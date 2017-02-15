@@ -23,4 +23,10 @@
 	<dependencies>
 		<nextcloud min-version="12" max-version="12" />
 	</dependencies>
+
+	<repair-steps>
+		<install>
+			<step>OCA\QuotaWarning\Migration\Install</step>
+		</install>
+	</repair-steps>
 </info>
