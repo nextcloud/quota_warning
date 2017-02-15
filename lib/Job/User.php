@@ -22,17 +22,24 @@
 namespace OCA\QuotaWarning\Job;
 
 use OC\BackgroundJob\TimedJob;
+use OCA\QuotaWarning\CheckQuota;
 
 class User extends TimedJob {
 
+	/** @var CheckQuota */
+	protected $checkQuota;
+
 	/**
 	 * User constructor.
+	 *
+	 * @param CheckQuota $checkQuota
 	 */
-	public function __construct() {
+	public function __construct(CheckQuota $checkQuota) {
+		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
 	}
 
 	protected function run($argument) {
-		// TODO: Implement run() method.
+		$this->checkQuota->check($argument['uid']);
 	}
 }
