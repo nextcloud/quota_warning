@@ -62,36 +62,27 @@ class CheckQuota {
 	 * @param string $userId
 	 */
 	public function check($userId) {
-		try {
-			$storage = $this->getStorageInfo($userId);
-		} catch (NotFoundException $e) {
-			return;
-		}
-
-		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] < 5 * 1024**2) {
-			// No warnings for unlimited storage and for less than 5 MB
-			return;
-		}
+		$usage = $this->getRelativeQuotaUsage($userId);
 
 		// 90%
-		if ($storage['relative'] > self::ALERT) {
-			if ($this->shouldWarn($userId, self::ALERT)) {
-				$this->issueWarning($userId, $storage['relative']);
+		if ($usage > self::ALERT) {
+			if ($this->shouldIssueWarning($userId, self::ALERT)) {
+				$this->issueWarning($userId, $usage);
 			}
 			$this->updateLastWarning($userId, self::ALERT);
 
 		// 70%
-		} else if ($storage['relative'] > self::WARNING) {
-			if ($this->shouldWarn($userId, self::WARNING)) {
-				$this->issueWarning($userId, $storage['relative']);
+		} else if ($usage > self::WARNING) {
+			if ($this->shouldIssueWarning($userId, self::WARNING)) {
+				$this->issueWarning($userId, $usage);
 			}
 			$this->updateLastWarning($userId, self::WARNING);
 			$this->removeLastWarning($userId, self::ALERT);
 
 		// 50%
-		} else if ($storage['relative'] > self::INFO) {
-			if ($this->shouldWarn($userId, self::INFO)) {
-				$this->issueWarning($userId, $storage['relative']);
+		} else if ($usage > self::INFO) {
+			if ($this->shouldIssueWarning($userId, self::INFO)) {
+				$this->issueWarning($userId, $usage);
 			}
 			$this->updateLastWarning($userId, self::INFO);
 			$this->removeLastWarning($userId, self::WARNING);
@@ -101,6 +92,25 @@ class CheckQuota {
 			$this->removeLastWarning($userId, self::INFO);
 
 		}
+	}
+
+	/**
+	 * @param string $userId
+	 * @return float
+	 */
+	public function getRelativeQuotaUsage($userId) {
+		try {
+			$storage = $this->getStorageInfo($userId);
+		} catch (NotFoundException $e) {
+			return 0.0;
+		}
+
+		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] < 5 * 1024**2) {
+			// No warnings for unlimited storage and for less than 5 MB
+			return 0.0;
+		}
+
+		return $storage['relative'];
 	}
 
 	/**
@@ -150,7 +160,7 @@ class CheckQuota {
 	 * @param int $level
 	 * @return bool
 	 */
-	protected function shouldWarn($userId, $level) {
+	protected function shouldIssueWarning($userId, $level) {
 		$lastWarning = $this->config->getUserValue($userId, Application::APP_ID, 'warning-' . $level, '');
 		if ($lastWarning === '') {
 			return true;
