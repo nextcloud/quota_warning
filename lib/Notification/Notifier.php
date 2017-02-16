@@ -62,13 +62,13 @@ class Notifier implements INotifier {
 	public function prepare(INotification $notification, $languageCode) {
 		if ($notification->getApp() !== Application::APP_ID) {
 			// Wrong app
-			throw new \InvalidArgumentException();
+			throw new \InvalidArgumentException('Unknown app');
 		}
 
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
 		if ($usage < CheckQuota::INFO) {
 			// User is not in danger zone anymore
-			throw new \InvalidArgumentException();
+			throw new \InvalidArgumentException('Less usage');
 		} else {
 			// TODO use different icons depending on the warning level
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
@@ -79,8 +79,10 @@ class Notifier implements INotifier {
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
 
 		$parameters = $notification->getSubjectParameters();
+		$usage = (int) round($parameters['usage']);
+		$usage = min(100, $usage);
 		$notification->setParsedSubject(
-			$l->t('You are using more than %d%% of your storage quota', floor($parameters['usage']))
+			$l->t('You are using more than %d%% of your storage quota', $usage)
 		);
 		return $notification;
 	}
