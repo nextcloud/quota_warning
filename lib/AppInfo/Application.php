@@ -24,7 +24,9 @@
 namespace OCA\QuotaWarning\AppInfo;
 
 use OCA\QuotaWarning\Job\User;
+use OCA\QuotaWarning\Notification\Notifier;
 use OCP\AppFramework\App;
+use OCP\IL10N;
 use OCP\Util;
 
 class Application extends App {
@@ -36,6 +38,7 @@ class Application extends App {
 
 	public function register() {
 		$this->registerLoginHook();
+		$this->registerNotifier();
 	}
 
 
@@ -55,6 +58,19 @@ class Application extends App {
 		$jobList->add(
 			User::class,
 			['uid' => $params['uid']]
+		);
+	}
+
+	public function registerNotifier() {
+		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
+		$notificationManager->registerNotifier(
+			function() {
+				return $this->getContainer()->query(Notifier::class);
+			},
+			function () {
+				$l = $this->getContainer()->query(IL10N::class);
+				return ['id' => self::APP_ID, 'name' => $l->t('Quota warning')];
+			}
 		);
 	}
 }
