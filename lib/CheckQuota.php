@@ -57,6 +57,8 @@ class CheckQuota {
 	}
 
 	/**
+	 * Checks the quota of a given user and issues the warning if necessary
+	 *
 	 * @param string $userId
 	 */
 	public function check($userId) {
@@ -66,16 +68,19 @@ class CheckQuota {
 			return;
 		}
 
-		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] === 0) {
+		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] < 5 * 1024**2) {
+			// No warnings for unlimited storage and for less than 5 MB
 			return;
 		}
 
+		// 90%
 		if ($storage['relative'] > self::ALERT) {
 			if ($this->shouldWarn($userId, self::ALERT)) {
 				$this->issueWarning($userId, $storage['relative']);
 			}
 			$this->updateLastWarning($userId, self::ALERT);
 
+		// 70%
 		} else if ($storage['relative'] > self::WARNING) {
 			if ($this->shouldWarn($userId, self::WARNING)) {
 				$this->issueWarning($userId, $storage['relative']);
@@ -83,6 +88,7 @@ class CheckQuota {
 			$this->updateLastWarning($userId, self::WARNING);
 			$this->removeLastWarning($userId, self::ALERT);
 
+		// 50%
 		} else if ($storage['relative'] > self::INFO) {
 			if ($this->shouldWarn($userId, self::INFO)) {
 				$this->issueWarning($userId, $storage['relative']);
@@ -91,16 +97,20 @@ class CheckQuota {
 			$this->removeLastWarning($userId, self::WARNING);
 
 		} else {
+			$this->removeWarning($userId);
 			$this->removeLastWarning($userId, self::INFO);
 
 		}
 	}
 
 	/**
+	 * Issues the warning by creating a notification
+	 *
 	 * @param string $userId
 	 * @param float $percentage
 	 */
 	protected function issueWarning($userId, $percentage) {
+		$this->removeWarning($userId);
 		$notification = $this->notificationManager->createNotification();
 
 		try {
@@ -116,6 +126,26 @@ class CheckQuota {
 	}
 
 	/**
+	 * Removes any existing warning
+	 *
+	 * @param string $userId
+	 */
+	protected function removeWarning($userId) {
+		$notification = $this->notificationManager->createNotification();
+
+		try {
+			$notification->setApp(Application::APP_ID)
+				->setObject('quota', $userId)
+				->setUser($userId);
+			$this->notificationManager->markProcessed($notification);
+		} catch (\InvalidArgumentException $e) {
+			$this->logger->logException($e, ['app' => Application::APP_ID]);
+		}
+	}
+
+	/**
+	 * The user should be warned, when we was not warned in the last 7 days
+	 *
 	 * @param string $userId
 	 * @param int $level
 	 * @return bool
@@ -133,6 +163,8 @@ class CheckQuota {
 	}
 
 	/**
+	 * Updates the "last date" for all <= the given alert level
+	 *
 	 * @param string $userId
 	 * @param int $level
 	 */
@@ -150,6 +182,8 @@ class CheckQuota {
 	}
 
 	/**
+	 * Removes the warnings when the user is below the level again
+	 *
 	 * @param string $userId
 	 * @param int $level
 	 */
