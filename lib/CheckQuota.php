@@ -30,8 +30,8 @@ use OCP\Notification\IManager;
 
 class CheckQuota {
 
-	const ALERT = 90;
-	const WARNING = 70;
+	const ALERT = 95;
+	const WARNING = 80;
 	const INFO = 50;
 
 	/** @var IConfig */
