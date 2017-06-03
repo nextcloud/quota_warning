@@ -1,0 +1,5 @@
+{ "translations": {
+    "Quota warning" : "Aviso de cota",
+    "You are using more than %d%% of your storage quota" : "Vostede está a usar máis do %d %% ds súa cota de almacenamento"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
