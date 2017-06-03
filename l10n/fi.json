@@ -1,0 +1,5 @@
+{ "translations": {
+    "Quota warning" : "Kiintiövaroitus",
+    "You are using more than %d%% of your storage quota" : "Käytössäsi on enemmän kuin %d%% tallennustilan kiintiöstäsi"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
