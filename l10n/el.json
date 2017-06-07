@@ -1,0 +1,5 @@
+{ "translations": {
+    "Quota warning" : "Προειδοποίηση ποσοστού",
+    "You are using more than %d%% of your storage quota" : "Χρησιμοποιείτε μεγαλύτερο από %d%%του ποσοστού αποθήκευσής σας"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
