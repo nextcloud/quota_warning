@@ -1,0 +1,5 @@
+{ "translations": {
+    "Quota warning" : "Kvote advarsel",
+    "You are using more than %d%% of your storage quota" : "Du bruger mere end %d%% af din diskplads"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
