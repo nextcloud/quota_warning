@@ -43,7 +43,7 @@ class Application extends App {
 
 
 	protected function registerLoginHook() {
-		Util::connectHook('OC_User', 'post_login', $this, 'login');
+		Util::connectHook('OC_User', 'post_login', $this, 'loginHook');
 	}
 
 	/**
