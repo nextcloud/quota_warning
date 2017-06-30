@@ -2,6 +2,7 @@
 <info>
 	<name>Quota warning</name>
 	<description>This app sends notifications to users when they reached 50, 80 and 95% of their quota.</description>
+    <screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/screenshots/quota_warning.png</screenshot>
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 
