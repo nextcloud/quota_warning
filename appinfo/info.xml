@@ -8,13 +8,15 @@
 	<category>files</category>
 	<category>monitoring</category>
 
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/screenshot.png</screenshot>
+
 	<website>https://github.com/nextcloud/quota_warning</website>
 	<bugs>https://github.com/nextcloud/quota_warning/issues</bugs>
 	<repository>https://github.com/nextcloud/quota_warning</repository>
 
 	<id>quota_warning</id>
 	<namespace>QuotaWarning</namespace>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 
 	<types>
 		<filesystem/>
