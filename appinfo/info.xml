@@ -16,7 +16,7 @@
 
 	<id>quota_warning</id>
 	<namespace>QuotaWarning</namespace>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 
 	<types>
 		<filesystem/>
