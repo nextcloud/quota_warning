@@ -26,6 +26,10 @@ use OCP\Files\FileInfo;
 use OCP\Files\NotFoundException;
 use OCP\IConfig;
 use OCP\ILogger;
+use OCP\IUser;
+use OCP\IUserManager;
+use OCP\L10N\IFactory;
+use OCP\Mail\IMailer;
 use OCP\Notification\IManager;
 
 class CheckQuota {
@@ -40,6 +44,15 @@ class CheckQuota {
 	/** @var ILogger */
 	protected $logger;
 
+	/** @var IMailer */
+	protected $mailer;
+
+	/** @var IFactory */
+	protected $l10nFactory;
+
+	/** @var IUserManager */
+	protected $userManager;
+
 	/** @var IManager */
 	protected $notificationManager;
 
@@ -48,11 +61,17 @@ class CheckQuota {
 	 *
 	 * @param IConfig $config
 	 * @param ILogger $logger
+	 * @param IMailer $mailer
+	 * @param IFactory $l10nFactory
+	 * @param IUserManager $userManager
 	 * @param IManager $notificationManager
 	 */
-	public function __construct(IConfig $config, ILogger $logger, IManager $notificationManager) {
+	public function __construct(IConfig $config, ILogger $logger, IMailer $mailer, IFactory $l10nFactory, IUserManager $userManager, IManager $notificationManager) {
 		$this->config = $config;
 		$this->logger = $logger;
+		$this->mailer = $mailer;
+		$this->l10nFactory = $l10nFactory;
+		$this->userManager = $userManager;
 		$this->notificationManager = $notificationManager;
 	}
 
@@ -68,6 +87,7 @@ class CheckQuota {
 		if ($usage > self::ALERT) {
 			if ($this->shouldIssueWarning($userId, self::ALERT)) {
 				$this->issueWarning($userId, $usage);
+				$this->sendEmail($userId, $usage);
 			}
 			$this->updateLastWarning($userId, self::ALERT);
 
@@ -132,6 +152,63 @@ class CheckQuota {
 			$this->notificationManager->notify($notification);
 		} catch (\InvalidArgumentException $e) {
 			$this->logger->logException($e, ['app' => Application::APP_ID]);
+		}
+	}
+
+	/**
+	 * Send an email to the user
+	 *
+	 * @param string $userId
+	 * @param float $percentage
+	 */
+	protected function sendEmail($userId, $percentage) {
+		$user = $this->userManager->get($userId);
+		if (!$user instanceof IUser) {
+			return;
+		}
+
+		$email = $user->getEMailAddress();
+		if (!$email) {
+			return;
+		}
+
+		$lang = $this->config->getUserValue($userId, 'core', 'lang');
+		$l = $this->l10nFactory->get('quota_warning', $lang);
+		$emailTemplate = $this->mailer->createEMailTemplate();
+
+		$emailTemplate->addHeader();
+		$emailTemplate->addHeading($l->t('Reaching quota limit'), false);
+
+		$link = $this->config->getAppValue('quota_warning', 'plan_management_url', 'https://nextcloud13.local');
+
+		$help = $l->t('You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore.', $percentage);
+		if ($link !== '') {
+			$emailTemplate->addBodyText(
+				$help . ' ' . $l->t('Or click the following button for options to change your data plan.'),
+				$help . ' ' . $l->t('Or click the following link for options to change your data plan.')
+			);
+
+			$emailTemplate->addBodyButton(
+				$l->t('Data plan options'),
+				$link,
+				false
+			);
+		} else {
+			$emailTemplate->addBodyText($help);
+
+		}
+
+		$emailTemplate->addFooter();
+
+		try {
+			$message = $this->mailer->createMessage();
+			$message->setTo([$email => $user->getUID()]);
+			$message->setSubject($l->t('Reaching quota limit'));
+			$message->setPlainBody($emailTemplate->renderText());
+			$message->setHtmlBody($emailTemplate->renderHtml());
+			$this->mailer->send($message);
+		} catch (\Exception $e) {
+			$this->logger->logException($e, ['app' => 'quota_warning']);
 		}
 	}
 
