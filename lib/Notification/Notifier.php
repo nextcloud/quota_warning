@@ -72,14 +72,14 @@ class Notifier implements INotifier {
 		}
 
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
-		if ($usage < $this->config->getAppValue('quota_warning', 'info_percentage', 50)) {
+		if ($usage < $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
 			// User is not in danger zone anymore
 			throw new \InvalidArgumentException('Less usage');
 		}
 
 		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-alert.svg');
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 80)) {
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-warning.svg');
 		} else {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
