@@ -34,10 +34,6 @@ use OCP\Notification\IManager;
 
 class CheckQuota {
 
-	const ALERT = 95;
-	const WARNING = 80;
-	const INFO = 50;
-
 	/** @var IConfig */
 	protected $config;
 
@@ -83,33 +79,30 @@ class CheckQuota {
 	public function check($userId) {
 		$usage = $this->getRelativeQuotaUsage($userId);
 
-		// 90%
-		if ($usage > self::ALERT) {
-			if ($this->shouldIssueWarning($userId, self::ALERT)) {
+		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {
+			if ($this->shouldIssueWarning($userId, 'alert')) {
 				$this->issueWarning($userId, $usage);
 				$this->sendEmail($userId, $usage);
 			}
-			$this->updateLastWarning($userId, self::ALERT);
+			$this->updateLastWarning($userId, 'alert');
 
-		// 70%
-		} else if ($usage > self::WARNING) {
-			if ($this->shouldIssueWarning($userId, self::WARNING)) {
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 80)) {
+			if ($this->shouldIssueWarning($userId, 'warning')) {
 				$this->issueWarning($userId, $usage);
 			}
-			$this->updateLastWarning($userId, self::WARNING);
-			$this->removeLastWarning($userId, self::ALERT);
+			$this->updateLastWarning($userId, 'warning');
+			$this->removeLastWarning($userId, 'alert');
 
-		// 50%
-		} else if ($usage > self::INFO) {
-			if ($this->shouldIssueWarning($userId, self::INFO)) {
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'info_percentage', 50)) {
+			if ($this->shouldIssueWarning($userId, 'info')) {
 				$this->issueWarning($userId, $usage);
 			}
-			$this->updateLastWarning($userId, self::INFO);
-			$this->removeLastWarning($userId, self::WARNING);
+			$this->updateLastWarning($userId, 'info');
+			$this->removeLastWarning($userId, 'warning');
 
 		} else {
 			$this->removeWarning($userId);
-			$this->removeLastWarning($userId, self::INFO);
+			$this->removeLastWarning($userId, 'info');
 
 		}
 	}
@@ -253,18 +246,18 @@ class CheckQuota {
 	 * Updates the "last date" for all <= the given alert level
 	 *
 	 * @param string $userId
-	 * @param int $level
+	 * @param string $level
 	 */
 	protected function updateLastWarning($userId, $level) {
 		$now = new \DateTime();
 		$dateTimeString = $now->format(\DateTime::ATOM);
 		switch ($level) {
-			case self::ALERT:
-				$this->config->setUserValue($userId, Application::APP_ID, 'warning-' . self::ALERT, $dateTimeString);
-			case self::WARNING:
-				$this->config->setUserValue($userId, Application::APP_ID, 'warning-' . self::WARNING, $dateTimeString);
-			case self::INFO:
-				$this->config->setUserValue($userId, Application::APP_ID, 'warning-' . self::INFO, $dateTimeString);
+			case 'alert':
+				$this->config->setUserValue($userId, Application::APP_ID, 'warning-alert', $dateTimeString);
+			case 'warning':
+				$this->config->setUserValue($userId, Application::APP_ID, 'warning-warning', $dateTimeString);
+			case 'info':
+				$this->config->setUserValue($userId, Application::APP_ID, 'warning-info', $dateTimeString);
 		}
 	}
 
@@ -272,16 +265,16 @@ class CheckQuota {
 	 * Removes the warnings when the user is below the level again
 	 *
 	 * @param string $userId
-	 * @param int $level
+	 * @param string $level
 	 */
 	protected function removeLastWarning($userId, $level) {
 		switch ($level) {
-			case self::INFO:
-				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-' . self::INFO);
-			case self::WARNING:
-				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-' . self::WARNING);
-			case self::ALERT:
-				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-' . self::ALERT);
+			case 'info':
+				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-info');
+			case 'warning':
+				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-warning');
+			case 'alert':
+				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-alert');
 		}
 	}
 
