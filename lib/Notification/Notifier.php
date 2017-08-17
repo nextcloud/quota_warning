@@ -87,6 +87,11 @@ class Notifier implements INotifier {
 
 		$notification->setIcon($this->url->getAbsoluteURL($imagePath));
 
+		$link = $this->config->getAppValue('quota_warning', 'plan_management_url');
+		if ($link) {
+			$notification->setLink($link);
+		}
+
 		// Read the language from the notification
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
 
