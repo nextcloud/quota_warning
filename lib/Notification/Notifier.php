@@ -69,11 +69,17 @@ class Notifier implements INotifier {
 		if ($usage < CheckQuota::INFO) {
 			// User is not in danger zone anymore
 			throw new \InvalidArgumentException('Less usage');
-		} else {
-			// TODO use different icons depending on the warning level
-			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
-			$notification->setIcon($this->url->getAbsoluteURL($imagePath));
 		}
+
+		if ($usage > CheckQuota::ALERT) {
+			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-alert.svg');
+		} else if ($usage > CheckQuota::WARNING) {
+			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-warning.svg');
+		} else {
+			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
+		}
+
+		$notification->setIcon($this->url->getAbsoluteURL($imagePath));
 
 		// Read the language from the notification
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
