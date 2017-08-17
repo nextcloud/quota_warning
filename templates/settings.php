@@ -60,4 +60,9 @@ style('quota_warning', 'settings');
 			   value="1" <?php if ($_['alert_email']) { print_unescaped('checked="checked"'); } ?> />
 		<label for="quota_warning_alert_email"><?php p($l->t('Send an email'));?></label>
 	</p>
+
+	<p class="percentage-option">
+		<label for="quota_warning_plan_management_url"><?php p($l->t('Link to quota management')) ?></label>
+		<input id="quota_warning_plan_management_url" type="text" value="<?php p($_['plan_management_url']) ?>" placeholder="https://…" />
+	</p>
 </div>
