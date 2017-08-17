@@ -1,0 +1,9 @@
+.percentage-option label {
+	display: inline-block;
+	min-width: 150px;
+}
+
+.email-option {
+	margin-left: 150px;
+	margin-bottom: 20px;
+}
