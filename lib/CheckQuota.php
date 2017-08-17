@@ -88,7 +88,7 @@ class CheckQuota {
 			}
 			$this->updateLastWarning($userId, 'alert');
 
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 80)) {
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
 			if ($this->shouldIssueWarning($userId, 'warning')) {
 				$this->issueWarning($userId, $usage);
 				if ($this->config->getAppValue('quota_warning', 'warning_email', 'no') === 'yes') {
@@ -98,7 +98,7 @@ class CheckQuota {
 			$this->updateLastWarning($userId, 'warning');
 			$this->removeLastWarning($userId, 'alert');
 
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'info_percentage', 50)) {
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
 			if ($this->shouldIssueWarning($userId, 'info')) {
 				$this->issueWarning($userId, $usage);
 				if ($this->config->getAppValue('quota_warning', 'info_email', 'no') === 'yes') {
