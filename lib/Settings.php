@@ -44,6 +44,7 @@ class Settings implements ISettings {
 			'alert_percentage' => $this->config->getAppValue('quota_warning', 'alert_percentage', 95),
 			'alert_email' => $this->config->getAppValue('quota_warning', 'alert_email', 'no') === 'yes',
 			'plan_management_url' => $this->config->getAppValue('quota_warning', 'plan_management_url'),
+			'repeat_warning' => $this->config->getAppValue('quota_warning', 'repeat_warning', 7),
 		]);
 
 		return $response;

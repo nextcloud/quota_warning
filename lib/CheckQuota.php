@@ -244,8 +244,14 @@ class CheckQuota {
 			return true;
 		}
 
+		$days = (int) $this->config->getAppValue('quota_warning', 'repeat_warning', 7);
+
+		if ($days <= 0) {
+			return false;
+		}
+
 		$dateLastWarning = \DateTime::createFromFormat(\DateTime::ATOM, $lastWarning);
-		$dateLastWarning->add(new \DateInterval('P7D'));
+		$dateLastWarning->add(new \DateInterval('P' . $days . 'D'));
 		$now = new \DateTime();
 		return $dateLastWarning < $now;
 	}
