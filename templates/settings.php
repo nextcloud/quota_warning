@@ -63,6 +63,12 @@ style('quota_warning', 'settings');
 
 	<p class="percentage-option">
 		<label for="quota_warning_plan_management_url"><?php p($l->t('Link to quota management')) ?></label>
-		<input id="quota_warning_plan_management_url" type="text" value="<?php p($_['plan_management_url']) ?>" placeholder="https://…" />
+		<input id="quota_warning_plan_management_url" value="<?php p($_['plan_management_url']) ?>" placeholder="https://…" />
+	</p>
+
+	<p class="percentage-option">
+		<label for="quota_warning_repeat_warning"><?php p($l->t('Resend notifications after … days')) ?></label>
+		<input id="quota_warning_repeat_warning" type="number" min="0" value="<?php p($_['repeat_warning']) ?>" />
+		<em><?php p($l->t('Set to 0 if the user should only receive one notification.')) ?></em>
 	</p>
 </div>
