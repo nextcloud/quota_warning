@@ -1,0 +1,5 @@
+{ "translations": {
+    "Quota warning" : "Utrymmesvarning",
+    "You are using more than %d%% of your storage quota" : "Du använder mer än %d%% av ditt lagringsutrymme"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
