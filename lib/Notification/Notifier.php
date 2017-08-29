@@ -26,6 +26,7 @@ namespace OCA\QuotaWarning\Notification;
 
 use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\CheckQuota;
+use OCP\IConfig;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
 use OCP\Notification\INotification;
@@ -36,6 +37,9 @@ class Notifier implements INotifier {
 	/** @var CheckQuota */
 	protected $checkQuota;
 
+	/** @var IConfig */
+	protected $config;
+
 	/** @var IFactory */
 	protected $l10nFactory;
 
@@ -44,11 +48,13 @@ class Notifier implements INotifier {
 
 	/**
 	 * @param CheckQuota $checkQuota
+	 * @param IConfig $config
 	 * @param IFactory $l10nFactory
 	 * @param IURLGenerator $urlGenerator
 	 */
-	public function __construct(CheckQuota $checkQuota, IFactory $l10nFactory, IURLGenerator $urlGenerator) {
+	public function __construct(CheckQuota $checkQuota, IConfig $config, IFactory $l10nFactory, IURLGenerator $urlGenerator) {
 		$this->checkQuota = $checkQuota;
+		$this->config = $config;
 		$this->l10nFactory = $l10nFactory;
 		$this->url = $urlGenerator;
 	}
@@ -66,13 +72,24 @@ class Notifier implements INotifier {
 		}
 
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
-		if ($usage < CheckQuota::INFO) {
+		if ($usage < $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
 			// User is not in danger zone anymore
 			throw new \InvalidArgumentException('Less usage');
+		}
+
+		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {
+			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-alert.svg');
+		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
+			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-warning.svg');
 		} else {
-			// TODO use different icons depending on the warning level
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
-			$notification->setIcon($this->url->getAbsoluteURL($imagePath));
+		}
+
+		$notification->setIcon($this->url->getAbsoluteURL($imagePath));
+
+		$link = $this->config->getAppValue('quota_warning', 'plan_management_url');
+		if ($link) {
+			$notification->setLink($link);
 		}
 
 		// Read the language from the notification

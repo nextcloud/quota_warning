@@ -26,6 +26,7 @@ namespace OCA\QuotaWarning\Tests\Notification;
 use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\CheckQuota;
 use OCA\QuotaWarning\Notification\Notifier;
+use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
@@ -39,6 +40,8 @@ class NotifierTest extends \Test\TestCase {
 	protected $factory;
 	/** @var CheckQuota|\PHPUnit_Framework_MockObject_MockObject */
 	protected $checkQuota;
+	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
+	protected $config;
 	/** @var IURLGenerator|\PHPUnit_Framework_MockObject_MockObject */
 	protected $urlGenerator;
 	/** @var IL10N|\PHPUnit_Framework_MockObject_MockObject */
@@ -48,6 +51,7 @@ class NotifierTest extends \Test\TestCase {
 		parent::setUp();
 
 		$this->checkQuota = $this->createMock(CheckQuota::class);
+		$this->config = $this->createMock(IConfig::class);
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->l = $this->createMock(IL10N::class);
 		$this->l->expects($this->any())
@@ -62,6 +66,7 @@ class NotifierTest extends \Test\TestCase {
 
 		$this->notifier = new Notifier(
 			$this->checkQuota,
+			$this->config,
 			$this->factory,
 			$this->urlGenerator
 		);
@@ -101,19 +106,24 @@ class NotifierTest extends \Test\TestCase {
 		$notification->expects($this->never())
 			->method('getSubjectParameters');
 
+		$this->config->expects($this->once())
+			->method('getAppValue')
+			->with('quota_warning', 'info_percentage', 85)
+			->willReturnArgument(2);
+
 		$this->checkQuota->expects($this->once())
 			->method('getRelativeQuotaUsage')
 			->with('user')
-			->willReturn(49.0);
+			->willReturn(84.0);
 
 		$this->notifier->prepare($notification, 'en');
 	}
 
 	public function dataPrepare() {
 		return [
-			[50.1, ' 50% '],
-			[70.6, ' 71% '],
-			[102.3, ' 100% '],
+			[85.1, ' 85% ', 'app-dark.svg'],
+			[94.9, ' 95% ', 'app-warning.svg'],
+			[102.3, ' 100% ', 'app-alert.svg'],
 		];
 	}
 
@@ -122,12 +132,21 @@ class NotifierTest extends \Test\TestCase {
 	 *
 	 * @param float $quota
 	 * @param string $stringContains
+	 * @param string $image
 	 */
-	public function testPrepare($quota, $stringContains) {
+	public function testPrepare($quota, $stringContains, $image) {
 		$this->checkQuota->expects($this->once())
 			->method('getRelativeQuotaUsage')
 			->with('user')
 			->willReturn($quota);
+
+		$this->config->expects($this->any())
+			->method('getAppValue')
+			->willReturnMap([
+				['quota_warning', 'info_percentage', 85, 85],
+				['quota_warning', 'warning_percentage', 90, 90],
+				['quota_warning', 'alert_percentage', 95, 95],
+			]);
 
 		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
 		$notification = $this->createMock(INotification::class);
@@ -147,7 +166,7 @@ class NotifierTest extends \Test\TestCase {
 
 		$this->urlGenerator->expects($this->once())
 			->method('imagePath')
-			->with(Application::APP_ID, 'app-dark.svg')
+			->with(Application::APP_ID, $image)
 			->willReturn('icon-url');
 		$this->urlGenerator->expects($this->once())
 			->method('getAbsoluteURL')
