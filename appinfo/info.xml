@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <info>
 	<name>Quota warning</name>
-	<description>This app sends notifications to users when they reached 50, 80 and 95% of their quota.</description>
+	<summary>This app sends notifications to users when they reached 85, 90 and 95% of their quota.</summary>
+	<description>This app sends notifications to users when they reached 85, 90 and 95% of their quota.
+In addition an email can be sent to the users. The three percentages can be changed in the admin settings.
+It is also possible to have a link in the email and the notification for upsell options.</description>
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 
@@ -25,6 +28,10 @@
 	<dependencies>
 		<nextcloud min-version="13" max-version="13" />
 	</dependencies>
+
+	<settings>
+		<admin>OCA\QuotaWarning\Settings</admin>
+	</settings>
 
 	<repair-steps>
 		<install>

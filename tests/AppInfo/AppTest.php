@@ -24,7 +24,9 @@
 namespace OCA\QuotaWarning\Tests\AppInfo;
 
 use OCA\QuotaWarning\AppInfo\Application;
+use OCA\QuotaWarning\CheckQuota;
 use OCA\QuotaWarning\Notification\Notifier;
+use OCP\IConfig;
 use OCP\IL10N;
 use OCP\L10N\IFactory;
 use OCP\Notification\IManager;
@@ -68,9 +70,12 @@ class AppTest extends TestCase {
 	}
 
 	public function testAppNotification() {
-		$this->languageFactory->expects($this->once())
+		$this->languageFactory->expects($this->exactly(2))
 			->method('get')
-			->with(Application::APP_ID)
+			->withConsecutive(
+				['lib'],
+				[Application::APP_ID]
+			)
 			->willReturn($this->language);
 
 		$this->notificationManager->expects($this->once())
