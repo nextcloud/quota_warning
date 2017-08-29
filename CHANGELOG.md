@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 1.1.0 – 2017-08-18
+## 1.1.0 – 2017-08-29
 ### Added
  - Allow to send an email in addition to the notification
   [#16](https://github.com/nextcloud/quota_warning/pull/16)
