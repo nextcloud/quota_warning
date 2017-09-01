@@ -32,7 +32,7 @@ style('quota_warning', 'settings');
 	<span id="quota_warning_feedback" class="msg"></span>
 
 	<p class="percentage-option">
-		<label for="quota_warning_info_percentage"><?php p($l->t('First note')) ?></label>
+		<label for="quota_warning_info_percentage"><?php p($l->t('First notification')) ?></label>
 		<input id="quota_warning_info_percentage" type="number" min="0" max="100" value="<?php p($_['info_percentage']) ?>" />
 	</p>
 	<p class="email-option">
@@ -42,7 +42,7 @@ style('quota_warning', 'settings');
 	</p>
 
 	<p class="percentage-option">
-		<label for="quota_warning_warning_percentage"><?php p($l->t('Second note')) ?></label>
+		<label for="quota_warning_warning_percentage"><?php p($l->t('Second notification')) ?></label>
 		<input id="quota_warning_warning_percentage" type="number" min="0" max="100" value="<?php p($_['warning_percentage']) ?>" />
 	</p>
 	<p class="email-option">
@@ -52,7 +52,7 @@ style('quota_warning', 'settings');
 	</p>
 
 	<p class="percentage-option">
-		<label for="quota_warning_alert_percentage"><?php p($l->t('Final note')) ?></label>
+		<label for="quota_warning_alert_percentage"><?php p($l->t('Final notification')) ?></label>
 		<input id="quota_warning_alert_percentage" type="number" min="0" max="100" value="<?php p($_['alert_percentage']) ?>" />
 	</p>
 	<p class="email-option">
