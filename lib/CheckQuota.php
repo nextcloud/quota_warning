@@ -181,7 +181,7 @@ class CheckQuota {
 		]);
 
 		$emailTemplate->addHeader();
-		$emailTemplate->addHeading($l->t('Reaching quota limit'), false);
+		$emailTemplate->addHeading($l->t('Nearing your storage quota'), false);
 
 		$link = $this->config->getAppValue('quota_warning', 'plan_management_url');
 
@@ -207,7 +207,7 @@ class CheckQuota {
 		try {
 			$message = $this->mailer->createMessage();
 			$message->setTo([$email => $user->getUID()]);
-			$message->setSubject($l->t('Reaching quota limit'));
+			$message->setSubject($l->t('Nearing your storage quota'));
 			$message->setPlainBody($emailTemplate->renderText());
 			$message->setHtmlBody($emailTemplate->renderHtml());
 			$this->mailer->send($message);
