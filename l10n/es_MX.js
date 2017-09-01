@@ -6,6 +6,8 @@ OC.L10N.register(
     "Quota warning" : "Advertencia de cuota",
     "Reaching quota limit" : "Alcanzando el límite de la cuota",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Estás usando mas de %d %% de tu cuota de almacenamiento. Intenta liberar algo de espacio borrando archivos viejos que ya no necesites. ",
+    "Or click the following button for options to change your data plan." : "O bien da click en el siguiente botón para ver las opciones de cambio de tu plan de datos. ",
+    "Or click the following link for options to change your data plan." : "O bien da click en la siguiente liga para ver las opciones de cambio de tu plan de datos. ",
     "Data plan options" : "Opciones de planes de datos",
     "You are using more than %d%% of your storage quota" : "Usted está usando más de %d %% de su cuota de almacenamiento",
     "First note" : "Primera nota",
@@ -13,6 +15,7 @@ OC.L10N.register(
     "Second note" : "Segunda nota",
     "Final note" : "Nota final",
     "Link to quota management" : "Liga a administración de cuota",
-    "Resend notifications after … days" : "Reenviar notificaciones después de ... días"
+    "Resend notifications after … days" : "Reenviar notificaciones después de ... días",
+    "Set to 0 if the user should only receive one notification." : "Establece el valor a 0 si el usuario sólo debe recibir una única notificación"
 },
 "nplurals=2; plural=(n != 1);");
