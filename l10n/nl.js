@@ -9,12 +9,13 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Of klik op de onderstaande link voor opties om je data plan te wijzigen.",
     "Data plan options" : "Data plan opties",
     "You are using more than %d%% of your storage quota" : "Je gebruikt meer dan  %d%% van je opslagquotum",
-    "First note" : "Eerste notitie",
     "Send an email" : "Stuur een email",
-    "Second note" : "Tweede notitie",
-    "Final note" : "Laatste notitie",
     "Link to quota management" : "Link quota beheer",
     "Resend notifications after … days" : "Verstuur notificaties na ... dagen",
-    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen."
+    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen.",
+    "Reaching quota limit" : "je nadert je quotumlimiet",
+    "First note" : "Eerste notitie",
+    "Second note" : "Tweede notitie",
+    "Final note" : "Laatste notitie"
 },
 "nplurals=2; plural=(n != 1);");
