@@ -175,13 +175,10 @@ class CheckQuota {
 
 		$lang = $this->config->getUserValue($userId, 'core', 'lang');
 		$l = $this->l10nFactory->get('quota_warning', $lang);
-		$emailTemplate = $this->mailer->createEMailTemplate();
 
-		if (method_exists($emailTemplate, 'setMetaData')) {
-			$emailTemplate->setMetaData('quota_warning.Notification', [
-				'quota' => $percentage,
-			]);
-		}
+		$emailTemplate = $this->mailer->createEMailTemplate('quota_warning.Notification', [
+			'quota' => $percentage,
+		]);
 
 		$emailTemplate->addHeader();
 		$emailTemplate->addHeading($l->t('Nearing your storage quota'), false);
