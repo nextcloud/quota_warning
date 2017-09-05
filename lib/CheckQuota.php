@@ -175,8 +175,7 @@ class CheckQuota {
 
 		$lang = $this->config->getUserValue($userId, 'core', 'lang');
 		$l = $this->l10nFactory->get('quota_warning', $lang);
-		$emailTemplate = $this->mailer->createEMailTemplate();
-		$emailTemplate->setMetaData('quota_warning.Notification', [
+		$emailTemplate = $this->mailer->createEMailTemplate('quota_warning.Notification', [
 			'quota' => $percentage,
 		]);
 
