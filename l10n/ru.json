@@ -10,10 +10,6 @@
     "Send an email" : "Отправить по эл. почте",
     "Link to quota management" : "Ссылка на управление квотой",
     "Resend notifications after … days" : "Отправить уведомление повторно через ... дней",
-    "Set to 0 if the user should only receive one notification." : "Укажите 0 для отправки пользователю только одного уведомления.",
-    "Reaching quota limit" : "Достигнут предел квоты",
-    "First note" : "Первое уведомление",
-    "Second note" : "Второе уведомление",
-    "Final note" : "Последнее уведомление"
+    "Set to 0 if the user should only receive one notification." : "Укажите 0 для отправки пользователю только одного уведомления."
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
 }

@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Última notificación",
     "Link to quota management" : "Enlace a la gestión de cuotas",
     "Resend notifications after … days" : "Volver a mandar notificaciones después de ... días",
-    "Set to 0 if the user should only receive one notification." : "Déjalo en 0 si el usuario debería recibir solo una notificación.",
-    "Reaching quota limit" : "Alcanzando el límite de cuota",
-    "First note" : "Primera nota",
-    "Second note" : "Segunda nota",
-    "Final note" : "Nota final"
+    "Set to 0 if the user should only receive one notification." : "Déjalo en 0 si el usuario debería recibir solo una notificación."
 },
 "nplurals=2; plural=(n != 1);");

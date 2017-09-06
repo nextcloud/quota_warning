@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Ostatnie powiadomienie",
     "Link to quota management" : "Link do zarządzania limitem",
     "Resend notifications after … days" : "Wyślij ponownie powiadomienia po ... dniach",
-    "Set to 0 if the user should only receive one notification." : "Ustaw na 0 jeśli użytkownik ma otrzymać tylko jedno powiadomienie.",
-    "Reaching quota limit" : "Zbliżasz się do wyczerpania limitu dostępnego miejsca",
-    "First note" : "Pierwsze powiadomienie",
-    "Second note" : "Drugie powiadomienie",
-    "Final note" : "Ostatnie ostrzeżenie"
+    "Set to 0 if the user should only receive one notification." : "Ustaw na 0 jeśli użytkownik ma otrzymać tylko jedno powiadomienie."
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

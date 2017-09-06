@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Siste varsel",
     "Link to quota management" : "Lenke til kvotebehandling",
     "Resend notifications after … days" : "Send varsler på nytt etter … dager",
-    "Set to 0 if the user should only receive one notification." : "Sett til 0 hvis brukeren bare skal motta ett varsel.",
-    "Reaching quota limit" : "Når kvoten",
-    "First note" : "Første varsel",
-    "Second note" : "Andre varsel",
-    "Final note" : "Siste varsel"
+    "Set to 0 if the user should only receive one notification." : "Sett til 0 hvis brukeren bare skal motta ett varsel."
 },
 "nplurals=2; plural=(n != 1);");
