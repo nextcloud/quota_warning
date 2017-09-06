@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Son bildirim",
     "Link to quota management" : "Kota yönetimi bağlantısı",
     "Resend notifications after … days" : "Bildirim şu kadar gün sonra yeniden gönderilsin",
-    "Set to 0 if the user should only receive one notification." : "Kullanıcıya yalnız bir bildirim gönderilmesi için 0 olarak ayarlayın.",
-    "Reaching quota limit" : "Kota sınırına ulaşılıyor",
-    "First note" : "İlk not",
-    "Second note" : "İkinci not",
-    "Final note" : "Son not"
+    "Set to 0 if the user should only receive one notification." : "Kullanıcıya yalnız bir bildirim gönderilmesi için 0 olarak ayarlayın."
 },
 "nplurals=2; plural=(n > 1);");

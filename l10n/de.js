@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Letzte Benachrichtigung",
     "Link to quota management" : "Link zu den Speicherplatzeinstellungen",
     "Resend notifications after … days" : "Benachrichtigung alle ... Tage erneut senden",
-    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Nutzer nur eine Benachrichtigung erhalten soll",
-    "Reaching quota limit" : "Speicherplatz-Limit erreicht",
-    "First note" : "Erste Benachrichtigung",
-    "Second note" : "Zweite Benachrichtigung",
-    "Final note" : "Letzte Benachrichtigung"
+    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Nutzer nur eine Benachrichtigung erhalten soll"
 },
 "nplurals=2; plural=(n != 1);");

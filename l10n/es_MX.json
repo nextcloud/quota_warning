@@ -10,10 +10,6 @@
     "Send an email" : "Enviar correo electrónico",
     "Link to quota management" : "Liga a administración de cuota",
     "Resend notifications after … days" : "Reenviar notificaciones después de ... días",
-    "Set to 0 if the user should only receive one notification." : "Establece el valor a 0 si el usuario sólo debe recibir una única notificación",
-    "Reaching quota limit" : "Alcanzando el límite de la cuota",
-    "First note" : "Primera nota",
-    "Second note" : "Segunda nota",
-    "Final note" : "Nota final"
+    "Set to 0 if the user should only receive one notification." : "Establece el valor a 0 si el usuario sólo debe recibir una única notificación"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

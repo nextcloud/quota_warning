@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Laatste notificatie",
     "Link to quota management" : "Link quota beheer",
     "Resend notifications after … days" : "Verstuur notificaties na ... dagen",
-    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen.",
-    "Reaching quota limit" : "je nadert je quotumlimiet",
-    "First note" : "Eerste notitie",
-    "Second note" : "Tweede notitie",
-    "Final note" : "Laatste notitie"
+    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen."
 },
 "nplurals=2; plural=(n != 1);");

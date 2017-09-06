@@ -10,10 +10,6 @@
     "Send an email" : "Odoslať e-mail",
     "Link to quota management" : "Odkaz pre správu kvóty",
     "Resend notifications after … days" : "Preposlať oznámenia po ... dňoch",
-    "Set to 0 if the user should only receive one notification." : "Nastavte na 0 ak má používateľ dostávať len jeden oznam.",
-    "Reaching quota limit" : "Dosiahnutie kvóty",
-    "First note" : "Prvá poznámka",
-    "Second note" : "Druhá poznámka",
-    "Final note" : "Posledná poznámka"
+    "Set to 0 if the user should only receive one notification." : "Nastavte na 0 ak má používateľ dostávať len jeden oznam."
 },"pluralForm" :"nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;"
 }

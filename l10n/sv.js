@@ -12,10 +12,6 @@ OC.L10N.register(
     "Send an email" : "Skicka ett e-post",
     "Link to quota management" : "Länk till hantering av lagringsutrymme",
     "Resend notifications after … days" : "Skicka notifieringar igen efter ... dagar",
-    "Set to 0 if the user should only receive one notification." : "Set till 0 om användaren bara ska få en notifiering.",
-    "Reaching quota limit" : "Närmar sig gränsen för lagringsutrymmet",
-    "First note" : "Första notering",
-    "Second note" : "Andra notering",
-    "Final note" : "Sista notering"
+    "Set to 0 if the user should only receive one notification." : "Set till 0 om användaren bara ska få en notifiering."
 },
 "nplurals=2; plural=(n != 1);");

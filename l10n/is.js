@@ -16,10 +16,6 @@ OC.L10N.register(
     "Final notification" : "Lokaaðvörun",
     "Link to quota management" : "Tengill á umsýslu kvóta",
     "Resend notifications after … days" : "Senda aðvaranir aftur eftir … daga",
-    "Set to 0 if the user should only receive one notification." : "Settu þetta á 0 ef notandinn á aðeins að fá eina aðvörun.",
-    "Reaching quota limit" : "Að ná hámarki kvóta",
-    "First note" : "Fyrsta aðvörun",
-    "Second note" : "Önnur aðvörun",
-    "Final note" : "Lokaaðvörun"
+    "Set to 0 if the user should only receive one notification." : "Settu þetta á 0 ef notandinn á aðeins að fá eina aðvörun."
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");
