@@ -11,7 +11,9 @@ It is also possible to have a link in the email and the notification for upsell 
 	<category>files</category>
 	<category>monitoring</category>
 
-	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/screenshot.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/notification.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/email.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/admin-settings.png</screenshot>
 
 	<website>https://github.com/nextcloud/quota_warning</website>
 	<bugs>https://github.com/nextcloud/quota_warning/issues</bugs>
