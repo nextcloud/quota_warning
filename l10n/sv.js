@@ -10,7 +10,10 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Eller klicka på följande länk för inställningar för att ändra din dataplan.",
     "Data plan options" : "Alternativ för dataplan",
     "You are using more than %d%% of your storage quota" : "Du använder mer än %d%% av ditt lagringsutrymme",
+    "First notification" : "Första meddelande",
     "Send an email" : "Skicka ett e-post",
+    "Second notification" : "Andra meddelande",
+    "Final notification" : "Sista meddelande",
     "Link to quota management" : "Länk till hantering av lagringsutrymme",
     "Resend notifications after … days" : "Skicka notifieringar igen efter ... dagar",
     "Set to 0 if the user should only receive one notification." : "Set till 0 om användaren bara ska få en notifiering."
