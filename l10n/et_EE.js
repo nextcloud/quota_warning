@@ -1,0 +1,21 @@
+OC.L10N.register(
+    "quota_warning",
+    {
+    "Saving…" : "Salvestan...",
+    "Saved!" : "Salvestatud!",
+    "Quota warning" : "Limiidi hoiatus",
+    "Nearing your storage quota" : "Oled liginemas andmemahu limiidile",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Kasutad %d%% andmemahtu üle oma limiidi. Kustuta mõned ebavajalikud failid ära andmemahu vähendamiseks.",
+    "Or click the following button for options to change your data plan." : "Või vaata siit võimalusi oma andmemahu limiidi muutmiseks.",
+    "Or click the following link for options to change your data plan." : "Või vaata siit võimalusi oma andmemahu limiidi muutmiseks.",
+    "Data plan options" : "Andmemahu valikud",
+    "You are using more than %d%% of your storage quota" : "Kasutad %d%% andmemahtu üle oma limiidi",
+    "First notification" : "Esimene märguanne",
+    "Send an email" : "Saada kiri",
+    "Second notification" : "Teine märguanne",
+    "Final notification" : "Viimane märguanne",
+    "Link to quota management" : "Link andmemahu limiidi manageerimiseks",
+    "Resend notifications after … days" : "Saada märguanne uuesti peale ... päeva",
+    "Set to 0 if the user should only receive one notification." : "Märgi 0 kui kasutaja peaks saama ainult ühe märguande"
+},
+"nplurals=2; plural=(n != 1);");
