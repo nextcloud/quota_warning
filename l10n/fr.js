@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Sauvegarde en cours...",
+    "Saving…" : "Enregistrement…",
     "Saved!" : "Sauvegardé !",
     "Quota warning" : "Avertissement de quota",
     "Nearing your storage quota" : "Proche du quota de votre stockage",
