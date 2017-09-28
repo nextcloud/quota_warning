@@ -4,6 +4,7 @@ OC.L10N.register(
     "Saving…" : "Ukládám...",
     "Saved!" : "Uloženo!",
     "Quota warning" : "Varování kvóty",
+    "Nearing your storage quota" : "Blížíte se k vaší úložné kvótě",
     "You are using more than %d%% of your storage quota" : "Využíváte více než %d%% vaší úložné kvóty",
     "First notification" : "První upozornění",
     "Send an email" : "Odeslat email",
