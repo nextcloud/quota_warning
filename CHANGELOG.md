@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.1 – 2017-10-13
+### Fixed
+ - Delete the background job when the user does not exist anymore
+  [nextcloud/server#6803](https://github.com/nextcloud/server/issues/6803)
+ - Add the user id to the email template for better styling
+  [#23](https://github.com/nextcloud/quota_warning/pull/23)
+
 ## 1.1.0 – 2017-08-29
 ### Added
  - Allow to send an email in addition to the notification
