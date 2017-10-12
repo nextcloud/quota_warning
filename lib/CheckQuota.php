@@ -22,6 +22,8 @@
 namespace OCA\QuotaWarning;
 
 use OCA\QuotaWarning\AppInfo\Application;
+use OCA\QuotaWarning\Job\User;
+use OCP\BackgroundJob\IJobList;
 use OCP\Files\FileInfo;
 use OCP\Files\NotFoundException;
 use OCP\IConfig;
@@ -49,6 +51,9 @@ class CheckQuota {
 	/** @var IUserManager */
 	protected $userManager;
 
+	/** @var IJobList */
+	protected $jobList;
+
 	/** @var IManager */
 	protected $notificationManager;
 
@@ -60,14 +65,22 @@ class CheckQuota {
 	 * @param IMailer $mailer
 	 * @param IFactory $l10nFactory
 	 * @param IUserManager $userManager
+	 * @param IJobList $jobList
 	 * @param IManager $notificationManager
 	 */
-	public function __construct(IConfig $config, ILogger $logger, IMailer $mailer, IFactory $l10nFactory, IUserManager $userManager, IManager $notificationManager) {
+	public function __construct(IConfig $config,
+								ILogger $logger,
+								IMailer $mailer,
+								IFactory $l10nFactory,
+								IUserManager $userManager,
+								IJobList $jobList,
+								IManager $notificationManager) {
 		$this->config = $config;
 		$this->logger = $logger;
 		$this->mailer = $mailer;
 		$this->l10nFactory = $l10nFactory;
 		$this->userManager = $userManager;
+		$this->jobList = $jobList;
 		$this->notificationManager = $notificationManager;
 	}
 
@@ -77,6 +90,11 @@ class CheckQuota {
 	 * @param string $userId
 	 */
 	public function check($userId) {
+		if (!$this->userManager->userExists($userId)) {
+			$this->jobList->remove(User::class, ['uid' => $userId]);
+			return;
+		}
+
 		$usage = $this->getRelativeQuotaUsage($userId);
 
 		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {
