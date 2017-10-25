@@ -11,6 +11,7 @@ OC.L10N.register(
     "Second notification" : "Toinen ilmoitus",
     "Final notification" : "Viimeinen ilmoitus",
     "Link to quota management" : "Linkki kiintiöhallintaan",
+    "Resend notifications after … days" : "Lähetä ilmoitukset uudelleen … päivän jälkeen",
     "Set to 0 if the user should only receive one notification." : "Aseta arvoon 0 jos käyttäjän tulee vastaanottaa vain yksi ilmoitus."
 },
 "nplurals=2; plural=(n != 1);");
