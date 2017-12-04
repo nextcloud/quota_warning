@@ -8,6 +8,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Ή κάντε κλικ στον παρακάτω σύνδεσμο για να αλλάξετε το σχέδιο δεδομένων σας.",
     "Data plan options" : "Επιλογές σχεδίου δεδομένων",
     "You are using more than %d%% of your storage quota" : "Χρησιμοποιείτε μεγαλύτερο από %d%%του ορίου αποθήκευσής σας ",
+    "First notification" : "Πρώτη ειδοποίηση",
     "Send an email" : "Αποστολή ηλεκτρονικού ταχυδρομείου"
 },
 "nplurals=2; plural=(n != 1);");
