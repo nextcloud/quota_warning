@@ -5,7 +5,7 @@ OC.L10N.register(
     "Saved!" : "Sauvegardé !",
     "Quota warning" : "Avertissement de quota",
     "Nearing your storage quota" : "Proche du quota de votre stockage",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Vous utilisez plus de %d%% ode votre quota de stockage. Essayez de libérer un peu d'espace en supprimant d'anciens fichiers dont vous n'en avez plus besoin.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Vous utilisez plus de %d%% de votre quota de stockage. Essayez de libérer un peu d'espace en supprimant d'anciens fichiers dont vous n'avez plus besoin.",
     "Or click the following button for options to change your data plan." : "Ou cliquez sur le bouton suivant pour modifier votre plan d'utilisation de données.",
     "Or click the following link for options to change your data plan." : "Ou cliquez sur le lien suivant pour modifier votre plan d'utilisation de données.",
     "Data plan options" : "Options du plan d'utilisation de données",
