@@ -206,12 +206,12 @@ class CheckQuota {
 		$help = $l->t('You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore.', $percentage);
 		if ($link !== '') {
 			$emailTemplate->addBodyText(
-				$help . ' ' . $l->t('Or click the following button for options to change your data plan.'),
+				htmlspecialchars($help . ' ' . $l->t('Or click the following button for options to change your data plan.')),
 				$help . ' ' . $l->t('Or click the following link for options to change your data plan.')
 			);
 
 			$emailTemplate->addBodyButton(
-				$l->t('Data plan options'),
+				htmlspecialchars($l->t('Data plan options')),
 				$link,
 				false
 			);
