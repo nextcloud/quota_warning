@@ -203,7 +203,7 @@ class CheckQuota {
 
 		$link = $this->config->getAppValue('quota_warning', 'plan_management_url');
 
-		$help = $l->t('You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore.', $percentage);
+		$help = $l->t('You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don\'t need anymore.', $percentage);
 		if ($link !== '') {
 			$emailTemplate->addBodyText(
 				htmlspecialchars($help . ' ' . $l->t('Or click the following button for options to change your data plan.')),
