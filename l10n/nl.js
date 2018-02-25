@@ -5,7 +5,6 @@ OC.L10N.register(
     "Saved!" : "Opgeslagen!",
     "Quota warning" : "Quota waarschuwing",
     "Nearing your storage quota" : "Je nadert je opslag limiet",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Je gebruikt meer dan %d%% van je opslagruimte. Probeer ruimte vrij te maken door oude bestanden die je niet meer gebruikt te verwijderen.",
     "Or click the following button for options to change your data plan." : "Of klik op de onderstaande knop om je data plan te wijzigen.",
     "Or click the following link for options to change your data plan." : "Of klik op de onderstaande link voor opties om je data plan te wijzigen.",
     "Data plan options" : "Data plan opties",
@@ -16,6 +15,7 @@ OC.L10N.register(
     "Final notification" : "Laatste notificatie",
     "Link to quota management" : "Link quota beheer",
     "Resend notifications after … days" : "Verstuur notificaties na ... dagen",
-    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen."
+    "Set to 0 if the user should only receive one notification." : "Stel in op 0 wanneer gebruikers maar één notificatie hoeven te ontvangen.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Je gebruikt meer dan %d%% van je opslagruimte. Probeer ruimte vrij te maken door oude bestanden die je niet meer gebruikt te verwijderen."
 },
 "nplurals=2; plural=(n != 1);");

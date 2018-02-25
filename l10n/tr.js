@@ -5,7 +5,6 @@ OC.L10N.register(
     "Saved!" : "Kaydedildi!",
     "Quota warning" : "Kota uyarısı",
     "Nearing your storage quota" : "Depolama kotanızın sınırına yaklaşıyorsunuz",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Depolama kotanızdan %d%% daha fazla kullanıyorsunuz. Artık gerek duymadığınız bazı eski dosyaları silerek yer açmayı deneyin.",
     "Or click the following button for options to change your data plan." : "Ya da veri planınızı değiştirmek için aşağıdaki düğmeye tıklayın.",
     "Or click the following link for options to change your data plan." : "Ya da veri planınızı değiştirmek ve seçeneklerinizi görmek için aşağıdaki bağlantıya tıklayın.",
     "Data plan options" : "Veri planı seçenekleri",
@@ -16,6 +15,7 @@ OC.L10N.register(
     "Final notification" : "Son bildirim",
     "Link to quota management" : "Kota yönetimi bağlantısı",
     "Resend notifications after … days" : "Bildirim şu kadar gün sonra yeniden gönderilsin",
-    "Set to 0 if the user should only receive one notification." : "Kullanıcıya yalnız bir bildirim gönderilmesi için 0 olarak ayarlayın."
+    "Set to 0 if the user should only receive one notification." : "Kullanıcıya yalnız bir bildirim gönderilmesi için 0 olarak ayarlayın.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Depolama kotanızdan %d%% daha fazla kullanıyorsunuz. Artık gerek duymadığınız bazı eski dosyaları silerek yer açmayı deneyin."
 },
 "nplurals=2; plural=(n > 1);");
