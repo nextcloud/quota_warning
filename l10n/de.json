@@ -3,6 +3,7 @@
     "Saved!" : "Gespeichert!",
     "Quota warning" : "Kontingent-Warnung",
     "Nearing your storage quota" : "Du erreichst bald die Grenze Deines Speicherplatz-Kontingents",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Du nutzt mehr als %d%% des Dir zur Verfügung stehenden Speicherplatzes. Versuche Speicherplatz freizugeben, indem Du ältere, nicht mehr benötigte Dateien löschst.",
     "Or click the following button for options to change your data plan." : "Oder drücke die nachfolgende Schaltfläche für weitere Tarifoptionen.",
     "Or click the following link for options to change your data plan." : "Oder klicke auf den nachfolgenden Link für weitere Tarifoptionen.",
     "Data plan options" : "Tarifoptionen",
