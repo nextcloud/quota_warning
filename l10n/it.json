@@ -3,6 +3,7 @@
     "Saved!" : "Salvato!",
     "Quota warning" : "Avviso di quota",
     "Nearing your storage quota" : "Avvicinamento della tua quota di archiviazione",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Stai utilizzando più di %d%% della tua quota di archiviazione. Prova a liberare spazio eliminando vecchi file non più necessari.",
     "Or click the following button for options to change your data plan." : "O fai clic sul pulsante seguente per le opzioni di modifica del piano dati.",
     "Or click the following link for options to change your data plan." : "O fai clic sul collegamento seguente per le opzioni di modifica del piano dati.",
     "Data plan options" : "Opzioni piano dati",
