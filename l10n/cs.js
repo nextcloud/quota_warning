@@ -10,7 +10,7 @@ OC.L10N.register(
     "Data plan options" : "Možnosti datového tarifu",
     "You are using more than %d%% of your storage quota" : "Využíváte více než %d%% vaší kapacity uložiště",
     "First notification" : "První upozornění",
-    "Send an email" : "Odeslat email",
+    "Send an email" : "Odeslat e-mail",
     "Second notification" : "Druhé upozornění",
     "Final notification" : "Konečné oznámení",
     "Link to quota management" : "Odkaz na správu kvót",
