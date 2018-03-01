@@ -3,6 +3,7 @@
     "Saved!" : "Сачувано!",
     "Quota warning" : "Упозорење о квоти",
     "Nearing your storage quota" : "Приближавате се квоти складишта",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Користите више од %d%% од Ваше квоте складишта. Ослободите места тако што ћете обрисати старе фајлове који Вам више не требају.",
     "Or click the following button for options to change your data plan." : "Или кликните следеће дугме за опције промене Вашег пакета података.",
     "Or click the following link for options to change your data plan." : "Или идите на следећу везу за опције промене Вашег пакета података.",
     "Data plan options" : "Опцје пакета података",
