@@ -3,6 +3,7 @@
     "Saved!" : "Сохранено!",
     "Quota warning" : "Предупреждение квотирования",
     "Nearing your storage quota" : "Приближение к квоте хранилища",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Использовано более %d%% квоты хранилища. Попробуйте освободить место удалением старых ненужных файлов.",
     "Or click the following button for options to change your data plan." : "Или нажмите на кнопку для изменений плана данных.",
     "Or click the following link for options to change your data plan." : "Или нажмите на ссылку для изменения плана данных.",
     "Data plan options" : "Параметры плана данных",
