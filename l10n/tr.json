@@ -3,6 +3,7 @@
     "Saved!" : "Kaydedildi!",
     "Quota warning" : "Kota uyarısı",
     "Nearing your storage quota" : "Depolama kotanızın sınırına yaklaşıyorsunuz",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Depolama kotanızdan %d %% daha fazla kullanıyorsunuz. Artık gerek duymadığınız bazı eski dosyaları silerek yer açmayı deneyin.",
     "Or click the following button for options to change your data plan." : "Ya da veri planınızı değiştirmek için aşağıdaki düğmeye tıklayın.",
     "Or click the following link for options to change your data plan." : "Ya da veri planınızı değiştirmek ve seçeneklerinizi görmek için aşağıdaki bağlantıya tıklayın.",
     "Data plan options" : "Veri planı seçenekleri",

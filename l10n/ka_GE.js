@@ -5,6 +5,7 @@ OC.L10N.register(
     "Saved!" : "შენახულია!",
     "Quota warning" : "გაფრთხილება კვოტის შესახებ",
     "Nearing your storage quota" : "თქვენი საცავის კვოტა სრულდება",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "იყენებთ საცავის კვოტის %d%%-ზე მეტს. სცადეთ გაათავისუფლოთ ადგილი ძველი, არასაჭირო ფაილების გაუქმებით.",
     "Or click the following button for options to change your data plan." : "ან თქვენი მონაცემების გეგმის ცვლილებისთვის, დააჭირეთ ქვემოთ მოცემულ ღილაკს.",
     "Or click the following link for options to change your data plan." : "ან თქვენი მონაცემების გეგმის ცვლილებისთვის დააწკაპუნეთ შემდეგ ბმულზე.",
     "Data plan options" : "მონაცემების გეგმის არჩევნები",
