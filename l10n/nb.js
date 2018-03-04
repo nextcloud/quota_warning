@@ -5,6 +5,7 @@ OC.L10N.register(
     "Saved!" : "Lagret.",
     "Quota warning" : "Kvotevarsel",
     "Nearing your storage quota" : "Lagringskvoten er nesten brukt opp",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Du bruker mer enn %d%% av din datakvote. Prøv å rydde plass ved å slette gamle filer du ikke trenger lenger.",
     "Or click the following button for options to change your data plan." : "Klikk på påfølgende knapp for valg om endring av din dataplan.",
     "Or click the following link for options to change your data plan." : "Klikk på påfølgende lenke for valg om endring av din dataplan.",
     "Data plan options" : "Valg for dataplan",
