@@ -9,6 +9,8 @@ OC.L10N.register(
     "Data plan options" : "Επιλογές σχεδίου δεδομένων",
     "You are using more than %d%% of your storage quota" : "Χρησιμοποιείτε μεγαλύτερο από %d%%του ορίου αποθήκευσής σας ",
     "First notification" : "Πρώτη ειδοποίηση",
-    "Send an email" : "Αποστολή ηλεκτρονικού ταχυδρομείου"
+    "Send an email" : "Αποστολή ηλεκτρονικού ταχυδρομείου",
+    "Second notification" : "Δεύτερη ειδοποίηση",
+    "Final notification" : "Τελευταία ειδοποίηση"
 },
 "nplurals=2; plural=(n != 1);");
