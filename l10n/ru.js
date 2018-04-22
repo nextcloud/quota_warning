@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Сохранение...",
+    "Saving…" : "Сохранение…",
     "Saved!" : "Сохранено!",
     "Quota warning" : "Предупреждение квотирования",
     "Nearing your storage quota" : "Приближение к квоте хранилища",
@@ -15,7 +15,7 @@ OC.L10N.register(
     "Second notification" : "Второе уведомление",
     "Final notification" : "Последнее уведомление",
     "Link to quota management" : "Ссылка на управление квотой",
-    "Resend notifications after … days" : "Отправить уведомление повторно через ... дней",
+    "Resend notifications after … days" : "Отправить уведомление повторно через … дней",
     "Set to 0 if the user should only receive one notification." : "Укажите 0 для отправки пользователю только одного уведомления.",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Использовано более %d%% квоты хранилища. Попробуйте освободить место удалением старых ненужных файлов."
 },
