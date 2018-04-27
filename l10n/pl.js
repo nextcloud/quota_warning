@@ -5,6 +5,7 @@ OC.L10N.register(
     "Saved!" : "Zapisano!",
     "Quota warning" : "Ostrzeżenie o limicie",
     "Nearing your storage quota" : "Zbliżasz się do limitu dostępnego miejsca",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Wykorzystujesz ponad %d%% Twojego limitu miejsca. Spróbuj zwolnić miejsce usuwając stare lub niepotrzebne pliki.",
     "Or click the following button for options to change your data plan." : "Lub kliknij przycisk, aby zobaczyć opcje zmiany planu danych.",
     "Or click the following link for options to change your data plan." : "Lub kliknij link, aby zobaczyć opcje zmiany planu danych.",
     "Data plan options" : "Opcje",
