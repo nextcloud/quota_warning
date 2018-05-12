@@ -2,7 +2,7 @@ OC.L10N.register(
     "quota_warning",
     {
     "Saving…" : "Guardant",
-    "Saved!" : "Guardat",
+    "Saved!" : "Desat!",
     "Quota warning" : "Avís de quota",
     "Nearing your storage quota" : "S'està cercant la quota d'emmagatzematge",
     "Or click the following button for options to change your data plan." : "O feu clic al botó següent per obtenir opcions per canviar el pla de dades.",
