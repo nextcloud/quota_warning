@@ -18,4 +18,4 @@ OC.L10N.register(
     "Set to 0 if the user should only receive one notification." : "Nastavte na 0 ak má používateľ dostávať len jeden oznam.",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Využívate viac než %d%% vašej kvóty úložiska. Vymazaním súborov, ktoré už nepotrebujete získate opäť voľné miesto."
 },
-"nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;");
+"nplurals=4; plural=(n % 1 == 0 ? 4: n==1 ? 1: n % 1 == 0 && n>=2 && n<=4 ? 3);");
