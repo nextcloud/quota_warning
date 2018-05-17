@@ -15,5 +15,5 @@
     "Resend notifications after … days" : "Iš naujo siųsti pranešimus po ... dienų",
     "Set to 0 if the user should only receive one notification." : "Nustatykite 0, jei norite gauti tik vieną perspėjimą",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Naudojate daugiau nei %d%% jums leidžiamo duomenų kiekio. Pabandykite atlaisvinti šiek tiek vietos ištrindami senus nebenaudojamus failus. "
-},"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);"
+},"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 1 : (n%10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 3 : n % 1 != 0 ? 4);"
 }
