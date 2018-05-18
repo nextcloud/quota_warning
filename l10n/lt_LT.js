@@ -18,4 +18,4 @@ OC.L10N.register(
     "Set to 0 if the user should only receive one notification." : "Nustatykite 0, jei norite gauti tik vieną perspėjimą",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Naudojate daugiau nei %d%% jums leidžiamo duomenų kiekio. Pabandykite atlaisvinti šiek tiek vietos ištrindami senus nebenaudojamus failus. "
 },
-"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 1 : (n%10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 3 : n % 1 != 0 ? 4);");
+"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
