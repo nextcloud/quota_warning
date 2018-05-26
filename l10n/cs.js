@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Ukládám...",
+    "Saving…" : "Ukládání…",
     "Saved!" : "Uloženo!",
     "Quota warning" : "Varování kvóty",
     "Nearing your storage quota" : "Blížíte se ke konci kapacity vašeho uložiště",
@@ -9,6 +9,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Nebo klikněte na následující odkaz pro možnosti změny datového tarifu.",
     "Data plan options" : "Možnosti datového tarifu",
     "You are using more than %d%% of your storage quota" : "Využíváte více než %d%% vaší kapacity uložiště",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Tato aplikace zasílá upozornění uživatelům kteří dosáhli 85, 90 a 95% své kvóty.",
     "First notification" : "První upozornění",
     "Send an email" : "Odeslat e-mail",
     "Second notification" : "Druhé upozornění",
