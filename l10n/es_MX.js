@@ -10,6 +10,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "O bien da click en la siguiente liga para ver las opciones de cambio de tu plan de datos. ",
     "Data plan options" : "Opciones de planes de datos",
     "You are using more than %d%% of your storage quota" : "Usted está usando más de %d %% de su cuota de almacenamiento",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Esta aplicación manda notifiaciones cuando un usuario alcanza un 85, 90 y 95% de su cuota.",
     "First notification" : "Primer aviso",
     "Send an email" : "Enviar correo electrónico",
     "Second notification" : "Segundo aviso",
