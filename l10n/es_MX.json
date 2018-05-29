@@ -9,6 +9,7 @@
     "Data plan options" : "Opciones de planes de datos",
     "You are using more than %d%% of your storage quota" : "Usted está usando más de %d %% de su cuota de almacenamiento",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Esta aplicación manda notifiaciones cuando un usuario alcanza un 85, 90 y 95% de su cuota.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Esta aplicación manda notificaciones a usuarios cuando alcanzan el 85, 90 y 95% de su cuota (verficado una vez al día).\nAdicionalmente se puede enviar un correo electrónico a los usuarios. El valor de los porcentajes puede ser cambiado en las configuraciones de administración.\nTambién es posible enviar una liga en el correo electrónico y la notificación de las opciones para ampliar el plan. ",
     "First notification" : "Primer aviso",
     "Send an email" : "Enviar correo electrónico",
     "Second notification" : "Segundo aviso",
