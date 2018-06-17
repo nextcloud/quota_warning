@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Saving…" : "保存中...",
     "Saved!" : "保存しました！",
-    "Quota warning" : "Quotaについての警告",
+    "Quota warning" : "クォータの警告",
     "Nearing your storage quota" : "ストレージ容量に近づいています",
     "Or click the following button for options to change your data plan." : "または、データプランを変更する場合はボタンをクリックしてください。",
     "Or click the following link for options to change your data plan." : "または、データプランを変更する場合はリンクをクリックしてください。",
