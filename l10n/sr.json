@@ -8,6 +8,8 @@
     "Or click the following link for options to change your data plan." : "Или идите на следећу везу за опције промене Вашег пакета података.",
     "Data plan options" : "Опцје пакета података",
     "You are using more than %d%% of your storage quota" : "Користите више од %d%% Ваше квоте складишта ",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Ова апликација шаље обавештења корисницима када достигну 85, 90 и 95% њихове квоте.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Ова апликација шаље обавештења корисницима када достигну 85, 90 и 95% њихове квоте (проверава се једном дневно).\nДодатно се може слати и е-пошта корисницима. Ове три вредности за проценте се могу изменити у администраторским поставкама.\nТакође је могуће и додати везу у е-пошти и обавештење за опцију продаје квоте.",
     "First notification" : "Прво обавештење",
     "Send an email" : "Пошаљи е-пошту",
     "Second notification" : "Друго обавештење",
