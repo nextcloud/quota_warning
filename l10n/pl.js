@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Zapisywanie...",
+    "Saving…" : "Zapisywanie…",
     "Saved!" : "Zapisano!",
     "Quota warning" : "Ostrzeżenie o limicie",
     "Nearing your storage quota" : "Zbliżasz się do limitu dostępnego miejsca",
@@ -15,7 +15,7 @@ OC.L10N.register(
     "Second notification" : "Drugie powiadomienie",
     "Final notification" : "Ostatnie powiadomienie",
     "Link to quota management" : "Link do zarządzania limitem",
-    "Resend notifications after … days" : "Wyślij ponownie powiadomienia po ... dniach",
+    "Resend notifications after … days" : "Wyślij ponownie powiadomienia po … dniach",
     "Set to 0 if the user should only receive one notification." : "Ustaw na 0 jeśli użytkownik ma otrzymać tylko jedno powiadomienie.",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Wykorzystujesz ponad %d%% Twojego limitu miejsca. Spróbuj zwolnić miejsce usuwając stare lub niepotrzebne pliki."
 },
