@@ -10,6 +10,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Of klik op de onderstaande link voor opties om je data plan te wijzigen.",
     "Data plan options" : "Data plan opties",
     "You are using more than %d%% of your storage quota" : "Je gebruikt meer dan  %d%% van je opslagquotum",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Deze app verstuurt meldingen naar gebruikers als ze 85, 90 en 95% van hun quotum gebruikt hebben.",
     "First notification" : "Eerste notificatie",
     "Send an email" : "Stuur een email",
     "Second notification" : "Tweede notificatie",
