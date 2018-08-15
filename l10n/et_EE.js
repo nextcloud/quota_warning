@@ -5,6 +5,7 @@ OC.L10N.register(
     "Saved!" : "Salvestatud!",
     "Quota warning" : "Limiidi hoiatus",
     "Nearing your storage quota" : "Oled liginemas andmemahu limiidile",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Kasutad %d%% andmemahtu üle oma limiidi. Kustuta andmemahu vähendamiseks mõned ebavajalikud failid ära.",
     "Or click the following button for options to change your data plan." : "Või vaata siit võimalusi oma andmemahu limiidi muutmiseks.",
     "Or click the following link for options to change your data plan." : "Või vaata siit võimalusi oma andmemahu limiidi muutmiseks.",
     "Data plan options" : "Andmemahu valikud",
