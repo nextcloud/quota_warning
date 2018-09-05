@@ -21,14 +21,14 @@ It is also possible to have a link in the email and the notification for upsell 
 
 	<id>quota_warning</id>
 	<namespace>QuotaWarning</namespace>
-	<version>1.3.0</version>
+	<version>1.4.0</version>
 
 	<types>
 		<filesystem/>
 	</types>
 
 	<dependencies>
-		<nextcloud min-version="14" max-version="14" />
+		<nextcloud min-version="15" max-version="15" />
 	</dependencies>
 
 	<settings>
