@@ -1,43 +1,36 @@
 <?xml version="1.0"?>
-<info>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>quota_warning</id>
 	<name>Quota warning</name>
 	<summary>This app sends notifications to users when they reached 85, 90 and 95% of their quota.</summary>
 	<description>This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).
 In addition an email can be sent to the users. The three percentages can be changed in the admin settings.
 It is also possible to have a link in the email and the notification for upsell options.</description>
-	<licence>AGPL</licence>
-	<author>Joas Schilling</author>
-
-	<category>files</category>
-	<category>monitoring</category>
-
-	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/notification.png</screenshot>
-	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/email.png</screenshot>
-	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/admin-settings.png</screenshot>
-
-	<website>https://github.com/nextcloud/quota_warning</website>
-	<bugs>https://github.com/nextcloud/quota_warning/issues</bugs>
-	<repository>https://github.com/nextcloud/quota_warning</repository>
-
-	<id>quota_warning</id>
-	<namespace>QuotaWarning</namespace>
 	<version>1.4.0</version>
-
+	<licence>agpl</licence>
+	<author>Joas Schilling</author>
+	<namespace>QuotaWarning</namespace>
 	<types>
 		<filesystem/>
 	</types>
-
+	<category>files</category>
+	<category>monitoring</category>
+	<website>https://github.com/nextcloud/quota_warning</website>
+	<bugs>https://github.com/nextcloud/quota_warning/issues</bugs>
+	<repository>https://github.com/nextcloud/quota_warning</repository>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/notification.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/email.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/admin-settings.png</screenshot>
 	<dependencies>
 		<nextcloud min-version="15" max-version="15" />
 	</dependencies>
-
-	<settings>
-		<admin>OCA\QuotaWarning\Settings</admin>
-	</settings>
-
 	<repair-steps>
 		<install>
 			<step>OCA\QuotaWarning\Migration\Install</step>
 		</install>
 	</repair-steps>
+	<settings>
+		<admin>OCA\QuotaWarning\Settings</admin>
+	</settings>
 </info>
