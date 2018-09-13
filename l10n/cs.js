@@ -15,7 +15,7 @@ OC.L10N.register(
     "Second notification" : "Druhé upozornění",
     "Final notification" : "Konečné oznámení",
     "Link to quota management" : "Odkaz na správu kvót",
-    "Resend notifications after … days" : "Opětovné zaslání oznámení po ... dnech",
+    "Resend notifications after … days" : "Opětovné zaslání oznámení po … dnech",
     "Set to 0 if the user should only receive one notification." : "Nastavte na hodnotu 0 v případě, že uživatel by měl obdržet pouze jedno oznámení.",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Využíváte více než %d%% kapacity vašeho uložiště. Pokuste se uvolnit nějaký prostor tím, že odstraníte staré soubory, které už nepotřebujete."
 },
