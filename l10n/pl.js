@@ -10,6 +10,8 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Lub kliknij link, aby zobaczyć opcje zmiany planu danych.",
     "Data plan options" : "Opcje",
     "You are using more than %d%% of your storage quota" : "Wykorzystano już ponad %d%% dostępnego miejsca",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Ta aplikacja wysyła powiadomienia do użytkowników, którzy osiągnęli 85, 90 i 95% limitu miejsca.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Ta aplikacja wysyła powiadomienia do użytkowników, którzy osiągnęli 85, 90 i 95% limitu miejsca (sprawdzane raz dziennie). Dodatkowo może zostać wysłany e-mail do użytkowników. Te trzy wartości procentowe można zmienić w ustawieniach administratora. Istnieje również możliwość umieszczenia linku w wiadomości e-mail i powiadomieniu o opcjach dodatkowych.",
     "First notification" : "Pierwsze powiadomienie",
     "Send an email" : "Wyślij e-mail",
     "Second notification" : "Drugie powiadomienie",
