@@ -10,6 +10,7 @@ OC.L10N.register(
     "Data plan options" : "Možnosti datového tarifu",
     "You are using more than %d%% of your storage quota" : "Využíváte více než %d%% vaší kapacity uložiště",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Tato aplikace zasílá upozornění uživatelům kteří dosáhli 85, 90 a 95% své kvóty.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Tato aplikace pošle oznámení uživatelům, kteří dosáhli 85, 90 a 95% jejich kvóty (kontroluje se jednou za den).\nKrom toho je možné poslat uživatelům e-mail. Tyto tři úrovně je možné změnit v nastavení správy.\nJe také možné do e-mailu vložit odkaz a oznámení o volbách dokupu.",
     "First notification" : "První upozornění",
     "Send an email" : "Odeslat e-mail",
     "Second notification" : "Druhé upozornění",
