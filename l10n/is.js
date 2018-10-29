@@ -10,6 +10,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Eða smelltu á eftirfarandi tengil til að sjá valkosti til að breyta gagnamagninu þínu.",
     "Data plan options" : "Valkostir gagnamagns",
     "You are using more than %d%% of your storage quota" : "Þú ert að nota meira en %d%% af geymslukvótanum þínum",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Þetta forrit sendir tilkynningar til notenda þegar þeir hafa náð 85, 90 og 95% af kvóta sínum.",
     "First notification" : "Fyrsta aðvörun",
     "Send an email" : "Senda tölvupóst",
     "Second notification" : "Önnur aðvörun",
