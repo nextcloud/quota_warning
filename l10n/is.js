@@ -11,6 +11,7 @@ OC.L10N.register(
     "Data plan options" : "Valkostir gagnamagns",
     "You are using more than %d%% of your storage quota" : "Þú ert að nota meira en %d%% af geymslukvótanum þínum",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Þetta forrit sendir tilkynningar til notenda þegar þeir hafa náð 85, 90 og 95% af kvóta sínum.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Þetta forrit sendir tilkynningar til notenda þegar þeir hafa náð 85, 90 og 95% af kvóta sínum (athugað einu sinni á dag).\nAð auki er hægt að senda notendum tölvupóst. Þessum þremur prósentutölum er hægt að breyta í stjórnstillingum.\nEinnig er hægt að hafa tengil í tölvupóstinum auk tilkynningar um aðferðir við að uppfæra kvóta.",
     "First notification" : "Fyrsta aðvörun",
     "Send an email" : "Senda tölvupóst",
     "Second notification" : "Önnur aðvörun",
