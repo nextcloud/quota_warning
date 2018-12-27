@@ -10,6 +10,7 @@ OC.L10N.register(
     "Or click the following link for options to change your data plan." : "Eller klicka på följande länk för inställningar för att ändra din dataplan.",
     "Data plan options" : "Alternativ för dataplan",
     "You are using more than %d%% of your storage quota" : "Du använder mer än %d%% av ditt lagringsutrymme",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Denna app skickar meddelanden till användare när de nådde 85, 90 och 95% av sin kvot.",
     "First notification" : "Första meddelande",
     "Send an email" : "Skicka e-post",
     "Second notification" : "Andra meddelande",
