@@ -5,7 +5,7 @@ OC.L10N.register(
     "Saved!" : "Gardado!",
     "Quota warning" : "Aviso de cota",
     "Nearing your storage quota" : "Preto da súa cota de almacenamento",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Está a usar máis do %d%% da súa cota de almacenamento. Tente liberar espazo borrando ficheiros antigos que xa non necesite.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Está a usar máis do %d%% da súa cota de almacenamento. Tente liberar espazo eliminando ficheiros antigos que xa non necesite.",
     "Or click the following button for options to change your data plan." : "Ou prema no seguinte botón para ver opcións para cambiar o seu plan de datos. ",
     "Or click the following link for options to change your data plan." : "Ou prema na seguinte ligazón para ver opcións para cambiar o seu plan de datos. ",
     "Data plan options" : "Opcións de plans de datos ",
@@ -19,6 +19,6 @@ OC.L10N.register(
     "Link to quota management" : "Ligazón á xestión de cotas",
     "Resend notifications after … days" : "Volver enviar notificacións após … días ",
     "Set to 0 if the user should only receive one notification." : "Estabelézao a 0 se o usuario só debe recibir unha notificación.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Está a usar máis do %d%% da súa cota de almacenamento. Tente liberar espazo borrando ficheiros antigos que xa non necesite."
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Está a usar máis do %d%% da súa cota de almacenamento. Tente liberar espazo eliminando ficheiros antigos que xa non necesite."
 },
 "nplurals=2; plural=(n != 1);");
