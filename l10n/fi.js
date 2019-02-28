@@ -13,7 +13,6 @@ OC.L10N.register(
     "Final notification" : "Viimeinen ilmoitus",
     "Link to quota management" : "Linkki kiintiöhallintaan",
     "Resend notifications after … days" : "Lähetä ilmoitukset uudelleen … päivän jälkeen",
-    "Set to 0 if the user should only receive one notification." : "Aseta arvoon 0 jos käyttäjän tulee vastaanottaa vain yksi ilmoitus.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Käytössäsi on %d%% enemmän kuin kiintiöksesi on määritetty. Vapauta tilaa poistamalla tarpeettomia tiedostoja."
+    "Set to 0 if the user should only receive one notification." : "Aseta arvoon 0 jos käyttäjän tulee vastaanottaa vain yksi ilmoitus."
 },
 "nplurals=2; plural=(n != 1);");

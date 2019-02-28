@@ -15,7 +15,6 @@
     "Final notification" : "最後通告",
     "Link to quota management" : "クォータ管理にリンク",
     "Resend notifications after … days" : "... 日後に再度通告を送信",
-    "Set to 0 if the user should only receive one notification." : "通知を1回だけ送信する場合には、0に設定してください。",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "ストレージクォータの %d%% 以上使用しています。もう必要なくなった古いファイルを削除して、空き容量を増やしてください。"
+    "Set to 0 if the user should only receive one notification." : "通知を1回だけ送信する場合には、0に設定してください。"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

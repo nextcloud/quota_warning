@@ -16,7 +16,6 @@ OC.L10N.register(
     "Final notification" : "Viimane märguanne",
     "Link to quota management" : "Link andmemahu limiidi manageerimiseks",
     "Resend notifications after … days" : "Saada märguanne uuesti peale ... päeva",
-    "Set to 0 if the user should only receive one notification." : "Märgi 0 kui kasutaja peaks saama ainult ühe märguande",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Kasutad %d%% andmemahtu üle oma limiidi. Kustuta mõned ebavajalikud failid ära andmemahu vähendamiseks."
+    "Set to 0 if the user should only receive one notification." : "Märgi 0 kui kasutaja peaks saama ainult ühe märguande"
 },
 "nplurals=2; plural=(n != 1);");

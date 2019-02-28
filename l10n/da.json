@@ -13,7 +13,6 @@
     "Final notification" : "Sidste notifikation",
     "Link to quota management" : "Link til plads administration",
     "Resend notifications after … days" : "Send notifikation igen efter ... dage",
-    "Set to 0 if the user should only receive one notification." : "Sæt til 0 hvis brugeren kun skal modtage en notifikation.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Du bruger mere en %d%% af din plads. Prøv at frigøre noget plads ved at slette gamle filer du ikke bruger mere."
+    "Set to 0 if the user should only receive one notification." : "Sæt til 0 hvis brugeren kun skal modtage en notifikation."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

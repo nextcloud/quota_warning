@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Letzte Benachrichtigung",
     "Link to quota management" : "Link zu den Kontingenteinstellungen",
     "Resend notifications after … days" : "Benachrichtigung alle ... Tage erneut senden",
-    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Nutzer nur eine Benachrichtigung erhalten soll",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Sie nutzen mehr als %d%% des Ihnen zur Verfügung stehenden Speicherplatzes. Versuchen Sie Speicherplatz freizugeben, indem Sie ältere, nicht mehr benötigte Dateien löschen."
+    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Nutzer nur eine Benachrichtigung erhalten soll"
 },
 "nplurals=2; plural=(n != 1);");

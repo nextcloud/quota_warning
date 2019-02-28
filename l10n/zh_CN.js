@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "最后一次提醒",
     "Link to quota management" : "链接到限额管理",
     "Resend notifications after … days" : "在 ... 天以后重发提醒",
-    "Set to 0 if the user should only receive one notification." : "设置为 0 如果用户仅应接收一次提醒。",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "您的使用已超过存储限额 %d%%。可以尝试删除不再需要的旧文件释放一些空间。"
+    "Set to 0 if the user should only receive one notification." : "设置为 0 如果用户仅应接收一次提醒。"
 },
 "nplurals=1; plural=0;");
