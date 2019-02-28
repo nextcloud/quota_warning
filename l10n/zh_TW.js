@@ -16,7 +16,6 @@ OC.L10N.register(
     "Final notification" : "最後通知",
     "Link to quota management" : "容量管理連結",
     "Resend notifications after … days" : "在...天後重寄通知",
-    "Set to 0 if the user should only receive one notification." : "如果使用者只需要收到一次通知，請設定為 0",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "您正在使用超過容量限制 %d%% 的空間，請刪除一些不需要的檔案以釋放空間"
+    "Set to 0 if the user should only receive one notification." : "如果使用者只需要收到一次通知，請設定為 0"
 },
 "nplurals=1; plural=0;");

@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Végső értesítés",
     "Link to quota management" : "Hivatkozás a kvótakezeléshez",
     "Resend notifications after … days" : "Értesítés újraküldése … naponta",
-    "Set to 0 if the user should only receive one notification." : "Állítsa 0-ra, ha a felhasználó csak egy értesítést kell kapjon.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Több mint ennyit használ a tárolókvótájából: %d %%. Próbáljon meg helyet felszabadítani a régi vagy már nem használt fájlok törlésével."
+    "Set to 0 if the user should only receive one notification." : "Állítsa 0-ra, ha a felhasználó csak egy értesítést kell kapjon."
 },
 "nplurals=2; plural=(n != 1);");

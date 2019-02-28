@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Последње обавештење",
     "Link to quota management" : "Веза за управљање квотама",
     "Resend notifications after … days" : "Пошаљи опет обавештење после колико дана",
-    "Set to 0 if the user should only receive one notification." : "Поставите на 0 ако корисник треба да прими само једно обавештење.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Користите више од %d%% од Ваше квоте складишта. Ослободите места тако што ћете обрисати старе фајлове који Вам више не требају."
+    "Set to 0 if the user should only receive one notification." : "Поставите на 0 ако корисник треба да прими само једно обавештење."
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

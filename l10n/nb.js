@@ -16,7 +16,6 @@ OC.L10N.register(
     "Final notification" : "Siste varsel",
     "Link to quota management" : "Lenke til kvotebehandling",
     "Resend notifications after … days" : "Send varsler på nytt etter … dager",
-    "Set to 0 if the user should only receive one notification." : "Sett til 0 hvis brukeren bare skal motta ett varsel.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Du bruker mer enn %d%% av din lagringskvote. For å frigjøre noe plass, prøv å slette gamle filer du ikke trenger lenger."
+    "Set to 0 if the user should only receive one notification." : "Sett til 0 hvis brukeren bare skal motta ett varsel."
 },
 "nplurals=2; plural=(n != 1);");

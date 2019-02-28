@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Lokaaðvörun",
     "Link to quota management" : "Tengill á umsýslu kvóta",
     "Resend notifications after … days" : "Senda aðvaranir aftur eftir … daga",
-    "Set to 0 if the user should only receive one notification." : "Settu þetta á 0 ef notandinn á aðeins að fá eina aðvörun.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Þú ert að nota meira en %d%% af geymslukvótanum þínum. Reyndu að losa um eitthvað pláss með því að eyða gömlum skrám sem þú þarft ekki lengur að nota."
+    "Set to 0 if the user should only receive one notification." : "Settu þetta á 0 ef notandinn á aðeins að fá eina aðvörun."
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

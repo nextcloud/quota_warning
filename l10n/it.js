@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Ultima notifica",
     "Link to quota management" : "Collegamento alla gestione quote",
     "Resend notifications after … days" : "Invia nuovamente le notifiche dopo ... giorni",
-    "Set to 0 if the user should only receive one notification." : "Imposta a 0 se l'utente deve ricevere solo una notifica.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Stai utilizzando più di %d%% della tua quota di archiviazione. Prova a liberare spazio eliminando vecchi file non più necessari."
+    "Set to 0 if the user should only receive one notification." : "Imposta a 0 se l'utente deve ricevere solo una notifica."
 },
 "nplurals=2; plural=(n != 1);");
