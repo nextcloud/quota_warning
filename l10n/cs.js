@@ -18,7 +18,6 @@ OC.L10N.register(
     "Final notification" : "Konečné oznámení",
     "Link to quota management" : "Odkaz na správu kvót",
     "Resend notifications after … days" : "Opětovné zaslání oznámení po … dnech",
-    "Set to 0 if the user should only receive one notification." : "Nastavte na hodnotu 0 v případě, že uživatel by měl obdržet pouze jedno oznámení.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Využíváte více než %d%% kapacity vašeho uložiště. Pokuste se uvolnit nějaký prostor tím, že odstraníte staré soubory, které už nepotřebujete."
+    "Set to 0 if the user should only receive one notification." : "Nastavte na hodnotu 0 v případě, že uživatel by měl obdržet pouze jedno oznámení."
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

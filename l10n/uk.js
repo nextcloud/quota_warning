@@ -16,7 +16,6 @@ OC.L10N.register(
     "Final notification" : "Останнє повідомлення",
     "Link to quota management" : "Посилання на управління квотами",
     "Resend notifications after … days" : "Повторно надіслати сповіщення після ... днів",
-    "Set to 0 if the user should only receive one notification." : "Встановіть 0, якщо користувачеві потрібно отримати лише одне сповіщення.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Ви використовуєте більш ніж %d%% квоти на зберігання. Спробуйте звільнити місце, видаляючи старі файли, які вам більше не потрібні."
+    "Set to 0 if the user should only receive one notification." : "Встановіть 0, якщо користувачеві потрібно отримати лише одне сповіщення."
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");

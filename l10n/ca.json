@@ -13,7 +13,6 @@
     "Final notification" : "Notificació final",
     "Link to quota management" : "Enllaç a la gestió de quotes",
     "Resend notifications after … days" : "Reenvieu notificacions després de ... dies",
-    "Set to 0 if the user should only receive one notification." : "Estableix a 0 si l'usuari només hauria de rebre una notificació.",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don´t need anymore." : "Esteu utilitzant més de la quota d'emmagatzematge %d%%. Intenta alliberar espai per eliminar fitxers antics que ja no necessiteu."
+    "Set to 0 if the user should only receive one notification." : "Estableix a 0 si l'usuari només hauria de rebre una notificació."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
