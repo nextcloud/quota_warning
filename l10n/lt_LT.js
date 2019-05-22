@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Galutinis pranešimas",
     "Link to quota management" : "Nuoroda į leidžiamo duomenų kiekio valdymą",
     "Resend notifications after … days" : "Iš naujo siųsti pranešimus po ... dienų",
-    "Set to 0 if the user should only receive one notification." : "Nustatykite 0, jei norite gauti tik vieną perspėjimą"
+    "Set to 0 if the user should only receive one notification." : "Nustatykite 0, jei naudotojas turėtų gauti tik vieną pranešimą."
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
