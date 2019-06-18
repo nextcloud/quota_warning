@@ -9,7 +9,7 @@
     "Data plan options" : "データオプションプラン",
     "You are using more than %d%% of your storage quota" : "ストレージクオータの%d%%以上使用中です。",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "このアプリはクオータの85%、90%、95%に達した時にユーザーに通知を送信します。",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "このアプリは、ユーザがクォータの85%,90%および95%(毎日1回チェック)に達すると通知します。\nさらに、ユーザにEメールを送信することもできます。 この 3 つのパーセンテージは管理者が設定で変更できます。\nまた、Eメールにリンクを張ったり、増強オプションをおすすめしたりすることもできます。",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "このアプリは、クオータの85%、90%、95%に達するとユーザーに通知します(毎日1回チェックします)。\nさらに、ユーザーにメールを送信することもできます。 この3つのパーセンテージは管理者の設定で変更できます。\nまた、メールにリンクを付けたり、増強オプションを通知させることもできます。",
     "First notification" : "最初の通知",
     "Send an email" : "メールを送信",
     "Second notification" : "2回目の通告",
