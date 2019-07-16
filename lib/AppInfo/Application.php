@@ -63,14 +63,6 @@ class Application extends App {
 
 	public function registerNotifier() {
 		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
-		$notificationManager->registerNotifier(
-			function() {
-				return $this->getContainer()->query(Notifier::class);
-			},
-			function () {
-				$l = $this->getContainer()->query(IL10N::class);
-				return ['id' => self::APP_ID, 'name' => $l->t('Quota warning')];
-			}
-		);
+		$notificationManager->registerNotifierService(Notifier::class);
 	}
 }
