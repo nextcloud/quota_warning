@@ -1,11 +1,11 @@
 { "translations": {
     "Saving…" : "Gemmer...",
     "Saved!" : "Gemt!",
-    "Quota warning" : "Kvote advarsel",
     "Nearing your storage quota" : "Tæt på din lagring grænse",
     "Or click the following button for options to change your data plan." : "Eller klik på følgende knap for at få muligheden for at ændre din data plan.",
     "Or click the following link for options to change your data plan." : "Eller klik på følgende link for at få muligheden for at ændre din data plan.",
     "Data plan options" : "Data plan muligheder",
+    "Quota warning" : "Kvote advarsel",
     "You are using more than %d%% of your storage quota" : "Du bruger mere end %d%% af din diskplads",
     "First notification" : "Første notifikation ",
     "Send an email" : "Send en email",

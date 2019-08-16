@@ -1,12 +1,12 @@
 { "translations": {
     "Saving…" : "Ukladá sa...",
     "Saved!" : "Uložené!",
-    "Quota warning" : "Varovanie o kvóte",
     "Nearing your storage quota" : "Blížite sa k vašej úložnej kvóte",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Využívate viac než %d%% vašej kvóty úložiska. Vymazaním súborov, ktoré už nepotrebujete získate opäť voľné miesto.",
     "Or click the following button for options to change your data plan." : "Alebo kliknite na nasledujúce tlačidlo pre zmenu vášho dátového programu.",
     "Or click the following link for options to change your data plan." : "Alebo kliknite na nasledujúci odkaz pre zmenu vášho dátového programu.",
     "Data plan options" : "Možnosti dátového programu",
+    "Quota warning" : "Varovanie o kvóte",
     "You are using more than %d%% of your storage quota" : "Používate viac než %d%% vašej kvóty úložiska",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Táto aplikácia odosiela notifikácie používateľom keď dosiahnu 85, 90 a 95% kvóty úložiska.",
     "First notification" : "Prvé upozornenie",
