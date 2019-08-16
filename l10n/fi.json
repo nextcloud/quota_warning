@@ -1,9 +1,9 @@
 { "translations": {
     "Saving…" : "Tallennetaan…",
     "Saved!" : "Tallennettu!",
-    "Quota warning" : "Kiintiövaroitus",
     "Nearing your storage quota" : "Tallennustilan kiintiö on tulossa täyteen",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Käytössäsi on %d%% enemmän kuin kiintiöksesi on määritetty. Vapauta tilaa poistamalla tarpeettomia tiedostoja.",
+    "Quota warning" : "Kiintiövaroitus",
     "You are using more than %d%% of your storage quota" : "Käytössäsi on enemmän kuin %d%% tallennustilan kiintiöstäsi",
     "First notification" : "Ensimmäinen ilmoitus",
     "Send an email" : "Lähetä sähköposti",

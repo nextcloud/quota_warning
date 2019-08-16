@@ -1,11 +1,11 @@
 { "translations": {
     "Saving…" : "Guardando...",
     "Saved!" : "¡Guardado!",
-    "Quota warning" : "Advertencia de cuota",
     "Nearing your storage quota" : "Te estás acercando al límite de tu almacenamiento",
     "Or click the following button for options to change your data plan." : "O bien da click en el siguiente botón para ver las opciones de cambio de tu plan de datos. ",
     "Or click the following link for options to change your data plan." : "O bien da click en la siguiente liga para ver las opciones de cambio de tu plan de datos. ",
     "Data plan options" : "Opciones de planes de datos",
+    "Quota warning" : "Advertencia de cuota",
     "You are using more than %d%% of your storage quota" : "Usted está usando más de %d %% de su cuota de almacenamiento",
     "First notification" : "Primer aviso",
     "Send an email" : "Enviar correo electrónico",
