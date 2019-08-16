@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Saving…" : "בתהליך שמירה…",
     "Saved!" : "נשמר!",
-    "Quota warning" : "אזהרת מכסה",
     "Nearing your storage quota" : "המכסה שלך עומדת להסתיים",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "ניצלת למעלה מ־%d%% ממכסת האחסון שלך. כדאי לנסות לפנות קצת מקום על ידי מחיקת קבצים ישנים שאין לך בהם צורך עוד.",
     "Or click the following button for options to change your data plan." : "או ללחוץ על הכפתור שלהלן להצגת אפשרויות לשינוי תכנית הנתונים שלך.",
     "Or click the following link for options to change your data plan." : "או ללחוץ על הקישור שלהלן להצגת אפשרויות לשינוי תכנית הנתונים שלך.",
     "Data plan options" : "אפשרויות תכנית נתונים",
+    "Quota warning" : "אזהרת מכסה",
     "You are using more than %d%% of your storage quota" : "ניצלת למעלה מ־%d%% ממכסת האחסון שלך",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "יישומון זה שולח התרעות למשתמשים כשהם מגיעים ל־85, 90 ו־95% מתוך המכסה שלהם.",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "יישומון זה שולח התרעות למשתמשים כשהם מגיעים ל־85, 90 ו־95% מתוך המכסה שלהם (נבדק מדי יום).\nבנוסף אפשר לשלוח הודעות בדוא״ל למשתמשים. ניתן לשנות את שלושת רמות האחוזים בהגדרות הניהול.\nניתן גם לקבל קישור בהודעה ובהתרעה לאפשרויות שדרוג חבילה.",

@@ -1,12 +1,12 @@
 { "translations": {
     "Saving…" : "Сохранение…",
     "Saved!" : "Сохранено!",
-    "Quota warning" : "Предупреждение квотирования",
     "Nearing your storage quota" : "Приближение к квоте хранилища",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Использовано более %d%% квоты хранилища. Попробуйте освободить место удалением старых ненужных файлов.",
     "Or click the following button for options to change your data plan." : "Или нажмите на кнопку для изменений плана данных.",
     "Or click the following link for options to change your data plan." : "Или нажмите на ссылку для изменения плана данных.",
     "Data plan options" : "Параметры плана данных",
+    "Quota warning" : "Предупреждение квотирования",
     "You are using more than %d%% of your storage quota" : "Вы используете более %d%% от установленного размера хранилища",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Это приложение отправляет уведомления пользователям, когда они достигли 85, 90 и 95% своей дисковой квоты.",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Это приложение отправляет уведомления пользователям, когда они достигли 85, 90 и 95% своей квоты (проверяется один раз в день).\nКроме того, пользователю может быть отправлено электронное письмо. Это три границы в процентах могут быть изменены в настройках администратора.\nТакже возможно получить ссылку в письме и уведомлении о вариантах дальнейших действий.",

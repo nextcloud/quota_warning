@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "Saving…" : "Zapisywanie…",
     "Saved!" : "Zapisano!",
-    "Quota warning" : "Ostrzeżenie o limicie",
     "Nearing your storage quota" : "Zbliżasz się do limitu dostępnego miejsca",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Wykorzystujesz ponad %d%% Twojego limitu miejsca. Spróbuj zwolnić miejsce usuwając stare lub niepotrzebne pliki.",
     "Or click the following button for options to change your data plan." : "Lub kliknij przycisk, aby zobaczyć opcje zmiany planu danych.",
     "Or click the following link for options to change your data plan." : "Lub kliknij link, aby zobaczyć opcje zmiany planu danych.",
     "Data plan options" : "Opcje",
+    "Quota warning" : "Ostrzeżenie o limicie",
     "You are using more than %d%% of your storage quota" : "Wykorzystano już ponad %d%% dostępnego miejsca",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Ta aplikacja wysyła powiadomienia do użytkowników, którzy osiągnęli 85, 90 i 95% limitu miejsca.",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Ta aplikacja wysyła powiadomienia do użytkowników, którzy osiągnęli 85, 90 i 95% limitu miejsca (sprawdzane raz dziennie). Dodatkowo może zostać wysłany e-mail do użytkowników. Te trzy wartości procentowe można zmienić w ustawieniach administratora. Istnieje również możliwość umieszczenia linku w wiadomości e-mail i powiadomieniu o opcjach dodatkowych.",
