@@ -2,7 +2,7 @@ OC.L10N.register(
     "quota_warning",
     {
     "Saving…" : "Enregistrement…",
-    "Saved!" : "Sauvegardé !",
+    "Saved!" : "Enregistré !",
     "Nearing your storage quota" : "Proche du quota de votre stockage",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Vous utilisez plus de %d%% de votre quota de stockage. Essayez de libérer un peu d'espace en supprimant d'anciens fichiers dont vous n'avez plus besoin.",
     "Or click the following button for options to change your data plan." : "Ou cliquez sur le bouton suivant pour modifier votre plan d'utilisation de données.",
