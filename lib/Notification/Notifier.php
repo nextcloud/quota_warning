@@ -29,6 +29,7 @@ use OCA\QuotaWarning\CheckQuota;
 use OCP\IConfig;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
+use OCP\Notification\AlreadyProcessedException;
 use OCP\Notification\INotification;
 use OCP\Notification\INotifier;
 
@@ -94,7 +95,7 @@ class Notifier implements INotifier {
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
 		if ($usage < $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
 			// User is not in danger zone anymore
-			throw new \InvalidArgumentException('Less usage');
+			throw new AlreadyProcessedException();
 		}
 
 		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {

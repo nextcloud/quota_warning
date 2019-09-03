@@ -90,8 +90,7 @@ class NotifierTest extends \Test\TestCase {
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
-	 * @expectedExceptionMessage Less usage
+	 * @expectedException \OCP\Notification\AlreadyProcessedException
 	 */
 	public function testPrepareLessUsage() {
 		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
