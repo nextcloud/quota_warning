@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Konservante...",
+    "Saving…" : "Konservado...",
     "Saved!" : "Konservita!",
     "Nearing your storage quota" : "Aproksimiĝo al via konserveja kvoto",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Vi uzas pli ol %d %% el via konserveja kvoto. Provu liberigi iom da spaco per forigi de malnovaj dosieroj, kiujn vi ne plu bezonas.",
@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Lasta sciigo",
     "Link to quota management" : "Ligilo al kvota administrado",
     "Resend notifications after … days" : "Resendi sciigojn post ... tagoj",
-    "Set to 0 if the user should only receive one notification." : "Enmeti 0, ĉu la uzanto ricevu nur unu sciigon."
+    "Set to 0 if the user should only receive one notification." : "Enmeti 0, por ke la uzanto ricevu nur unu sciigon."
 },
 "nplurals=2; plural=(n != 1);");
