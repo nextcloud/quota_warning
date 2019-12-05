@@ -46,7 +46,7 @@ class AppTest extends TestCase {
 	/** @var IManager|\PHPUnit_Framework_MockObject_MockObject */
 	protected $notificationManager;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->languageFactory = $this->createMock(IFactory::class);
@@ -62,7 +62,7 @@ class AppTest extends TestCase {
 		$this->overwriteService('L10NFactory', $this->languageFactory);
 	}
 
-	protected function tearDown() {
+	protected function tearDown(): void {
 		$this->restoreService('L10NFactory');
 		$this->restoreService('NotificationManager');
 
