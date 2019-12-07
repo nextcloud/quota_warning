@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Kaydediliyor...",
+    "Saving…" : "Kaydediliyor …",
     "Saved!" : "Kaydedildi!",
     "Nearing your storage quota" : "Depolama kotanızın sınırına yaklaşıyorsunuz",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Depolama kotanızdan %d %% daha fazla kullanıyorsunuz. Artık gerek duymadığınız bazı eski dosyaları silerek yer açmayı deneyin.",
@@ -17,7 +17,7 @@ OC.L10N.register(
     "Second notification" : "İkinci bildirim",
     "Final notification" : "Son bildirim",
     "Link to quota management" : "Kota yönetimi bağlantısı",
-    "Resend notifications after … days" : "Bildirim şu kadar gün sonra yeniden gönderilsin",
+    "Resend notifications after … days" : "Bildirim … gün sonra yeniden gönderilsin",
     "Set to 0 if the user should only receive one notification." : "Kullanıcıya yalnız bir bildirim gönderilmesi için 0 olarak ayarlayın."
 },
 "nplurals=2; plural=(n > 1);");
