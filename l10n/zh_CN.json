@@ -1,5 +1,5 @@
 { "translations": {
-    "Saving…" : "保存中...",
+    "Saving…" : "正在保存…",
     "Saved!" : "已保存！",
     "Nearing your storage quota" : "即将达到存储限额",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "您已经使用了超过 %d%% 的存储配额。请尝试通过删除一些您用不到的文件来释放一些空间。",
