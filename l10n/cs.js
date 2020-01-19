@@ -2,7 +2,7 @@ OC.L10N.register(
     "quota_warning",
     {
     "Saving…" : "Ukládání…",
-    "Saved!" : "Uloženo!",
+    "Saved!" : "Uloženo",
     "Nearing your storage quota" : "Blížíte se ke konci vám přidělené kapacity úložiště",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Využíváte více než %d%% z vám přidělené kapacity úložiště. Pokuste se uvolnit nějaké místo smazáním starých souborů, které už nepotřebujete.",
     "Or click the following button for options to change your data plan." : "Nebo klikněte na následující tlačítko pro možnosti změny datového tarifu.",
