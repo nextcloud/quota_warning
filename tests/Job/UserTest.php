@@ -33,7 +33,7 @@ class UserTest extends \Test\TestCase {
 	/** @var CheckQuota|\PHPUnit_Framework_MockObject_MockObject */
 	protected $checkQuota;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->checkQuota = $this->createMock(CheckQuota::class);

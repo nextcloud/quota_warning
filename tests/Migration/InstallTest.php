@@ -39,7 +39,7 @@ class InstallTest extends \Test\TestCase {
 	/** @var IJobList|\PHPUnit_Framework_MockObject_MockObject */
 	protected $jobList;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->userManager = $this->createMock(IUserManager::class);
