@@ -13,7 +13,7 @@ OC.L10N.register(
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "本应用将会在用户使用了 85%，90%，95% 的限额时发出通知。",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "本应用将会在用户使用了 85%，90%，95% 的限额时发出通知。（每天仅检测一次）\n除了可以发送邮件给用户外。这三个百分比可在管理员设置中进行调整。\n还可以在通知邮件中添加增销方案的售货链接。",
     "First notification" : "第一次提醒",
-    "Send an email" : "发送一封邮件",
+    "Send an email" : "发送一封电子邮件",
     "Second notification" : "第二次提醒",
     "Final notification" : "最后一次提醒",
     "Link to quota management" : "链接到限额管理",
