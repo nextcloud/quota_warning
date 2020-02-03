@@ -1,4 +1,5 @@
 { "translations": {
-    "Saving…" : "در حال ذخیره"
+    "Saving…" : "در حال ذخیره",
+    "Saved!" : "ذخیره!"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
