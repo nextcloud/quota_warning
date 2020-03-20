@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Letzte Benachrichtigung",
     "Link to quota management" : "Link zu den Kontingenteinstellungen",
     "Resend notifications after … days" : "Benachrichtigung alle ... Tage erneut senden",
-    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Nutzer nur eine Benachrichtigung erhalten soll"
+    "Set to 0 if the user should only receive one notification." : "Auf 0 setzen, wenn der Benutzer nur eine Benachrichtigung erhalten soll"
 },
 "nplurals=2; plural=(n != 1);");
