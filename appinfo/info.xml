@@ -7,7 +7,7 @@
 	<description>This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).
 In addition an email can be sent to the users. The three percentages can be changed in the admin settings.
 It is also possible to have a link in the email and the notification for upsell options.</description>
-	<version>1.8.0</version>
+	<version>1.9.0</version>
 	<licence>agpl</licence>
 	<author>Joas Schilling</author>
 	<namespace>QuotaWarning</namespace>
@@ -23,7 +23,7 @@ It is also possible to have a link in the email and the notification for upsell 
 	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/email.png</screenshot>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/master/docs/admin-settings.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="19" max-version="19" />
+		<nextcloud min-version="20" max-version="20" />
 	</dependencies>
 	<repair-steps>
 		<install>
