@@ -4,7 +4,7 @@ OC.L10N.register(
     "Saving…" : "Збереження...",
     "Saved!" : "Збережено!",
     "Nearing your storage quota" : "Наближається ваша квота для зберігання",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Ви використовуєте більш ніж %d%% квоти на зберігання. Спробуйте звільнити місце, видаляючи старі файли, які вам більше не потрібні.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Ви використовуєте більш ніж %d%% квоти на зберігання. Спробуйте звільнити місце - для цього вилучіть старі файли, які вам більше не потрібні.",
     "Or click the following button for options to change your data plan." : "Або натисніть кнопку нижче, щоб змінити план даних.",
     "Or click the following link for options to change your data plan." : "Або натисніть посилання, щоб змінити план даних.",
     "Data plan options" : "Параметри плану даних",
