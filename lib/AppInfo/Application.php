@@ -47,14 +47,14 @@ class Application extends App implements IBootstrap {
 	}
 
 
-	protected function registerLoginHook() {
+	protected function registerLoginHook(): void {
 		Util::connectHook('OC_User', 'post_login', $this, 'loginHook');
 	}
 
 	/**
 	 * @param array $params
 	 */
-	public function loginHook(array $params) {
+	public function loginHook(array $params): void {
 		if (!isset($params['uid'])) {
 			return;
 		}
@@ -66,7 +66,7 @@ class Application extends App implements IBootstrap {
 		);
 	}
 
-	public function registerNotifier() {
+	public function registerNotifier(): void {
 		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
 		$notificationManager->registerNotifierService(Notifier::class);
 	}

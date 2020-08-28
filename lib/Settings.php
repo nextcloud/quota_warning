@@ -34,7 +34,7 @@ class Settings implements ISettings {
 		$this->config = $config;
 	}
 
-	public function getForm() {
+	public function getForm(): TemplateResponse {
 		$response = new TemplateResponse('quota_warning', 'settings');
 		$response->setParams([
 			'info_percentage' => $this->config->getAppValue('quota_warning', 'info_percentage', 85),
@@ -50,11 +50,11 @@ class Settings implements ISettings {
 		return $response;
 	}
 
-	public function getSection() {
+	public function getSection(): string {
 		return 'additional';
 	}
 
-	public function getPriority() {
+	public function getPriority(): int {
 		return 50;
 	}
 }

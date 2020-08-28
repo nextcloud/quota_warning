@@ -39,7 +39,7 @@ class User extends TimedJob {
 		$this->setInterval(86400);
 	}
 
-	protected function run($argument) {
+	protected function run($argument): void {
 		$this->checkQuota->check($argument['uid']);
 	}
 }
