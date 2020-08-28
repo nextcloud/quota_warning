@@ -72,10 +72,6 @@ class NotifierTest extends \Test\TestCase {
 		);
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 * @expectedExceptionMessage Unknown app
-	 */
 	public function testPrepareWrongApp() {
 		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
 		$notification = $this->createMock(INotification::class);
@@ -86,12 +82,11 @@ class NotifierTest extends \Test\TestCase {
 		$notification->expects($this->never())
 			->method('getSubject');
 
+		$this->expectException(\InvalidArgumentException::class);
+		$this->expectExceptionMessage('Unknown app');
 		$this->notifier->prepare($notification, 'en');
 	}
 
-	/**
-	 * @expectedException \OCP\Notification\AlreadyProcessedException
-	 */
 	public function testPrepareLessUsage() {
 		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
 		$notification = $this->createMock(INotification::class);
@@ -115,6 +110,7 @@ class NotifierTest extends \Test\TestCase {
 			->with('user')
 			->willReturn(84.0);
 
+		$this->expectException(\OCP\Notification\AlreadyProcessedException::class);
 		$this->notifier->prepare($notification, 'en');
 	}
 

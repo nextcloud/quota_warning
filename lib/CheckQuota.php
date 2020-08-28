@@ -89,7 +89,7 @@ class CheckQuota {
 	 *
 	 * @param string $userId
 	 */
-	public function check($userId) {
+	public function check(string $userId): void {
 		if (!$this->userManager->userExists($userId)) {
 			$this->jobList->remove(User::class, ['uid' => $userId]);
 			return;
@@ -137,7 +137,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @return float
 	 */
-	public function getRelativeQuotaUsage($userId) {
+	public function getRelativeQuotaUsage(string $userId): float {
 		try {
 			$storage = $this->getStorageInfo($userId);
 		} catch (NotFoundException $e) {
@@ -158,7 +158,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @param float $percentage
 	 */
-	protected function issueWarning($userId, $percentage) {
+	protected function issueWarning(string $userId, float $percentage): void {
 		$this->removeWarning($userId);
 		$notification = $this->notificationManager->createNotification();
 
@@ -180,7 +180,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @param float $percentage
 	 */
-	protected function sendEmail($userId, $percentage) {
+	protected function sendEmail(string $userId, float $percentage): void {
 		$user = $this->userManager->get($userId);
 		if (!$user instanceof IUser) {
 			return;
@@ -239,7 +239,7 @@ class CheckQuota {
 	 *
 	 * @param string $userId
 	 */
-	protected function removeWarning($userId) {
+	protected function removeWarning(string $userId): void {
 		$notification = $this->notificationManager->createNotification();
 
 		try {
@@ -259,7 +259,7 @@ class CheckQuota {
 	 * @param int $level
 	 * @return bool
 	 */
-	protected function shouldIssueWarning($userId, $level) {
+	protected function shouldIssueWarning(string $userId, int $level): bool {
 		$lastWarning = $this->config->getUserValue($userId, Application::APP_ID, 'warning-' . $level, '');
 		if ($lastWarning === '') {
 			return true;
@@ -283,7 +283,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @param string $level
 	 */
-	protected function updateLastWarning($userId, $level) {
+	protected function updateLastWarning(string $userId, string $level): void {
 		$now = new \DateTime();
 		$dateTimeString = $now->format(\DateTime::ATOM);
 		switch ($level) {
@@ -302,7 +302,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @param string $level
 	 */
-	protected function removeLastWarning($userId, $level) {
+	protected function removeLastWarning(string $userId, string $level): void {
 		switch ($level) {
 			case 'info':
 				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-info');
@@ -317,7 +317,7 @@ class CheckQuota {
 	 * @param string $userId
 	 * @return array
 	 */
-	protected function getStorageInfo($userId) {
+	protected function getStorageInfo(string $userId): array {
 		\OC_Util::tearDownFS();
 		\OC_Util::setupFS($userId);
 		return \OC_Helper::getStorageInfo('/');

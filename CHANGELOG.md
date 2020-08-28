@@ -1,6 +1,38 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.9.0 – 2020-08-28
+### Changed
+- Nextcloud 20 compatibility
+
+## 1.8.0 – 2020-06-03
+### Changed
+- Nextcloud 19 compatibility
+
+## 1.7.0 – 2020-01-17
+### Changed
+- Nextcloud 18 compatibility
+
+## 1.6.0 – 2019-09-03
+### Changed
+- Nextcloud 17 compatibility
+
+## 1.5.0 – 2019-04-01
+### Changed
+- Nextcloud 16 compatibility
+
+## 1.4.0 – 2018-12-04
+### Changed
+- Nextcloud 15 compatibility
+
+## 1.3.0 – 2018-08-23
+### Changed
+- Nextcloud 14 compatibility
+
+## 1.2.0 – 2017-11-20
+### Changed
+- Nextcloud 13 compatibility
+
 ## 1.1.1 – 2017-10-13
 ### Fixed
  - Delete the background job when the user does not exist anymore

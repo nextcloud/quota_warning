@@ -26,30 +26,35 @@ namespace OCA\QuotaWarning\AppInfo;
 use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Notification\Notifier;
 use OCP\AppFramework\App;
-use OCP\IL10N;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Util;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
 	const APP_ID = 'quota_warning';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
 
-	public function register() {
+	public function register(IRegistrationContext $context): void {
+	}
+
+	public function boot(IBootContext $context): void {
 		$this->registerLoginHook();
 		$this->registerNotifier();
 	}
 
 
-	protected function registerLoginHook() {
+	protected function registerLoginHook(): void {
 		Util::connectHook('OC_User', 'post_login', $this, 'loginHook');
 	}
 
 	/**
 	 * @param array $params
 	 */
-	public function loginHook(array $params) {
+	public function loginHook(array $params): void {
 		if (!isset($params['uid'])) {
 			return;
 		}
@@ -61,7 +66,7 @@ class Application extends App {
 		);
 	}
 
-	public function registerNotifier() {
+	public function registerNotifier(): void {
 		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
 		$notificationManager->registerNotifierService(Notifier::class);
 	}

@@ -53,7 +53,7 @@ class Install implements IRepairStep {
 	 * @return string
 	 * @since 9.1.0
 	 */
-	public function getName() {
+	public function getName(): string {
 		return 'Add background jobs for existing users';
 	}
 
@@ -61,7 +61,7 @@ class Install implements IRepairStep {
 	 * @param IOutput $output
 	 * @since 9.1.0
 	 */
-	public function run(IOutput $output) {
+	public function run(IOutput $output): void {
 		$output->startProgress();
 		$this->userManager->callForSeenUsers(function(IUser $user) use($output) {
 			$this->jobList->add(

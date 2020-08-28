@@ -52,7 +52,7 @@ class InstallTest extends \Test\TestCase {
 	}
 
 	public function testGetName() {
-		$this->assertInternalType('string', $this->migration->getName());
+		$this->assertIsString($this->migration->getName());
 	}
 
 	protected function getUser($uid) {
