@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -32,7 +34,7 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Util;
 
 class Application extends App implements IBootstrap {
-	const APP_ID = 'quota_warning';
+	public const APP_ID = 'quota_warning';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);
@@ -51,9 +53,6 @@ class Application extends App implements IBootstrap {
 		Util::connectHook('OC_User', 'post_login', $this, 'loginHook');
 	}
 
-	/**
-	 * @param array $params
-	 */
 	public function loginHook(array $params): void {
 		if (!isset($params['uid'])) {
 			return;
