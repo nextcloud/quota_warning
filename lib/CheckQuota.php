@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -57,17 +59,6 @@ class CheckQuota {
 	/** @var IManager */
 	protected $notificationManager;
 
-	/**
-	 * CheckQuota constructor.
-	 *
-	 * @param IConfig $config
-	 * @param ILogger $logger
-	 * @param IMailer $mailer
-	 * @param IFactory $l10nFactory
-	 * @param IUserManager $userManager
-	 * @param IJobList $jobList
-	 * @param IManager $notificationManager
-	 */
 	public function __construct(IConfig $config,
 								ILogger $logger,
 								IMailer $mailer,
@@ -256,10 +247,10 @@ class CheckQuota {
 	 * The user should be warned, when we was not warned in the last 7 days
 	 *
 	 * @param string $userId
-	 * @param int $level
+	 * @param string $level
 	 * @return bool
 	 */
-	protected function shouldIssueWarning(string $userId, int $level): bool {
+	protected function shouldIssueWarning(string $userId, string $level): bool {
 		$lastWarning = $this->config->getUserValue($userId, Application::APP_ID, 'warning-' . $level, '');
 		if ($lastWarning === '') {
 			return true;

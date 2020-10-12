@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -23,7 +25,6 @@
 
 namespace OCA\QuotaWarning\Notification;
 
-
 use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\CheckQuota;
 use OCP\IConfig;
@@ -47,13 +48,10 @@ class Notifier implements INotifier {
 	/** @var IURLGenerator */
 	protected $url;
 
-	/**
-	 * @param CheckQuota $checkQuota
-	 * @param IConfig $config
-	 * @param IFactory $l10nFactory
-	 * @param IURLGenerator $urlGenerator
-	 */
-	public function __construct(CheckQuota $checkQuota, IConfig $config, IFactory $l10nFactory, IURLGenerator $urlGenerator) {
+	public function __construct(CheckQuota $checkQuota,
+								IConfig $config,
+								IFactory $l10nFactory,
+								IURLGenerator $urlGenerator) {
 		$this->checkQuota = $checkQuota;
 		$this->config = $config;
 		$this->l10nFactory = $l10nFactory;

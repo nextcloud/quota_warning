@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -36,13 +38,8 @@ class Install implements IRepairStep {
 	/** @var IJobList */
 	protected $jobList;
 
-	/**
-	 * Install constructor.
-	 *
-	 * @param IUserManager $userManager
-	 * @param IJobList $jobList
-	 */
-	public function __construct(IUserManager $userManager, IJobList $jobList) {
+	public function __construct(IUserManager $userManager,
+								IJobList $jobList) {
 		$this->userManager = $userManager;
 		$this->jobList = $jobList;
 	}
