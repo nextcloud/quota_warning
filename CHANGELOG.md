@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.9.1 – 2020-10-13
+### Fixed
+- Fix type error when checking user quota
+  [#57](https://github.com/nextcloud/quota_warning/pull/57)
+
 ## 1.9.0 – 2020-08-28
 ### Changed
 - Nextcloud 20 compatibility
