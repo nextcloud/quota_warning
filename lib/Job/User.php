@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -29,11 +31,6 @@ class User extends TimedJob {
 	/** @var CheckQuota */
 	protected $checkQuota;
 
-	/**
-	 * User constructor.
-	 *
-	 * @param CheckQuota $checkQuota
-	 */
 	public function __construct(CheckQuota $checkQuota) {
 		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
