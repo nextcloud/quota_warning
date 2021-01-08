@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.10.0 – 2021-01-08
+### Changed
+- Nextcloud 21 compatibility
+
 ## 1.9.1 – 2020-10-13
 ### Fixed
 - Fix type error when checking user quota
