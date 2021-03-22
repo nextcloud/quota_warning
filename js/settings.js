@@ -67,7 +67,7 @@
 			OCP.AppConfig.setValue(
 				'quota_warning',
 				$el.attr('id').substring(14),
-				$el.attr('checked') ? 'yes' : 'no',
+				$el.prop('checked') ? 'yes' : 'no',
 				{
 					success: function() {
 						OC.msg.finishedSuccess('#quota_warning_feedback', t('quota_warning', 'Saved!'));
