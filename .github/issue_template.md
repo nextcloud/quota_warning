@@ -62,7 +62,7 @@ Make sure to remove all sensitive content such as passwords. (e.g. database pass
 
 ### Logs
 
-#### Nextcloud log (data/owncloud.log)
+#### Nextcloud log (data/nextcloud.log)
 ```
 Insert your Nextcloud log here
 ```
