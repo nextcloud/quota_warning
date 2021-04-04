@@ -17,7 +17,7 @@ OC.L10N.register(
     "Second notification" : "第二次通知",
     "Final notification" : "最後通知",
     "Link to quota management" : "容量管理連結",
-    "Resend notifications after … days" : "在。。。天後重寄通知",
+    "Resend notifications after … days" : "在...天後重寄通知",
     "Set to 0 if the user should only receive one notification." : "如果用戶只需要收到一次通知，請設定為 0"
 },
 "nplurals=1; plural=0;");
