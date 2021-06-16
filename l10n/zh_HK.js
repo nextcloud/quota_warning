@@ -2,7 +2,7 @@ OC.L10N.register(
     "quota_warning",
     {
     "Saving…" : "儲存中…",
-    "Saved!" : "已儲存！",
+    "Saved!" : "已保存！",
     "Nearing your storage quota" : "即將到達容量限制",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "您正在使用超過容量限制 %d%% 的空間，請刪除一些不需要的檔案以釋放空間",
     "Or click the following button for options to change your data plan." : "或點選以下按鈕來改變您的容量方案",
