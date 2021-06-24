@@ -60,7 +60,7 @@ class Install implements IRepairStep {
 	 */
 	public function run(IOutput $output): void {
 		$output->startProgress();
-		$this->userManager->callForSeenUsers(function(IUser $user) use($output) {
+		$this->userManager->callForSeenUsers(function (IUser $user) use ($output) {
 			$this->jobList->add(
 				User::class,
 				['uid' => $user->getUID()]

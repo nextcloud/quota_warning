@@ -52,7 +52,9 @@ nbproject
 
 # Tests - auto-generated files
 /build
+/.php_cs.cache
 /tests/coverage*
 /tests/clover.xml
 /tests/.phpunit.result.cache
 /tests/js/node_modules
+/vendor

@@ -23,14 +23,13 @@
 
 namespace OCA\QuotaWarning\Tests\AppInfo;
 
-
-use OC\BackgroundJob\TimedJob;
 use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Migration\Install;
 use OCA\QuotaWarning\Notification\Notifier;
 use OCP\AppFramework\App;
 use OCP\BackgroundJob\IJob;
+use OCP\BackgroundJob\TimedJob;
 use OCP\Migration\IRepairStep;
 use OCP\Notification\INotifier;
 use Test\TestCase;

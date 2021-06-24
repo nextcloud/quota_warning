@@ -96,8 +96,7 @@ class CheckQuota {
 				}
 			}
 			$this->updateLastWarning($userId, 'alert');
-
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
+		} elseif ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
 			if ($this->shouldIssueWarning($userId, 'warning')) {
 				$this->issueWarning($userId, $usage);
 				if ($this->config->getAppValue('quota_warning', 'warning_email', 'no') === 'yes') {
@@ -106,8 +105,7 @@ class CheckQuota {
 			}
 			$this->updateLastWarning($userId, 'warning');
 			$this->removeLastWarning($userId, 'alert');
-
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
+		} elseif ($usage > $this->config->getAppValue('quota_warning', 'info_percentage', 85)) {
 			if ($this->shouldIssueWarning($userId, 'info')) {
 				$this->issueWarning($userId, $usage);
 				if ($this->config->getAppValue('quota_warning', 'info_email', 'no') === 'yes') {
@@ -116,11 +114,9 @@ class CheckQuota {
 			}
 			$this->updateLastWarning($userId, 'info');
 			$this->removeLastWarning($userId, 'warning');
-
 		} else {
 			$this->removeWarning($userId);
 			$this->removeLastWarning($userId, 'info');
-
 		}
 	}
 
@@ -135,7 +131,7 @@ class CheckQuota {
 			return 0.0;
 		}
 
-		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] < 5 * 1024**2) {
+		if ($storage['quota'] === FileInfo::SPACE_UNLIMITED || $storage['quota'] < 5 * 1024 ** 2) {
 			// No warnings for unlimited storage and for less than 5 MB
 			return 0.0;
 		}
@@ -208,7 +204,6 @@ class CheckQuota {
 			);
 		} else {
 			$emailTemplate->addBodyText($help);
-
 		}
 
 		$emailTemplate->addFooter();
@@ -262,7 +257,7 @@ class CheckQuota {
 			return false;
 		}
 
-		$dateLastWarning = \DateTime::createFromFormat(\DateTime::ATOM, $lastWarning);
+		$dateLastWarning = \DateTime::createFromFormat(\DateTimeInterface::ATOM, $lastWarning);
 		$dateLastWarning->add(new \DateInterval('P' . $days . 'D'));
 		$now = new \DateTime();
 		return $dateLastWarning < $now;
@@ -276,12 +271,14 @@ class CheckQuota {
 	 */
 	protected function updateLastWarning(string $userId, string $level): void {
 		$now = new \DateTime();
-		$dateTimeString = $now->format(\DateTime::ATOM);
+		$dateTimeString = $now->format(\DateTimeInterface::ATOM);
 		switch ($level) {
 			case 'alert':
 				$this->config->setUserValue($userId, Application::APP_ID, 'warning-alert', $dateTimeString);
+				// no break
 			case 'warning':
 				$this->config->setUserValue($userId, Application::APP_ID, 'warning-warning', $dateTimeString);
+				// no break
 			case 'info':
 				$this->config->setUserValue($userId, Application::APP_ID, 'warning-info', $dateTimeString);
 		}
@@ -297,8 +294,10 @@ class CheckQuota {
 		switch ($level) {
 			case 'info':
 				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-info');
+				// no break
 			case 'warning':
 				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-warning');
+				// no break
 			case 'alert':
 				$this->config->deleteUserValue($userId, Application::APP_ID, 'warning-alert');
 		}

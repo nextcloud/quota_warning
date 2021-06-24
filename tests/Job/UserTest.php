@@ -25,20 +25,26 @@ namespace OCA\QuotaWarning\Tests\Job;
 
 use OCA\QuotaWarning\CheckQuota;
 use OCA\QuotaWarning\Job\User;
+use OCP\AppFramework\Utility\ITimeFactory;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class UserTest extends \Test\TestCase {
 	/** @var User */
 	protected $job;
 
-	/** @var CheckQuota|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var ITimeFactory|MockObject */
+	protected $time;
+	/** @var CheckQuota|MockObject */
 	protected $checkQuota;
 
 	protected function setUp(): void {
 		parent::setUp();
 
+		$this->time = $this->createMock(ITimeFactory::class);
 		$this->checkQuota = $this->createMock(CheckQuota::class);
 
 		$this->job = new User(
+			$this->time,
 			$this->checkQuota
 		);
 	}
