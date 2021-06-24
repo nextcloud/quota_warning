@@ -98,7 +98,7 @@ class Notifier implements INotifier {
 
 		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', 95)) {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-alert.svg');
-		} else if ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
+		} elseif ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', 90)) {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-warning.svg');
 		} else {
 			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');

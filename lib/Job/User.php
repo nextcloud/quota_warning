@@ -23,15 +23,18 @@ declare(strict_types=1);
 
 namespace OCA\QuotaWarning\Job;
 
-use OC\BackgroundJob\TimedJob;
 use OCA\QuotaWarning\CheckQuota;
+use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\BackgroundJob\TimedJob;
 
 class User extends TimedJob {
 
 	/** @var CheckQuota */
 	protected $checkQuota;
 
-	public function __construct(CheckQuota $checkQuota) {
+	public function __construct(ITimeFactory $time,
+								CheckQuota $checkQuota) {
+		parent::__construct($time);
 		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
 	}

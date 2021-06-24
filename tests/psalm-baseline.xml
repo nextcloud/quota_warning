@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.7.0@d4377c0baf3ffbf0b1ec6998e8d1be2a40971005">
+  <file src="lib/CheckQuota.php">
+    <InvalidScalarArgument occurrences="5">
+      <code>$percentage</code>
+      <code>7</code>
+      <code>85</code>
+      <code>90</code>
+      <code>95</code>
+    </InvalidScalarArgument>
+    <UndefinedClass occurrences="1">
+      <code>\OC_Util</code>
+    </UndefinedClass>
+    <UndefinedInterfaceMethod occurrences="3">
+      <code>setHtmlBody</code>
+      <code>setPlainBody</code>
+      <code>setSubject</code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="lib/Notification/Notifier.php">
+    <InvalidScalarArgument occurrences="4">
+      <code>$usage</code>
+      <code>85</code>
+      <code>90</code>
+      <code>95</code>
+    </InvalidScalarArgument>
+  </file>
+  <file src="lib/Settings.php">
+    <InvalidScalarArgument occurrences="4">
+      <code>7</code>
+      <code>85</code>
+      <code>90</code>
+      <code>95</code>
+    </InvalidScalarArgument>
+  </file>
+</files>
