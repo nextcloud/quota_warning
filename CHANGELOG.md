@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.11.0 – 2021-07-21
+### Changed
+- Nextcloud 22 compatibility
+
+### Fixed
+- Fix "Send an email" checkbox in admin settings
+  [#66](https://github.com/nextcloud/quota_warning/pull/66)
+
 ## 1.10.0 – 2021-01-08
 ### Changed
 - Nextcloud 21 compatibility
