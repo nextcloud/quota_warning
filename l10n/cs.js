@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Poslední upozornění",
     "Link to quota management" : "Odkaz na správu kvót",
     "Resend notifications after … days" : "Upozornění poslat znovu za … dnů",
-    "Set to 0 if the user should only receive one notification." : "Pokud má uživatel obdržet pouze upozornění pouze jedinkrát, nastavte na hodnotu 0 (nula)."
+    "Set to 0 if the user should only receive one notification." : "Pokud má uživatel obdržet upozornění pouze jedenkrát, nastavte na hodnotu 0 (nula)."
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");
