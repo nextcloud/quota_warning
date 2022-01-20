@@ -29,6 +29,9 @@ It is also possible to have a link in the email and the notification for upsell 
 		<install>
 			<step>OCA\QuotaWarning\Migration\Install</step>
 		</install>
+		<uninstall>
+			<step>OCA\QuotaWarning\Migration\Uninstall</step>
+		</uninstall>
 	</repair-steps>
 	<settings>
 		<admin>OCA\QuotaWarning\Settings</admin>
