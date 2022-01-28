@@ -118,7 +118,7 @@ class Notifier implements INotifier {
 		$usage = (int) round($parameters['usage']);
 		$usage = min(100, $usage);
 		$notification->setParsedSubject(
-			$l->t('You are using more than %d%% of your storage quota', $usage)
+			$l->t('You are using more than %d%% of your storage quota', [$usage])
 		);
 		return $notification;
 	}
