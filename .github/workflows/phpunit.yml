@@ -24,6 +24,7 @@ jobs:
         include:
           - php-versions: '7.3'
             server-versions: 'stable21'
+            databases: 'sqlite'
 
     name: php${{ matrix.php-versions }}-${{ matrix.databases }}
 
