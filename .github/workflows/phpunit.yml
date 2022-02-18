@@ -21,6 +21,9 @@ jobs:
         php-versions: ['7.4']
         databases: ['sqlite']
         server-versions: ['master', 'stable23', 'stable22', 'stable21']
+        include:
+          - php-versions: '7.3'
+            server-versions: 'stable21'
 
     name: php${{ matrix.php-versions }}-${{ matrix.databases }}
 
@@ -74,7 +77,7 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
+        php-versions: ['7.4', '8.0']
         databases: ['mysql']
         server-versions: ['master']
 
