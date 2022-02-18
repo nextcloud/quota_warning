@@ -37,6 +37,10 @@ class User extends TimedJob {
 		parent::__construct($time);
 		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
+
+		if (method_exists($this, 'setTimeSensitivity')) {
+			$this->setTimeSensitivity(TimedJob::TIME_INSENSITIVE);
+		}
 	}
 
 	protected function run($argument): void {
