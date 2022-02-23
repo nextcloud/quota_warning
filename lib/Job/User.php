@@ -37,6 +37,15 @@ class User extends TimedJob {
 		parent::__construct($time);
 		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
+
+		if (method_exists($this, 'setTimeSensitivity')) {
+			/**
+			 * This constant is always defined when setTimeSensitivity exists,
+			 * Psalm can not know this :(
+			 * @psalm-suppress UndefinedConstant
+			 */
+			$this->setTimeSensitivity(TimedJob::TIME_INSENSITIVE);
+		}
 	}
 
 	protected function run($argument): void {
