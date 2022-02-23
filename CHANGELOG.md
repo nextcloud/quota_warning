@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.13.1 – 2022-02-23
+### Fixed
+- Mark background job as time insensitive
+
 ## 1.13.0 – 2021-12-02
 ### Changed
 - Nextcloud 23 compatibility
