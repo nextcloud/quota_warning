@@ -8,6 +8,8 @@
     "Data plan options" : "Valg for dataplan",
     "Quota warning" : "Kvotevarsel",
     "You are using more than %d%% of your storage quota" : "Du bruker mer enn %d%% av din lagringskvote",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Denne appen varsler brukere når de når 85, 90 og 95% av deres kvote.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Denne appen varsler brukere når de når 85, 90 og 95% av deres kvote (sjekkes én gang om dagen).\nI tillegg kan det sendes en mail til brukerne. De tre prosentsatsene kan endres i administrajonsinnstillingene.\nDet er også mulig å legge inn en link i mailen eller varslingen for å selge inn mer lagring.",
     "First notification" : "Første varsel",
     "Send an email" : "Send en e-post",
     "Second notification" : "Andre varsel",
