@@ -1,6 +1,6 @@
 { "translations": {
     "Saving…" : "Lagrer…",
-    "Saved!" : "Lagret.",
+    "Saved!" : "Lagret!",
     "Nearing your storage quota" : "Lagringskvoten er nesten brukt opp",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Du bruker mer enn %d%% av din datakvote. Prøv å rydde plass ved å slette gamle filer du ikke trenger lenger.",
     "Or click the following button for options to change your data plan." : "Klikk på påfølgende knapp for valg om endring av din dataplan.",
