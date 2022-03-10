@@ -29,19 +29,19 @@ use OCP\BackgroundJob\IJobList;
 use OCP\Files\FileInfo;
 use OCP\Files\NotFoundException;
 use OCP\IConfig;
-use OCP\ILogger;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\L10N\IFactory;
 use OCP\Mail\IMailer;
 use OCP\Notification\IManager;
+use Psr\Log\LoggerInterface;
 
 class CheckQuota {
 
 	/** @var IConfig */
 	protected $config;
 
-	/** @var ILogger */
+	/** @var LoggerInterface */
 	protected $logger;
 
 	/** @var IMailer */
@@ -60,7 +60,7 @@ class CheckQuota {
 	protected $notificationManager;
 
 	public function __construct(IConfig $config,
-								ILogger $logger,
+								LoggerInterface $logger,
 								IMailer $mailer,
 								IFactory $l10nFactory,
 								IUserManager $userManager,
@@ -157,7 +157,7 @@ class CheckQuota {
 				->setSubject(Application::APP_ID, ['usage' => $percentage]);
 			$this->notificationManager->notify($notification);
 		} catch (\InvalidArgumentException $e) {
-			$this->logger->logException($e, ['app' => Application::APP_ID]);
+			$this->logger->critical($e->getMessage(), ['app' => Application::APP_ID, 'exception' => $e]);
 		}
 	}
 
@@ -216,7 +216,7 @@ class CheckQuota {
 			$message->setHtmlBody($emailTemplate->renderHtml());
 			$this->mailer->send($message);
 		} catch (\Exception $e) {
-			$this->logger->logException($e, ['app' => 'quota_warning']);
+			$this->logger->critical($e->getMessage(), ['app' => Application::APP_ID, 'exception' => $e]);
 		}
 	}
 
@@ -234,7 +234,7 @@ class CheckQuota {
 				->setUser($userId);
 			$this->notificationManager->markProcessed($notification);
 		} catch (\InvalidArgumentException $e) {
-			$this->logger->logException($e, ['app' => Application::APP_ID]);
+			$this->logger->critical($e->getMessage(), ['app' => Application::APP_ID, 'exception' => $e]);
 		}
 	}
 
