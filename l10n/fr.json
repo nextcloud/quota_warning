@@ -17,5 +17,5 @@
     "Link to quota management" : "Lien vers la gestion du quota",
     "Resend notifications after … days" : "Renvoyer des notifications après ... jours",
     "Set to 0 if the user should only receive one notification." : "Saisir 0 si l'utilisateur devrait recevoir uniquement une notification."
-},"pluralForm" :"nplurals=2; plural=(n > 1);"
+},"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

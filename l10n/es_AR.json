@@ -3,5 +3,5 @@
     "Saved!" : "¡Guardado!",
     "Quota warning" : "Advertencia de cuota",
     "You are using more than %d%% of your storage quota" : "Usted está usando más de %d %% de su cuota de almacenamiento"
-},"pluralForm" :"nplurals=2; plural=(n != 1);"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

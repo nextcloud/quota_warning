@@ -17,5 +17,5 @@
     "Link to quota management" : "Liga a administración de cuota",
     "Resend notifications after … days" : "Reenviar notificaciones después de ... días",
     "Set to 0 if the user should only receive one notification." : "Establece el valor a 0 si el usuario sólo debe recibir una única notificación"
-},"pluralForm" :"nplurals=2; plural=(n != 1);"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

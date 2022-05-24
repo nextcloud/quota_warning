@@ -20,4 +20,4 @@ OC.L10N.register(
     "Resend notifications after … days" : "Volver a mandar notificaciones después de ... días",
     "Set to 0 if the user should only receive one notification." : "Déjalo en 0 si el usuario debería recibir solo una notificación."
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
