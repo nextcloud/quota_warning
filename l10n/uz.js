@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Saqlanmoqda...",
-    "Saved!" : "Saqlangan!"
+    "Saving…" : "Saving…",
+    "Saved!" : "Saved!"
 },
 "nplurals=1; plural=0;");
