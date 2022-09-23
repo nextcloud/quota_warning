@@ -20,11 +20,7 @@ jobs:
       matrix:
         php-versions: ['7.4']
         databases: ['sqlite']
-        server-versions: ['master', 'stable24', 'stable23', 'stable22']
-        include:
-          - php-versions: '7.3'
-            server-versions: 'stable22'
-            databases: 'sqlite'
+        server-versions: ['master', 'stable25', 'stable24', 'stable23']
 
     name: php${{ matrix.php-versions }}-${{ matrix.databases }}
 
