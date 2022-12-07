@@ -102,7 +102,7 @@ class NotifierTest extends \Test\TestCase {
 
 		$this->config->expects($this->once())
 			->method('getAppValue')
-			->with('quota_warning', 'info_percentage', 85)
+			->with('quota_warning', 'info_percentage', '85')
 			->willReturnArgument(2);
 
 		$this->checkQuota->expects($this->once())
@@ -138,9 +138,9 @@ class NotifierTest extends \Test\TestCase {
 		$this->config->expects($this->any())
 			->method('getAppValue')
 			->willReturnMap([
-				['quota_warning', 'info_percentage', 85, 85],
-				['quota_warning', 'warning_percentage', 90, 90],
-				['quota_warning', 'alert_percentage', 95, 95],
+				['quota_warning', 'info_percentage', '85', '85'],
+				['quota_warning', 'warning_percentage', '90', '90'],
+				['quota_warning', 'alert_percentage', '95', '95'],
 			]);
 
 		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
