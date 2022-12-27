@@ -8,7 +8,7 @@ OC.L10N.register(
     "Or click the following button for options to change your data plan." : "Або натисніть кнопку нижче, щоб змінити план даних.",
     "Or click the following link for options to change your data plan." : "Або натисніть посилання, щоб змінити план даних.",
     "Data plan options" : "Параметри плану даних",
-    "Quota warning" : "Попередження про квоту",
+    "Quota warning" : "Сповіщення квоти",
     "You are using more than %d%% of your storage quota" : "Ви використовуєте більш ніж %d%% квоти на зберігання",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Цей застосунок надсилає сповіщення користувачам при досягненні 85%, 90% і 95% від встановлених квот.",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Цей застосунок надсилає сповіщення користувачам при досягненні 85%, 90% і 95% від встановлених квот, що перевіряються щодоби.\nДодатково можна налаштувати відправку електронного листа.\nТри пороги використання квот можна змінити у налашьуваннях адміністратора.\nТакож можливо надсилати посилання у листі або сповіщенні.",
@@ -16,7 +16,7 @@ OC.L10N.register(
     "Send an email" : "Надіслати електронне повідомлення",
     "Second notification" : "Друге повідомлення",
     "Final notification" : "Останнє повідомлення",
-    "Link to quota management" : "Посилання на управління квотами",
+    "Link to quota management" : "Посилання на керування квотами",
     "Resend notifications after … days" : "Повторно надіслати сповіщення після ... днів",
     "Set to 0 if the user should only receive one notification." : "Встановіть 0, якщо користувачеві потрібно отримати лише одне сповіщення."
 },
