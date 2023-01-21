@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Speichere…",
+    "Saving…" : "Speichere …",
     "Saved!" : "Gespeichert!",
     "Nearing your storage quota" : "Du erreichst bald die Grenze deines Speicherplatz-Kontingents",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Du nutzt mehr als %d%% des dir zur Verfügung stehenden Speicherplatzes. Versuche Speicherplatz freizugeben, indem du ältere, nicht mehr benötigte Dateien löschst.",
