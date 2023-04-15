@@ -60,12 +60,12 @@ class CheckQuota {
 	protected $notificationManager;
 
 	public function __construct(IConfig $config,
-								LoggerInterface $logger,
-								IMailer $mailer,
-								IFactory $l10nFactory,
-								IUserManager $userManager,
-								IJobList $jobList,
-								IManager $notificationManager) {
+		LoggerInterface $logger,
+		IMailer $mailer,
+		IFactory $l10nFactory,
+		IUserManager $userManager,
+		IJobList $jobList,
+		IManager $notificationManager) {
 		$this->config = $config;
 		$this->logger = $logger;
 		$this->mailer = $mailer;

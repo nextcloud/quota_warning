@@ -38,8 +38,8 @@ style('quota_warning', 'settings');
 	<p class="email-option">
 		<input type="checkbox" name="quota_warning_info_email" id="quota_warning_info_email" class="checkbox"
 			   value="1" <?php if ($_['info_email']) {
-	print_unescaped('checked="checked"');
-} ?> />
+			   	print_unescaped('checked="checked"');
+			   } ?> />
 		<label for="quota_warning_info_email"><?php p($l->t('Send an email'));?></label>
 	</p>
 
@@ -50,8 +50,8 @@ style('quota_warning', 'settings');
 	<p class="email-option">
 		<input type="checkbox" name="quota_warning_warning_email" id="quota_warning_warning_email" class="checkbox"
 			   value="1" <?php if ($_['warning_email']) {
-	print_unescaped('checked="checked"');
-} ?> />
+			   	print_unescaped('checked="checked"');
+			   } ?> />
 		<label for="quota_warning_warning_email"><?php p($l->t('Send an email'));?></label>
 	</p>
 
@@ -62,8 +62,8 @@ style('quota_warning', 'settings');
 	<p class="email-option">
 		<input type="checkbox" name="quota_warning_alert_email" id="quota_warning_alert_email" class="checkbox"
 			   value="1" <?php if ($_['alert_email']) {
-	print_unescaped('checked="checked"');
-} ?> />
+			   	print_unescaped('checked="checked"');
+			   } ?> />
 		<label for="quota_warning_alert_email"><?php p($l->t('Send an email'));?></label>
 	</p>
 

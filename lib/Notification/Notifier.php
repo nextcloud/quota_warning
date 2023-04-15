@@ -49,9 +49,9 @@ class Notifier implements INotifier {
 	protected $url;
 
 	public function __construct(CheckQuota $checkQuota,
-								IConfig $config,
-								IFactory $l10nFactory,
-								IURLGenerator $urlGenerator) {
+		IConfig $config,
+		IFactory $l10nFactory,
+		IURLGenerator $urlGenerator) {
 		$this->checkQuota = $checkQuota;
 		$this->config = $config;
 		$this->l10nFactory = $l10nFactory;
