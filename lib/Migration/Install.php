@@ -39,7 +39,7 @@ class Install implements IRepairStep {
 	protected $jobList;
 
 	public function __construct(IUserManager $userManager,
-								IJobList $jobList) {
+		IJobList $jobList) {
 		$this->userManager = $userManager;
 		$this->jobList = $jobList;
 	}

@@ -33,7 +33,7 @@ class User extends TimedJob {
 	protected $checkQuota;
 
 	public function __construct(ITimeFactory $time,
-								CheckQuota $checkQuota) {
+		CheckQuota $checkQuota) {
 		parent::__construct($time);
 		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
