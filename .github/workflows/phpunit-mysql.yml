@@ -47,8 +47,6 @@ jobs:
             server-versions: 'stable26'
           - php-versions: '7.4'
             server-versions: 'stable25'
-          - php-versions: '7.4'
-            server-versions: 'stable24'
 
     services:
       mysql:
