@@ -1,7 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "S'està desant...",
+    "Saving…" : "S'està desant…",
     "Saved!" : "S'ha desat!",
     "Nearing your storage quota" : "Us esteu acostant al límit d'emmagatzematge",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Esteu utilitzant més del %d%% del vostre límit d'emmagatzematge. Suprimiu els fitxers antics que ja no necessiteu per a intentar alliberar espai.",
@@ -17,7 +17,7 @@ OC.L10N.register(
     "Second notification" : "Segona notificació",
     "Final notification" : "Notificació final",
     "Link to quota management" : "Enllaç a l'administració de límits d'emmagatzematge",
-    "Resend notifications after … days" : "Torna a enviar les notificacions després de ... dies",
+    "Resend notifications after … days" : "Torna a enviar les notificacions després de … dies",
     "Set to 0 if the user should only receive one notification." : "Definiu 0 si l'usuari només ha de rebre una notificació."
 },
 "nplurals=2; plural=(n != 1);");
