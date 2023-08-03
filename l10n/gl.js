@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Última notificación",
     "Link to quota management" : "Ligazón á xestión de cotas",
     "Resend notifications after … days" : "Volver enviar notificacións após … días ",
-    "Set to 0 if the user should only receive one notification." : "Estabelézao a 0 se o usuario só debe recibir unha notificación."
+    "Set to 0 if the user should only receive one notification." : "Estabelezao a 0 se o usuario só debe recibir unha notificación."
 },
 "nplurals=2; plural=(n != 1);");
