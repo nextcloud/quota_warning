@@ -17,7 +17,7 @@ If you have questions about how to install or use Nextcloud, please direct these
 
 Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
 
-[template]: https://raw.github.com/nextcloud/quota_warning/master/.github/issue_template.md
+[template]: https://raw.github.com/nextcloud/quota_warning/main/.github/issue_template.md
 [forum]: https://help.nextcloud.com/
 [irc]: https://webchat.freenode.net/?channels=nextcloud
 
