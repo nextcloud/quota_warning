@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -31,20 +33,21 @@ use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
 use OCP\Notification\INotification;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class NotifierTest extends \Test\TestCase {
 	/** @var Notifier */
 	protected $notifier;
 
-	/** @var IFactory|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IFactory|MockObject */
 	protected $factory;
-	/** @var CheckQuota|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var CheckQuota|MockObject */
 	protected $checkQuota;
-	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IConfig|MockObject */
 	protected $config;
-	/** @var IURLGenerator|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IURLGenerator|MockObject */
 	protected $urlGenerator;
-	/** @var IL10N|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IL10N|MockObject */
 	protected $l;
 
 	protected function setUp(): void {
@@ -72,8 +75,8 @@ class NotifierTest extends \Test\TestCase {
 		);
 	}
 
-	public function testPrepareWrongApp() {
-		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
+	public function testPrepareWrongApp(): void {
+		/** @var INotification|MockObject $notification */
 		$notification = $this->createMock(INotification::class);
 
 		$notification->expects($this->once())
@@ -87,8 +90,8 @@ class NotifierTest extends \Test\TestCase {
 		$this->notifier->prepare($notification, 'en');
 	}
 
-	public function testPrepareLessUsage() {
-		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
+	public function testPrepareLessUsage(): void {
+		/** @var INotification|MockObject $notification */
 		$notification = $this->createMock(INotification::class);
 
 		$notification->expects($this->once())
@@ -114,7 +117,7 @@ class NotifierTest extends \Test\TestCase {
 		$this->notifier->prepare($notification, 'en');
 	}
 
-	public function dataPrepare() {
+	public function dataPrepare(): array {
 		return [
 			[85.1, ' 85% ', 'app-dark.svg'],
 			[94.9, ' 95% ', 'app-warning.svg'],
@@ -124,12 +127,8 @@ class NotifierTest extends \Test\TestCase {
 
 	/**
 	 * @dataProvider dataPrepare
-	 *
-	 * @param float $quota
-	 * @param string $stringContains
-	 * @param string $image
 	 */
-	public function testPrepare($quota, $stringContains, $image) {
+	public function testPrepare(float $quota, string $stringContains, string $image): void {
 		$this->checkQuota->expects($this->once())
 			->method('getRelativeQuotaUsage')
 			->with('user')
@@ -143,7 +142,7 @@ class NotifierTest extends \Test\TestCase {
 				['quota_warning', 'alert_percentage', '95', '95'],
 			]);
 
-		/** @var INotification|\PHPUnit_Framework_MockObject_MockObject $notification */
+		/** @var INotification|MockObject $notification */
 		$notification = $this->createMock(INotification::class);
 		$notification->expects($this->once())
 			->method('getApp')

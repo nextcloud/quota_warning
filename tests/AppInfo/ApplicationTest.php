@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -53,12 +56,12 @@ class ApplicationTest extends TestCase {
 		$this->container = $this->app->getContainer();
 	}
 
-	public function testContainerAppName() {
+	public function testContainerAppName(): void {
 		$this->app = new Application();
 		$this->assertEquals(Application::APP_ID, $this->container->getAppName());
 	}
 
-	public function dataContainerQuery() {
+	public function dataContainerQuery(): array {
 		return [
 			[Application::class, App::class],
 			[Notifier::class, INotifier::class],
@@ -70,10 +73,8 @@ class ApplicationTest extends TestCase {
 
 	/**
 	 * @dataProvider dataContainerQuery
-	 * @param string $service
-	 * @param string $expected
 	 */
-	public function testContainerQuery($service, $expected) {
+	public function testContainerQuery(string $service, string $expected): void {
 		$this->assertInstanceOf($expected, $this->container->query($service));
 	}
 }

@@ -23,8 +23,10 @@ declare(strict_types=1);
 
 namespace OCA\QuotaWarning\Migration;
 
+use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\Job\User;
 use OCP\BackgroundJob\IJobList;
+use OCP\IConfig;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\Migration\IOutput;
@@ -37,11 +39,17 @@ class Install implements IRepairStep {
 
 	/** @var IJobList */
 	protected $jobList;
+	/** @var IConfig */
+	protected $config;
 
-	public function __construct(IUserManager $userManager,
-		IJobList $jobList) {
+	public function __construct(
+		IUserManager $userManager,
+		IJobList $jobList,
+		IConfig $config,
+	) {
 		$this->userManager = $userManager;
 		$this->jobList = $jobList;
+		$this->config = $config;
 	}
 
 	/**
@@ -59,6 +67,10 @@ class Install implements IRepairStep {
 	 * @since 9.1.0
 	 */
 	public function run(IOutput $output): void {
+		if ($this->config->getAppValue(Application::APP_ID, 'initialised', 'no') === 'yes') {
+			return;
+		}
+
 		$output->startProgress();
 		$this->userManager->callForSeenUsers(function (IUser $user) use ($output) {
 			$this->jobList->add(
@@ -68,5 +80,7 @@ class Install implements IRepairStep {
 			$output->advance();
 		});
 		$output->finishProgress();
+
+		$this->config->setAppValue(Application::APP_ID, 'initialised', 'yes');
 	}
 }

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -26,36 +28,41 @@ namespace OCA\QuotaWarning\Tests\Migration;
 use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Migration\Install;
 use OCP\BackgroundJob\IJobList;
+use OCP\IConfig;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\Migration\IOutput;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class InstallTest extends \Test\TestCase {
+	/** @var IUserManager|MockObject */
+	protected $userManager;
+	/** @var IJobList|MockObject */
+	protected $jobList;
+	/** @var IConfig|MockObject */
+	protected $config;
 	/** @var Install */
 	protected $migration;
-
-	/** @var IUserManager|\PHPUnit_Framework_MockObject_MockObject */
-	protected $userManager;
-	/** @var IJobList|\PHPUnit_Framework_MockObject_MockObject */
-	protected $jobList;
 
 	protected function setUp(): void {
 		parent::setUp();
 
 		$this->userManager = $this->createMock(IUserManager::class);
 		$this->jobList = $this->createMock(IJobList::class);
+		$this->config = $this->createMock(IConfig::class);
 
 		$this->migration = new Install(
 			$this->userManager,
-			$this->jobList
+			$this->jobList,
+			$this->config
 		);
 	}
 
-	public function testGetName() {
+	public function testGetName(): void {
 		$this->assertIsString($this->migration->getName());
 	}
 
-	protected function getUser($uid) {
+	protected function getUser(string $uid): MockObject {
 		$user = $this->createMock(IUser::class);
 		$user->expects($this->once())
 			->method('getUID')
@@ -63,8 +70,8 @@ class InstallTest extends \Test\TestCase {
 		return $user;
 	}
 
-	public function testRun() {
-		/** @var IOutput|\PHPUnit_Framework_MockObject_MockObject $output */
+	public function testRun(): void {
+		/** @var IOutput|MockObject $output */
 		$output = $this->createMock(IOutput::class);
 		$output->expects($this->once())
 			->method('startProgress');
@@ -86,6 +93,28 @@ class InstallTest extends \Test\TestCase {
 				[User::class, ['uid' => 'test2']],
 				[User::class, ['uid' => 'test3']]
 			);
+
+		$this->migration->run($output);
+	}
+
+	public function testRunSkipped(): void {
+		/** @var IOutput|MockObject $output */
+		$output = $this->createMock(IOutput::class);
+		$output->expects($this->never())
+			->method('startProgress');
+		$output->expects($this->never())
+			->method('finishProgress');
+
+		$this->config->expects($this->once())
+			->method('getAppValue')
+			->with('quota_warning', 'initialised', 'no')
+			->willReturn('yes');
+
+		$this->userManager->expects($this->never())
+			->method('callForSeenUsers');
+
+		$this->jobList->expects($this->never())
+			->method('add');
 
 		$this->migration->run($output);
 	}
