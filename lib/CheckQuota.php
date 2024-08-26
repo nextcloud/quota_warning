@@ -251,7 +251,7 @@ class CheckQuota {
 			return true;
 		}
 
-		$days = (int) $this->config->getAppValue('quota_warning', 'repeat_warning', '7');
+		$days = (int)$this->config->getAppValue('quota_warning', 'repeat_warning', '7');
 
 		if ($days <= 0) {
 			return false;

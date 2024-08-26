@@ -115,7 +115,7 @@ class Notifier implements INotifier {
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
 
 		$parameters = $notification->getSubjectParameters();
-		$usage = (int) round($parameters['usage']);
+		$usage = (int)round($parameters['usage']);
 		$usage = min(100, $usage);
 		$notification->setParsedSubject(
 			$l->t('You are using more than %d%% of your storage quota', [$usage])
