@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
@@ -49,11 +52,11 @@ class UserTest extends \Test\TestCase {
 		);
 	}
 
-	public function testInterval() {
+	public function testInterval(): void {
 		$this->assertSame(86400, self::invokePrivate($this->job, 'interval'));
 	}
 
-	public function testRun() {
+	public function testRun(): void {
 		$this->checkQuota->expects($this->once())
 			->method('check')
 			->with('test1');
