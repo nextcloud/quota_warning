@@ -18,6 +18,6 @@ OC.L10N.register(
     "Final notification" : "Ùrtima notìfica",
     "Link to quota management" : "Ligòngiu a sa gestione de is cuotas",
     "Resend notifications after … days" : "Imbia torra is notìficas a pustis de ... dies",
-    "Set to 0 if the user should only receive one notification." : "Imposta a 0 si s'utente depet retzire una notìfica ebbia."
+    "Set to 0 if the user should only receive one notification." : "Cunfigura a 0 si s'utente depet retzire una notìfica ebbia."
 },
 "nplurals=2; plural=(n != 1);");
