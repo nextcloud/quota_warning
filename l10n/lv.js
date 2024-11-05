@@ -11,7 +11,7 @@ OC.L10N.register(
     "Quota warning" : "Brīdinājums par kvotu",
     "You are using more than %d%% of your storage quota" : "Jūs izmantojat vairāk %d%% par savu krātuves kvotu",
     "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Šī lietotne nosūta paziņojumus lietotājiem, kad tie sasnieguši 85, 90 un 95% no savas kvotas.",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Šī lietotne nosūta paziņojumus lietotājiem, kad viņi sasnieguši 85, 90 un 95% no savas kvotas (pārbaudīts reizi dienā).\nTurklāt e-pasta ziņojumu var nosūtīt lietotājiem. Trīs procentus var mainīt administratora iestatījumos.\nIespējams arī e-pastā saņemt saiti un paziņojumu par papildu iespējām.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Šī lietotne nosūta paziņojumus lietotājiem, kad viņi sasnieguši 85, 90 un 95% no savas ierobežojuma (tiek pārbaudīts reizi dienā).\nPapildus var nosūtīt e-pasta ziņojumu lietotājiem. Trīs procentu vērtības var mainīt pārvaldīšanas iestatījumos.\nIr arī iespējams e-pastā saņemt saiti un paziņojumu par papildu iespējām.",
     "First notification" : "Pirmais paziņojums",
     "Send an email" : "Sūtīt e-pasta ziņojumu",
     "Second notification" : "Otrais paziņojums",
