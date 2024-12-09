@@ -23,7 +23,7 @@ It is also possible to have a link in the email and the notification for upsell 
 	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/main/docs/email.png</screenshot>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/quota_warning/main/docs/admin-settings.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="28" max-version="31" />
+		<nextcloud min-version="29" max-version="31" />
 	</dependencies>
 	<repair-steps>
 		<install>
