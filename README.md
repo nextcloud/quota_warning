@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2017 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # ❗💾 Quota warning
 
 This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).
