@@ -5,8 +5,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 1.21.0 – 202Y-MM-DD
+## 1.21.0 – 2025-02-15
 ### Changed
+- Nextcloud 31 compatibility
 - Require Nextcloud 29
 
 ## 1.20.0 – 2024-08-26
