@@ -1,5 +1,6 @@
 { "translations": {
     "Saving…" : "Inahifadhi...",
-    "Saved!" : "Imehifadhiwa"
+    "Saved!" : "Imehifadhiwa",
+    "Send an email" : "Send an email"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
