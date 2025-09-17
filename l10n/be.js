@@ -1,6 +1,7 @@
 OC.L10N.register(
     "quota_warning",
     {
+    "Saved!" : "Захавана!",
     "Quota warning" : "Папярэджанне аб квоце",
     "First notification" : "Першае апавяшчэнне"
 },
