@@ -21,6 +21,7 @@ class Settings implements ISettings {
 		$this->config = $config;
 	}
 
+	#[\Override]
 	public function getForm(): TemplateResponse {
 		$response = new TemplateResponse('quota_warning', 'settings');
 		$response->setParams([
@@ -37,10 +38,12 @@ class Settings implements ISettings {
 		return $response;
 	}
 
+	#[\Override]
 	public function getSection(): string {
 		return 'additional';
 	}
 
+	#[\Override]
 	public function getPriority(): int {
 		return 50;
 	}

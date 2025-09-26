@@ -18,14 +18,10 @@ use OCP\Migration\IOutput;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class InstallTest extends \Test\TestCase {
-	/** @var IUserManager|MockObject */
-	protected $userManager;
-	/** @var IJobList|MockObject */
-	protected $jobList;
-	/** @var IConfig|MockObject */
-	protected $config;
-	/** @var Install */
-	protected $migration;
+	protected IUserManager&MockObject $userManager;
+	protected IJobList&MockObject $jobList;
+	protected IConfig&MockObject $config;
+	protected Install $migration;
 
 	protected function setUp(): void {
 		parent::setUp();
@@ -54,7 +50,7 @@ class InstallTest extends \Test\TestCase {
 	}
 
 	public function testRun(): void {
-		/** @var IOutput|MockObject $output */
+		/** @var IOutput&MockObject $output */
 		$output = $this->createMock(IOutput::class);
 		$output->expects($this->once())
 			->method('startProgress');
@@ -69,19 +65,23 @@ class InstallTest extends \Test\TestCase {
 				$closure($this->getUser('test3'));
 			});
 
+		$calls = [
+			[User::class, ['uid' => 'test1']],
+			[User::class, ['uid' => 'test2']],
+			[User::class, ['uid' => 'test3']],
+		];
 		$this->jobList->expects($this->exactly(3))
 			->method('add')
-			->withConsecutive(
-				[User::class, ['uid' => 'test1']],
-				[User::class, ['uid' => 'test2']],
-				[User::class, ['uid' => 'test3']]
-			);
+			->willReturnCallback(function () use (&$calls) {
+				$expected = array_shift($calls);
+				$this->assertEquals($expected, func_get_args());
+			});
 
 		$this->migration->run($output);
 	}
 
 	public function testRunSkipped(): void {
-		/** @var IOutput|MockObject $output */
+		/** @var IOutput&MockObject $output */
 		$output = $this->createMock(IOutput::class);
 		$output->expects($this->never())
 			->method('startProgress');

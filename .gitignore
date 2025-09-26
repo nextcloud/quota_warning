@@ -57,6 +57,7 @@ nbproject
 /.php-cs-fixer.cache
 /tests/coverage*
 /tests/clover.xml
+/tests/.phpunit.cache
 /tests/.phpunit.result.cache
 /tests/js/node_modules
 /vendor

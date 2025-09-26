@@ -28,10 +28,12 @@ class Uninstall implements IRepairStep {
 		$this->jobList = $jobList;
 	}
 
+	#[\Override]
 	public function getName() {
 		return 'Remove QuotaWarning background jobs';
 	}
 
+	#[\Override]
 	public function run(IOutput $output) {
 		// Remove all the background jobs
 		$this->jobList->remove(User::class);

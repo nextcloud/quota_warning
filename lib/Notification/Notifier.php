@@ -41,32 +41,17 @@ class Notifier implements INotifier {
 		$this->url = $urlGenerator;
 	}
 
-	/**
-	 * Identifier of the notifier, only use [a-z0-9_]
-	 *
-	 * @return string
-	 * @since 17.0.0
-	 */
+	#[\Override]
 	public function getID(): string {
 		return Application::APP_ID;
 	}
 
-	/**
-	 * Human readable name describing the notifier
-	 *
-	 * @return string
-	 * @since 17.0.0
-	 */
+	#[\Override]
 	public function getName(): string {
 		return $this->l10nFactory->get(Application::APP_ID)->t('Quota warning');
 	}
 
-	/**
-	 * @param INotification $notification
-	 * @param string $languageCode The code of the language that should be used to prepare the notification
-	 * @return INotification
-	 * @throws \InvalidArgumentException When the notification was not prepared by a notifier
-	 */
+	#[\Override]
 	public function prepare(INotification $notification, string $languageCode): INotification {
 		if ($notification->getApp() !== Application::APP_ID) {
 			// Wrong app
@@ -98,7 +83,7 @@ class Notifier implements INotifier {
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
 
 		$parameters = $notification->getSubjectParameters();
-		$usage = (int)round($parameters['usage']);
+		$usage = (int)round((float)$parameters['usage']);
 		$usage = min(100, $usage);
 		$notification->setParsedSubject(
 			$l->t('You are using more than %d%% of your storage quota', [$usage])
