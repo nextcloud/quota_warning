@@ -15,13 +15,9 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class UserTest extends \Test\TestCase {
-	/** @var User */
-	protected $job;
-
-	/** @var ITimeFactory|MockObject */
-	protected $time;
-	/** @var CheckQuota|MockObject */
-	protected $checkQuota;
+	protected User $job;
+	protected ITimeFactory&MockObject $time;
+	protected CheckQuota&MockObject $checkQuota;
 
 	protected function setUp(): void {
 		parent::setUp();

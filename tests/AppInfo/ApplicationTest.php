@@ -14,24 +14,17 @@ use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Migration\Install;
 use OCA\QuotaWarning\Notification\Notifier;
 use OCP\AppFramework\App;
+use OCP\AppFramework\IAppContainer;
 use OCP\BackgroundJob\IJob;
 use OCP\BackgroundJob\TimedJob;
 use OCP\Migration\IRepairStep;
 use OCP\Notification\INotifier;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Test\TestCase;
 
-/**
- * Class ApplicationTest
- *
- * @package OCA\QuotaWarning\Tests
- * @group DB
- */
 class ApplicationTest extends TestCase {
-	/** @var \OCA\QuotaWarning\AppInfo\Application */
-	protected $app;
-
-	/** @var \OCP\AppFramework\IAppContainer */
-	protected $container;
+	protected Application $app;
+	protected IAppContainer $container;
 
 	protected function setUp(): void {
 		parent::setUp();
@@ -40,11 +33,10 @@ class ApplicationTest extends TestCase {
 	}
 
 	public function testContainerAppName(): void {
-		$this->app = new Application();
 		$this->assertEquals(Application::APP_ID, $this->container->getAppName());
 	}
 
-	public function dataContainerQuery(): array {
+	public static function dataContainerQuery(): array {
 		return [
 			[Application::class, App::class],
 			[Notifier::class, INotifier::class],
@@ -54,9 +46,7 @@ class ApplicationTest extends TestCase {
 		];
 	}
 
-	/**
-	 * @dataProvider dataContainerQuery
-	 */
+	#[DataProvider('dataContainerQuery')]
 	public function testContainerQuery(string $service, string $expected): void {
 		$this->assertInstanceOf($expected, $this->container->query($service));
 	}

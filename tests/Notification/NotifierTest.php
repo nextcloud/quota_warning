@@ -19,19 +19,12 @@ use OCP\Notification\INotification;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class NotifierTest extends \Test\TestCase {
-	/** @var Notifier */
-	protected $notifier;
-
-	/** @var IFactory|MockObject */
-	protected $factory;
-	/** @var CheckQuota|MockObject */
-	protected $checkQuota;
-	/** @var IConfig|MockObject */
-	protected $config;
-	/** @var IURLGenerator|MockObject */
-	protected $urlGenerator;
-	/** @var IL10N|MockObject */
-	protected $l;
+	protected Notifier $notifier;
+	protected IFactory&MockObject $factory;
+	protected CheckQuota&MockObject $checkQuota;
+	protected IConfig&MockObject $config;
+	protected IURLGenerator&MockObject $urlGenerator;
+	protected IL10N&MockObject $l;
 
 	protected function setUp(): void {
 		parent::setUp();
@@ -59,7 +52,7 @@ class NotifierTest extends \Test\TestCase {
 	}
 
 	public function testPrepareWrongApp(): void {
-		/** @var INotification|MockObject $notification */
+		/** @var INotification&MockObject $notification */
 		$notification = $this->createMock(INotification::class);
 
 		$notification->expects($this->once())
@@ -100,7 +93,7 @@ class NotifierTest extends \Test\TestCase {
 		$this->notifier->prepare($notification, 'en');
 	}
 
-	public function dataPrepare(): array {
+	public static function dataPrepare(): array {
 		return [
 			[85.1, ' 85% ', 'app-dark.svg'],
 			[94.9, ' 95% ', 'app-warning.svg'],
