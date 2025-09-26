@@ -33,6 +33,7 @@ class User extends TimedJob {
 		}
 	}
 
+	#[\Override]
 	protected function run($argument): void {
 		$this->checkQuota->check($argument['uid']);
 	}

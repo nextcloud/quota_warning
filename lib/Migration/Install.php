@@ -37,20 +37,12 @@ class Install implements IRepairStep {
 		$this->config = $config;
 	}
 
-	/**
-	 * Returns the step's name
-	 *
-	 * @return string
-	 * @since 9.1.0
-	 */
+	#[\Override]
 	public function getName(): string {
 		return 'Add background jobs for existing users';
 	}
 
-	/**
-	 * @param IOutput $output
-	 * @since 9.1.0
-	 */
+	#[\Override]
 	public function run(IOutput $output): void {
 		if ($this->config->getAppValue(Application::APP_ID, 'initialised', 'no') === 'yes') {
 			return;
