@@ -10,8 +10,8 @@ namespace OCA\QuotaWarning\Tests\Migration;
 
 use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Migration\Install;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\BackgroundJob\IJobList;
-use OCP\IConfig;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\Migration\IOutput;
@@ -20,7 +20,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 class InstallTest extends \Test\TestCase {
 	protected IUserManager&MockObject $userManager;
 	protected IJobList&MockObject $jobList;
-	protected IConfig&MockObject $config;
+	protected IAppConfig&MockObject $appConfig;
 	protected Install $migration;
 
 	protected function setUp(): void {
@@ -28,12 +28,12 @@ class InstallTest extends \Test\TestCase {
 
 		$this->userManager = $this->createMock(IUserManager::class);
 		$this->jobList = $this->createMock(IJobList::class);
-		$this->config = $this->createMock(IConfig::class);
+		$this->appConfig = $this->createMock(IAppConfig::class);
 
 		$this->migration = new Install(
 			$this->userManager,
 			$this->jobList,
-			$this->config
+			$this->appConfig,
 		);
 	}
 
@@ -88,10 +88,10 @@ class InstallTest extends \Test\TestCase {
 		$output->expects($this->never())
 			->method('finishProgress');
 
-		$this->config->expects($this->once())
-			->method('getAppValue')
-			->with('quota_warning', 'initialised', 'no')
-			->willReturn('yes');
+		$this->appConfig->expects($this->once())
+			->method('getAppValueBool')
+			->with('initialised')
+			->willReturn(true);
 
 		$this->userManager->expects($this->never())
 			->method('callForSeenUsers');
