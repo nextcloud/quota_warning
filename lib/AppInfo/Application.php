@@ -10,6 +10,7 @@ namespace OCA\QuotaWarning\AppInfo;
 
 use OCA\QuotaWarning\Job\User;
 use OCA\QuotaWarning\Notification\Notifier;
+use OCA\QuotaWarning\SettingsForm;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -25,6 +26,7 @@ class Application extends App implements IBootstrap {
 
 	#[\Override]
 	public function register(IRegistrationContext $context): void {
+		$context->registerDeclarativeSettings(SettingsForm::class);
 	}
 
 	#[\Override]

@@ -13,28 +13,19 @@ use OCP\BackgroundJob\IJobList;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 
-/**
- * Repair step called when disabling the quota_warning application. This will
- * remove all the jobs from the job lists.
- *
- * @author Carl Schwan <carl@carlschwan.eu>
- */
 class Uninstall implements IRepairStep {
-
-	/** @var IJobList */
-	private $jobList;
-
-	public function __construct(IJobList $jobList) {
-		$this->jobList = $jobList;
+	public function __construct(
+		private readonly IJobList $jobList,
+	) {
 	}
 
 	#[\Override]
-	public function getName() {
+	public function getName(): string {
 		return 'Remove QuotaWarning background jobs';
 	}
 
 	#[\Override]
-	public function run(IOutput $output) {
+	public function run(IOutput $output): void {
 		// Remove all the background jobs
 		$this->jobList->remove(User::class);
 	}

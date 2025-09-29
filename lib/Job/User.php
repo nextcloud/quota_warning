@@ -13,24 +13,13 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\TimedJob;
 
 class User extends TimedJob {
-
-	/** @var CheckQuota */
-	protected $checkQuota;
-
-	public function __construct(ITimeFactory $time,
-		CheckQuota $checkQuota) {
+	public function __construct(
+		ITimeFactory $time,
+		protected CheckQuota $checkQuota,
+	) {
 		parent::__construct($time);
-		$this->checkQuota = $checkQuota;
 		$this->setInterval(86400);
-
-		if (method_exists($this, 'setTimeSensitivity')) {
-			/**
-			 * This constant is always defined when setTimeSensitivity exists,
-			 * Psalm can not know this :(
-			 * @psalm-suppress UndefinedConstant
-			 */
-			$this->setTimeSensitivity(TimedJob::TIME_INSENSITIVE);
-		}
+		$this->setTimeSensitivity(self::TIME_INSENSITIVE);
 	}
 
 	#[\Override]
