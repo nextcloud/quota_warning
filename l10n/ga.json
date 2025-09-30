@@ -1,6 +1,4 @@
 { "translations": {
-    "Saving…" : "Shábháil…",
-    "Saved!" : "Shábháil!",
     "Nearing your storage quota" : "Ag druidim le do chuóta stórála",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Tá tú ag úsáid níos mó ná %d%% de do chuóta stórála. Déan iarracht roinnt spáis a shaoradh trí sheanchomhaid nach bhfuil uait a thuilleadh a scriosadh.",
     "Or click the following button for options to change your data plan." : "Nó cliceáil ar an gcnaipe seo a leanas le haghaidh roghanna chun do phlean sonraí a athrú.",
@@ -8,14 +6,14 @@
     "Data plan options" : "Roghanna plean sonraí",
     "Quota warning" : "Rabhadh cuóta",
     "You are using more than %d%% of your storage quota" : "Tá tú ag úsáid níos mó ná %d%% de do chuóta stórála",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Seolann an aip seo fógraí chuig úsáideoirí nuair a shroich siad 85, 90 agus 95% dá gcuóta.",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Seolann an aip seo fógraí chuig úsáideoirí nuair a shroich siad 85, 90 agus 95% dá gcuóta (seiceáilte uair amháin sa lá).\nIna theannta sin is féidir ríomhphost a sheoladh chuig na húsáideoirí. Is féidir na trí chéatadán a athrú sna socruithe riaracháin.\nIs féidir freisin nasc a bheith agat sa ríomhphost agus san fhógra le haghaidh roghanna athdhíola.",
     "First notification" : "An chéad fhógra",
     "Send an email" : "Seol ríomhphost",
     "Second notification" : "An dara fógra",
     "Final notification" : "Fógra deiridh",
-    "Link to quota management" : "Nasc le bainistíocht cuóta",
     "Resend notifications after … days" : "Seol fógraí arís tar éis … lá",
-    "Set to 0 if the user should only receive one notification." : "Socraigh go 0 más rud é nár cheart don úsáideoir ach fógra amháin a fháil."
+    "Set to 0 if the user should only receive one notification." : "Socraigh go 0 más rud é nár cheart don úsáideoir ach fógra amháin a fháil.",
+    "Link to quota management" : "Nasc le bainistíocht cuóta",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Seolann an aip seo fógraí chuig úsáideoirí nuair a shroich siad 85, 90 agus 95% dá gcuóta.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Seolann an aip seo fógraí chuig úsáideoirí nuair a shroich siad 85, 90 agus 95% dá gcuóta (seiceáilte uair amháin sa lá).\nIna theannta sin is féidir ríomhphost a sheoladh chuig na húsáideoirí. Is féidir na trí chéatadán a athrú sna socruithe riaracháin.\nIs féidir freisin nasc a bheith agat sa ríomhphost agus san fhógra le haghaidh roghanna athdhíola."
 },"pluralForm" :"nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);"
 }

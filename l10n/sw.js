@@ -1,8 +1,6 @@
 OC.L10N.register(
     "quota_warning",
     {
-    "Saving…" : "Inahifadhi...",
-    "Saved!" : "Imehifadhiwa",
     "Nearing your storage quota" : "Karibu kufikia kikomo chako cha hifadhi",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Unatumia zaidi ya %d%% ya nafasi yako ya hifadhi. Jaribu kupata nafasi fulani kwa kufuta faili za zamani ambazo huzihitaji tena.",
     "Or click the following button for options to change your data plan." : "Au bofya kitufe kifuatacho kwa chaguo za kubadilisha mpango wako wa data.",
@@ -10,14 +8,14 @@ OC.L10N.register(
     "Data plan options" : "Chaguzi za mpango wa data",
     "Quota warning" : "Onyo la kikomo",
     "You are using more than %d%% of your storage quota" : " Unatumia zaidi ya %d %% ya nafasi yako ya hifadhi",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Programu hii hutuma arifa kwa watumiaji walipofikia 85, 90 na 95% ya kiasi chao.",
-    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Programu hii hutuma arifa kwa watumiaji walipofikia 85, 90 na 95% ya mgawo wao (hukaguliwa mara moja kwa siku).\nAidha barua pepe inaweza kutumwa kwa watumiaji. Asilimia tatu zinaweza kubadilishwa katika mipangilio ya msimamizi.\nPia inawezekana kuwa na kiungo katika barua pepe na arifa ya chaguo za kuuza.",
     "First notification" : "Arifa ya kwanza",
     "Send an email" : "Tuma barua pepe",
     "Second notification" : "Arifa ya pili",
     "Final notification" : "Arifa ya mwisho",
-    "Link to quota management" : "Unganisha kwa usimamizi wa kiasi",
     "Resend notifications after … days" : "Tuma tena arifa baada ya … siku",
-    "Set to 0 if the user should only receive one notification." : "Weka hadi 0 ikiwa mtumiaji atapokea arifa moja pekee."
+    "Set to 0 if the user should only receive one notification." : "Weka hadi 0 ikiwa mtumiaji atapokea arifa moja pekee.",
+    "Link to quota management" : "Unganisha kwa usimamizi wa kiasi",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota." : "Programu hii hutuma arifa kwa watumiaji walipofikia 85, 90 na 95% ya kiasi chao.",
+    "This app sends notifications to users when they reached 85, 90 and 95% of their quota (checked once a day).\nIn addition an email can be sent to the users. The three percentages can be changed in the admin settings.\nIt is also possible to have a link in the email and the notification for upsell options." : "Programu hii hutuma arifa kwa watumiaji walipofikia 85, 90 na 95% ya mgawo wao (hukaguliwa mara moja kwa siku).\nAidha barua pepe inaweza kutumwa kwa watumiaji. Asilimia tatu zinaweza kubadilishwa katika mipangilio ya msimamizi.\nPia inawezekana kuwa na kiungo katika barua pepe na arifa ya chaguo za kuuza."
 },
 "nplurals=2; plural=(n != 1);");
