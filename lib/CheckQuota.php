@@ -199,7 +199,7 @@ class CheckQuota {
 	}
 
 	/**
-	 * The user should be warned, when we was not warned in the last 7 days
+	 * The user should be warned, when they were not warned in the last 7 days
 	 *
 	 * @param string $userId
 	 * @param string $level
