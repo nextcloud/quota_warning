@@ -1,11 +1,11 @@
 { "translations": {
     "Nearing your storage quota" : "ساقلاش نورمىڭىزغا يېقىن",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "ساقلاش نورمىسىنىڭ% d% دىن كۆپرەكىنى ئىشلىتىۋاتىسىز. ئەمدى لازىم بولمىغان كونا ھۆججەتلەرنى ئۆچۈرۈپ بىر ئاز بوشلۇقنى سىناپ بېقىڭ.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "ساقلاش نورمىسىنىڭ %%%d دىن كۆپرەكىنى ئىشلىتىۋاتىسىز. ئەمدى لازىم بولمىغان كونا ھۆججەتلەرنى ئۆچۈرۈپ بىر ئاز بوشلۇقنى سىناپ بېقىڭ.",
     "Or click the following button for options to change your data plan." : "ياكى سانلىق مەلۇمات پىلانىڭىزنى ئۆزگەرتىش ئۈچۈن تۆۋەندىكى كۇنۇپكىنى بېسىڭ.",
     "Or click the following link for options to change your data plan." : "ياكى سانلىق مەلۇمات پىلانىڭىزنى ئۆزگەرتىش ئۈچۈن تۆۋەندىكى ئۇلانمىنى چېكىڭ.",
     "Data plan options" : "سانلىق مەلۇمات پىلانى تاللانمىلىرى",
     "Quota warning" : "نورما ئاگاھلاندۇرۇشى",
-    "You are using more than %d%% of your storage quota" : "ساقلاش نورمىسىنىڭ% d% دىن كۆپرەكىنى ئىشلىتىۋاتىسىز",
+    "You are using more than %d%% of your storage quota" : "ساقلاش نورمىسىنىڭ %%%d دىن كۆپرەكىنى ئىشلىتىۋاتىسىز",
     "First notification" : "بىرىنچى ئۇقتۇرۇش",
     "Send an email" : "ئېلېكترونلۇق خەت ئەۋەتىڭ",
     "Second notification" : "ئىككىنچى ئۇقتۇرۇش",
