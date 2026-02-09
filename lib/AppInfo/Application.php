@@ -27,12 +27,12 @@ class Application extends App implements IBootstrap {
 	#[\Override]
 	public function register(IRegistrationContext $context): void {
 		$context->registerDeclarativeSettings(SettingsForm::class);
+		$context->registerNotifierService(Notifier::class);
 	}
 
 	#[\Override]
 	public function boot(IBootContext $context): void {
 		$this->registerLoginHook();
-		$this->registerNotifier();
 	}
 
 
@@ -45,15 +45,10 @@ class Application extends App implements IBootstrap {
 			return;
 		}
 
-		$jobList = $this->getContainer()->getServer()->getJobList();
+		$jobList = \OCP\Server::get(\OCP\BackgroundJob\IJobList::class);
 		$jobList->add(
 			User::class,
 			['uid' => $params['uid']]
 		);
-	}
-
-	public function registerNotifier(): void {
-		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
-		$notificationManager->registerNotifierService(Notifier::class);
 	}
 }
