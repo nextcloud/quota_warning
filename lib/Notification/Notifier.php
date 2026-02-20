@@ -16,6 +16,7 @@ use OCP\L10N\IFactory;
 use OCP\Notification\AlreadyProcessedException;
 use OCP\Notification\INotification;
 use OCP\Notification\INotifier;
+use OCP\Notification\UnknownNotificationException;
 
 class Notifier implements INotifier {
 
@@ -55,7 +56,7 @@ class Notifier implements INotifier {
 	public function prepare(INotification $notification, string $languageCode): INotification {
 		if ($notification->getApp() !== Application::APP_ID) {
 			// Wrong app
-			throw new \InvalidArgumentException('Unknown app');
+			throw new UnknownNotificationException('Unknown app');
 		}
 
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
