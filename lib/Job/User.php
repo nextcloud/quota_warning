@@ -22,6 +22,9 @@ class User extends TimedJob {
 		$this->setTimeSensitivity(self::TIME_INSENSITIVE);
 	}
 
+	/**
+	 * @param array{uid: string} $argument
+	 */
 	#[\Override]
 	protected function run($argument): void {
 		$this->checkQuota->check($argument['uid']);

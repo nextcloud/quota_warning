@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * SPDX-FileCopyrightText: 2016-2024 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2016 ownCloud, Inc.
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+namespace Test;
+
+abstract class TestCase extends \PHPUnit\Framework\TestCase {
+	/**
+	 * Allows us to test private methods/properties
+	 *
+	 * @param $object
+	 * @param $methodName
+	 * @param array $parameters
+	 * @return mixed
+	 */
+	protected static function invokePrivate($object, $methodName, array $parameters = []) {
+	}
+}
