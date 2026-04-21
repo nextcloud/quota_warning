@@ -10,7 +10,7 @@ namespace OCA\QuotaWarning\Notification;
 
 use OCA\QuotaWarning\AppInfo\Application;
 use OCA\QuotaWarning\CheckQuota;
-use OCP\IConfig;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
 use OCP\Notification\AlreadyProcessedException;
@@ -19,27 +19,12 @@ use OCP\Notification\INotifier;
 use OCP\Notification\UnknownNotificationException;
 
 class Notifier implements INotifier {
-
-	/** @var CheckQuota */
-	protected $checkQuota;
-
-	/** @var IConfig */
-	protected $config;
-
-	/** @var IFactory */
-	protected $l10nFactory;
-
-	/** @var IURLGenerator */
-	protected $url;
-
-	public function __construct(CheckQuota $checkQuota,
-		IConfig $config,
-		IFactory $l10nFactory,
-		IURLGenerator $urlGenerator) {
-		$this->checkQuota = $checkQuota;
-		$this->config = $config;
-		$this->l10nFactory = $l10nFactory;
-		$this->url = $urlGenerator;
+	public function __construct(
+		private CheckQuota $checkQuota,
+		private IAppConfig $appConfig,
+		private IFactory $l10nFactory,
+		private IURLGenerator $urlGenerator,
+	) {
 	}
 
 	#[\Override]
@@ -60,22 +45,22 @@ class Notifier implements INotifier {
 		}
 
 		$usage = $this->checkQuota->getRelativeQuotaUsage($notification->getUser());
-		if ($usage < $this->config->getAppValue('quota_warning', 'info_percentage', '85')) {
+		if ($usage < $this->appConfig->getAppValueInt('info_percentage', 85)) {
 			// User is not in danger zone anymore
 			throw new AlreadyProcessedException();
 		}
 
-		if ($usage > $this->config->getAppValue('quota_warning', 'alert_percentage', '95')) {
-			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-alert.svg');
-		} elseif ($usage > $this->config->getAppValue('quota_warning', 'warning_percentage', '90')) {
-			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-warning.svg');
+		if ($usage > $this->appConfig->getAppValueInt('alert_percentage', 95)) {
+			$imagePath = $this->urlGenerator->imagePath(Application::APP_ID, 'app-alert.svg');
+		} elseif ($usage > $this->appConfig->getAppValueInt('warning_percentage', 90)) {
+			$imagePath = $this->urlGenerator->imagePath(Application::APP_ID, 'app-warning.svg');
 		} else {
-			$imagePath = $this->url->imagePath(Application::APP_ID, 'app-dark.svg');
+			$imagePath = $this->urlGenerator->imagePath(Application::APP_ID, 'app-dark.svg');
 		}
 
-		$notification->setIcon($this->url->getAbsoluteURL($imagePath));
+		$notification->setIcon($this->urlGenerator->getAbsoluteURL($imagePath));
 
-		$link = $this->config->getAppValue('quota_warning', 'plan_management_url');
+		$link = $this->appConfig->getAppValueString('plan_management_url');
 		if ($link) {
 			$notification->setLink($link);
 		}

@@ -12,6 +12,7 @@ namespace OCA\QuotaWarning\Tests\Job;
 use OCA\QuotaWarning\CheckQuota;
 use OCA\QuotaWarning\Job\User;
 use OCP\AppFramework\Utility\ITimeFactory;
+use Override;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class UserTest extends \Test\TestCase {
@@ -19,6 +20,7 @@ class UserTest extends \Test\TestCase {
 	protected ITimeFactory&MockObject $time;
 	protected CheckQuota&MockObject $checkQuota;
 
+	#[Override]
 	protected function setUp(): void {
 		parent::setUp();
 

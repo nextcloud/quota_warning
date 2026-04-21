@@ -15,12 +15,14 @@ use OCP\BackgroundJob\IJobList;
 use OCP\EventDispatcher\Event;
 use OCP\IUser;
 use OCP\User\Events\UserLoggedInEvent;
+use Override;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class UserLoggedInListenerTest extends \Test\TestCase {
 	private IJobList&MockObject $jobList;
 	private UserLoggedInListener $listener;
 
+	#[Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -32,7 +34,7 @@ class UserLoggedInListenerTest extends \Test\TestCase {
 		$this->jobList->expects($this->never())
 			->method('add');
 
-		/** @psalm-suppress InvalidArgument */
+		/** @psalm-suppress ArgumentTypeCoercion */
 		$this->listener->handle(new Event());
 	}
 

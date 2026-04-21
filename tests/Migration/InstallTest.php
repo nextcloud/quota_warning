@@ -15,6 +15,7 @@ use OCP\BackgroundJob\IJobList;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\Migration\IOutput;
+use Override;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class InstallTest extends \Test\TestCase {
@@ -23,6 +24,7 @@ class InstallTest extends \Test\TestCase {
 	protected IAppConfig&MockObject $appConfig;
 	protected Install $migration;
 
+	#[Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -59,7 +61,7 @@ class InstallTest extends \Test\TestCase {
 
 		$this->userManager->expects($this->once())
 			->method('callForSeenUsers')
-			->willReturnCallback(function ($closure) {
+			->willReturnCallback(function (callable $closure): void {
 				$closure($this->getUser('test1'));
 				$closure($this->getUser('test2'));
 				$closure($this->getUser('test3'));

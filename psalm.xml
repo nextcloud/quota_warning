@@ -5,7 +5,7 @@
 -->
 <psalm
 	errorBaseline="tests/psalm-baseline.xml"
-	errorLevel="3"
+	errorLevel="2"
 	findUnusedCode="false"
 	resolveFromConfigFile="true"
 	phpVersion="8.1"
@@ -13,10 +13,15 @@
 	xmlns="https://getpsalm.org/schema/config"
 	xsi:schemaLocation="https://getpsalm.org/schema/config vendor-bin/psalm/vendor/vimeo/psalm/config.xsd"
 >
+    <stubs>
+       <file name="tests/stubs/testcase.stub" />
+    </stubs>
 	<projectFiles>
 		<directory name="lib" />
+        <directory name="tests" />
 		<ignoreFiles>
 			<directory name="vendor" />
+			<file name="tests/bootstrap.php" />
 		</ignoreFiles>
 	</projectFiles>
 	<extraFiles>
@@ -25,4 +30,20 @@
 			<directory name="vendor/phpunit/php-code-coverage" />
 		</ignoreFiles>
 	</extraFiles>
+    <issueHandlers>
+        <ClassMustBeFinal errorLevel="info" />
+        <MissingConstructor>
+          <errorLevel type="info">
+            <directory name="tests" />
+          </errorLevel>
+        </MissingConstructor>
+        <DeprecatedMethod>
+          <errorLevel type="info">
+			<!-- Remove when we depend on NC > 33 -->
+            <referencedMethod name="OCP\IConfig::getUserValue" />
+            <referencedMethod name="OCP\IConfig::setUserValue" />
+            <referencedMethod name="OCP\IConfig::deleteUserValue" />
+          </errorLevel>
+        </DeprecatedMethod>
+    </issueHandlers>
 </psalm>

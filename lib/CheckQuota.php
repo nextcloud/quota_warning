@@ -134,7 +134,7 @@ class CheckQuota {
 		}
 
 		$email = $user->getEMailAddress();
-		if (!$email) {
+		if ($email === null || $email === '') {
 			return;
 		}
 
