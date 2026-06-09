@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.24.0 – 2026-06-09
+### Changed
+- Nextcloud 34 compatibility
+
 ## 1.23.0 – 2026-01-21
 ### Changed
 - Nextcloud 33 compatibility
