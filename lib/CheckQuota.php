@@ -133,6 +133,11 @@ class CheckQuota {
 			return;
 		}
 
+		if (!$user->isEnabled()) {
+			// Don't notify disabled users
+			return;
+		}
+
 		$email = $user->getEMailAddress();
 		if ($email === null || $email === '') {
 			return;
