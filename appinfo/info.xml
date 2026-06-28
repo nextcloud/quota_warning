@@ -12,7 +12,7 @@
 In addition an email can be sent to the users. The three percentages can be changed in the admin settings.
 It is also possible to have a link in the email and the notification for upsell options.</description>
 	<version>1.25.0-dev.0</version>
-	<licence>agpl</licence>
+	<licence>AGPL-3.0-or-later</licence>
 	<author>Joas Schilling</author>
 	<namespace>QuotaWarning</namespace>
 	<types>

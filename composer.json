@@ -7,7 +7,7 @@
 	},
 	"name": "nextcloud/quota_warning",
 	"description": "quota_warning",
-	"license": "AGPL",
+	"license": "AGPL-3.0-or-later",
 	"config": {
 		"optimize-autoloader": true,
 		"classmap-authoritative": true,
