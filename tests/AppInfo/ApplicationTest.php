@@ -18,6 +18,7 @@ use OCP\BackgroundJob\IJob;
 use OCP\BackgroundJob\TimedJob;
 use OCP\Migration\IRepairStep;
 use OCP\Notification\INotifier;
+use OCP\Server;
 use Override;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Psr\Container\ContainerInterface;
@@ -31,7 +32,6 @@ class ApplicationTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		$this->app = new Application();
-		$this->container = $this->app->getContainer();
 	}
 
 	public static function dataContainerQuery(): array {
@@ -49,6 +49,6 @@ class ApplicationTest extends TestCase {
 	 */
 	#[DataProvider(methodName: 'dataContainerQuery')]
 	public function testContainerQuery(string $service, string $expected): void {
-		$this->assertInstanceOf($expected, $this->container->get($service));
+		$this->assertInstanceOf($expected, Server::get($service));
 	}
 }

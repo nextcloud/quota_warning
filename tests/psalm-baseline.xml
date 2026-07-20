@@ -5,9 +5,4 @@
       <code><![CDATA[\OC_Util]]></code>
     </UndefinedClass>
   </file>
-  <file src="tests/AppInfo/ApplicationTest.php">
-    <DeprecatedInterface>
-      <code><![CDATA[$this->app->getContainer()]]></code>
-    </DeprecatedInterface>
-  </file>
 </files>
