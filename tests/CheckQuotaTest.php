@@ -13,6 +13,8 @@ use OCA\QuotaWarning\CheckQuota;
 use OCA\QuotaWarning\Job\User;
 use OCP\AppFramework\Services\IAppConfig;
 use OCP\BackgroundJob\IJobList;
+use OCP\Files\FileInfo;
+use OCP\Files\NotFoundException;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
@@ -24,6 +26,7 @@ use OCP\Mail\IMessage;
 use OCP\Notification\IManager;
 use OCP\Notification\INotification;
 use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 
@@ -51,7 +54,10 @@ class CheckQuotaTest extends \Test\TestCase {
 		$this->notificationManager = $this->createMock(IManager::class);
 	}
 
-	protected function getCheckQuota(): CheckQuota&MockObject {
+	/**
+	 * @param list<non-empty-string> $methods
+	 */
+	protected function getCheckQuota(array $methods = ['getRelativeQuotaUsage']): CheckQuota&MockObject {
 		return $this->getMockBuilder(CheckQuota::class)
 			->setConstructorArgs([
 				$this->appConfig,
@@ -63,7 +69,7 @@ class CheckQuotaTest extends \Test\TestCase {
 				$this->jobList,
 				$this->notificationManager,
 			])
-			->onlyMethods(['getRelativeQuotaUsage'])
+			->onlyMethods($methods)
 			->getMock();
 	}
 
@@ -290,5 +296,55 @@ class CheckQuotaTest extends \Test\TestCase {
 			->with($message);
 
 		$checkQuota->check('user');
+	}
+
+	public static function dataGetRelativeQuotaUsage(): array {
+		return [
+			'unlimited quota' => [
+				['quota' => FileInfo::SPACE_UNLIMITED, 'used' => 123 * 1024 ** 2, 'relative' => 12.3],
+				0.0,
+			],
+			'quota below 5 MB' => [
+				['quota' => 1024 ** 2, 'used' => 512 * 1024, 'relative' => 50.0],
+				0.0,
+			],
+			'normal usage' => [
+				['quota' => 100 * 1024 ** 2, 'used' => 87 * 1024 ** 2, 'relative' => 87.0],
+				87.0,
+			],
+			// Server reports 100% for all users when the disk is full,
+			// because the total space is capped by the free space
+			'full disk but barely used quota' => [
+				['quota' => 10 * 1024 ** 3, 'used' => 100 * 1024 ** 2, 'relative' => 100.0],
+				0.98,
+			],
+			'over quota' => [
+				['quota' => 1024 ** 3, 'used' => 1280 * 1024 ** 2, 'relative' => 100.0],
+				125.0,
+			],
+		];
+	}
+
+	#[DataProvider(methodName: 'dataGetRelativeQuotaUsage')]
+	public function testGetRelativeQuotaUsage(array $storageInfo, float $expected): void {
+		$checkQuota = $this->getCheckQuota(['getStorageInfo']);
+
+		$checkQuota->expects($this->once())
+			->method('getStorageInfo')
+			->with('user')
+			->willReturn($storageInfo);
+
+		$this->assertSame($expected, $checkQuota->getRelativeQuotaUsage('user'));
+	}
+
+	public function testGetRelativeQuotaUsageWithoutStorage(): void {
+		$checkQuota = $this->getCheckQuota(['getStorageInfo']);
+
+		$checkQuota->expects($this->once())
+			->method('getStorageInfo')
+			->with('user')
+			->willThrowException(new NotFoundException());
+
+		$this->assertSame(0.0, $checkQuota->getRelativeQuotaUsage('user'));
 	}
 }
