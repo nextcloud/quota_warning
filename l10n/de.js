@@ -4,7 +4,7 @@ OC.L10N.register(
     "Nearing your storage quota" : "Du erreichst bald die Grenze deines Speicherplatz-Kontingents",
     "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Du nutzt mehr als %d%% des dir zur Verfügung stehenden Speicherplatzes. Versuche Speicherplatz freizugeben, indem du ältere, nicht mehr benötigte Dateien löschst.",
     "Or click the following button for options to change your data plan." : "Oder drücke die nachfolgende Schaltfläche für weitere Tarifoptionen.",
-    "Or click the following link for options to change your data plan." : "Oder klicke auf den nachfolgenden Link für weitere Tarifoptionen.",
+    "Or click the following link for options to change your data plan." : "Oder auf den nachfolgenden Link für weitere Tarifoptionen klicken.",
     "Data plan options" : "Tarifoptionen",
     "Quota warning" : "Kontingent-Warnung",
     "You are using more than %d%% of your storage quota" : "Du nutzt mehr als %d%% deines Speicherplatz-Kontingents",
