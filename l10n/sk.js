@@ -2,7 +2,7 @@ OC.L10N.register(
     "quota_warning",
     {
     "Nearing your storage quota" : "Blížite sa k vašej úložnej kvóte",
-    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Využívate viac než %d%% vašej kvóty úložiska. Vymazaním súborov, ktoré už nepotrebujete získate opäť voľné miesto.",
+    "You are using more than %d%% of your storage quota. Try to free up some space by deleting old files you don't need anymore." : "Využívate viac než %d%% vašej kvóty úložiska. Vymazaním súborov, ktoré už nepotrebujete, získate opäť voľné miesto.",
     "Or click the following button for options to change your data plan." : "Alebo kliknite na nasledujúce tlačidlo pre zmenu vášho dátového programu.",
     "Or click the following link for options to change your data plan." : "Alebo kliknite na nasledujúci odkaz pre zmenu vášho dátového programu.",
     "Data plan options" : "Možnosti dátového programu",
