@@ -96,7 +96,8 @@ class CheckQuota {
 			return 0.0;
 		}
 
-		return $storage['relative'];
+		// Compare the usage against the configured quota
+		return round($storage['used'] / $storage['quota'] * 10000) / 100.0;
 	}
 
 	/**
